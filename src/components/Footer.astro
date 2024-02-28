@@ -5,8 +5,8 @@ import SocialList from './SocialList.astro';
 import LittleSticksPlug from "./LittleSticksPlug.astro";
 ---
 
-<link rel="stylesheet" href="/contact-form.css">
-<link rel="stylesheet" href="/footer.css">
+<link rel="stylesheet" href="/sass/components/contact-form.css">
+<link rel="stylesheet" href="/sass/components/footer.css">
 
 
 
@@ -49,9 +49,9 @@ import LittleSticksPlug from "./LittleSticksPlug.astro";
   }
   
   document.addEventListener('DOMContentLoaded', (event) => {
-    loadHTML('/footer.html', 'master-footer');
-    loadHTML('/contact-form.html', 'openContactForm', () => {
-      loadExternalScript('/contact-form.js');
+    loadHTML('/html/footer.html', 'master-footer');
+    loadHTML('/html/contact-form.html', 'openContactForm', () => {
+      loadExternalScript('/html/contact-form.js');
     });
   });
   

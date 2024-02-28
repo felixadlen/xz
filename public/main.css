@@ -1191,7 +1191,11 @@ header {
 #white-bg {
   height: 80vh;
   width: 100%;
-  background-color: #e8e8e8;
+  background: rgb(247, 247, 247);
+  background: -webkit-radial-gradient(circle, rgb(247, 247, 247) 38%, rgb(232, 232, 232) 81%);
+  background: -moz-radial-gradient(circle, rgb(247, 247, 247) 38%, rgb(232, 232, 232) 81%);
+  background: -o-radial-gradient(circle, rgb(247, 247, 247) 38%, rgb(232, 232, 232) 81%);
+  background: radial-gradient(circle, rgb(247, 247, 247) 38%, rgb(232, 232, 232) 81%);
   position: relative;
   overflow: hidden;
 }
@@ -2666,6 +2670,15 @@ header {
     transition: transform 4s ease;
     transition: transform 4s ease, -webkit-transform 4s ease, -moz-transform 4s ease, -o-transform 4s ease;
   }
+}
+
+.bird-two {
+  top: -170px;
+  -webkit-transform: rotate(140deg);
+     -moz-transform: rotate(140deg);
+      -ms-transform: rotate(140deg);
+       -o-transform: rotate(140deg);
+          transform: rotate(140deg);
 }
 
 .form-popup-bg {

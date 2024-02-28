@@ -32,9 +32,9 @@ function executeScripts(container) {
 }
 
   document.addEventListener('DOMContentLoaded', (event) => {
-    loadHTML('html/menu.html', 'master-menu');
-    loadHTML('html/footer.html', 'master-footer');
-    loadHTML('html/contact-form.html', 'openContactForm');
+    loadHTML('/html/menu.html', 'master-menu');
+    loadHTML('/html/footer.html', 'master-footer');
+    loadHTML('/html/contact-form.html', 'openContactForm');
   });
 
 
@@ -88,25 +88,25 @@ document.addEventListener("DOMContentLoaded", function() {
 // 
 
 // NEDAN ÄR FADE IN FÖR INTRO-CONTAINER
-document.addEventListener('scroll', function() {
-  const introContainer = document.querySelector('.intro-container');
-  if (!introContainer) return;
+// document.addEventListener('scroll', function() {
+//   const introContainer = document.querySelector('.intro-container');
+//   if (!introContainer) return;
 
-  const windowHeight = window.innerHeight;
-  const elementRect = introContainer.getBoundingClientRect();
-  const elementMid = elementRect.top + elementRect.height / 2;
+//   const windowHeight = window.innerHeight;
+//   const elementRect = introContainer.getBoundingClientRect();
+//   const elementMid = elementRect.top + elementRect.height / 2;
 
-  // Calculate the range for 70% of the vertical center
-  const upperThreshold = windowHeight * 0.90; // 70% from the top
-  const lowerThreshold = windowHeight * 0.10; // 70% from the bottom
+//   // Calculate the range for 70% of the vertical center
+//   const upperThreshold = windowHeight * 0.90; // 70% from the top
+//   const lowerThreshold = windowHeight * 0.10; // 70% from the bottom
 
-  // Check if the middle of the element is within 70% of the viewport height
-  if (elementMid > lowerThreshold && elementMid < upperThreshold) {
-      introContainer.style.opacity = '1';
-  } else {
-      introContainer.style.opacity = '0.5';
-  }
-});
+//   // Check if the middle of the element is within 70% of the viewport height
+//   if (elementMid > lowerThreshold && elementMid < upperThreshold) {
+//       introContainer.style.opacity = '1';
+//   } else {
+//       introContainer.style.opacity = '0.5';
+//   }
+// });
 
 
 

@@ -350,7 +350,13 @@
 #white-bg {
   height: 80vh;
   width: 100%;
-  background-color: #e8e8e8;
+  // background-color: #e8e8e8;
+  background: rgb(247, 247, 247);
+  background: radial-gradient(
+    circle,
+    rgba(247, 247, 247, 1) 38%,
+    rgba(232, 232, 232, 1) 81%
+  );
   position: relative;
   overflow: hidden;
 
@@ -375,6 +381,7 @@
       }
     }
   }
+
   .intro-subheader {
     font-size: 1.8rem;
     flex: 0 0 100%;
@@ -1225,4 +1232,9 @@
       transition: transform 4s ease;
     }
   }
+}
+
+.bird-two {
+  top: -170px;
+  transform: rotate(140deg);
 }

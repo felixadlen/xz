@@ -8,7 +8,7 @@ import Logo from "./Logo.astro";
 
 
 
-<link rel="stylesheet" href="/menu.css">
+<link rel="stylesheet" href="/sass/components/menu.css">
 
 
 
@@ -51,8 +51,8 @@ function executeScripts(container) {
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
-  loadHTML('/menu.html', 'master-menu', () => {
-    loadExternalScript('/menu-script.js');
+  loadHTML('/html/menu.html', 'master-menu', () => {
+    loadExternalScript('/js/menu-script.js');
   });
 });
 
@@ -101,7 +101,7 @@ function executeScripts(container) {
   });
 }
 document.addEventListener('DOMContentLoaded', (event) => {
-  loadHTML('/menu.html', 'master-menu', () => {
+  loadHTML('/html/menu.html', 'master-menu', () => {
     // Elements that are part of the dynamically loaded content
     const menuButton = document.querySelector("a#menu-icon");
     const menuBox = document.querySelector(".menu-box");
