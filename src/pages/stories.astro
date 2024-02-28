@@ -35,12 +35,6 @@ function loadMorePosts() {
 
 <Layout seo={seo}>
   <Container>
-    <!-- <div class="home-hero-text__container">
-      <h1>our stories</h1>
-      <p class="subheader-stories-index">When you explore, you create stories.<br>
-        Here are our insights and random reflections from exploring new marketing ideas around the world.</p>
-      </div> -->
-
 
     <section id="stories-header">
    
@@ -77,21 +71,28 @@ function loadMorePosts() {
 
 <!-- Nedan skript är för att ladda ytterligare inlägg nedåt. Får funka tillsvidare, tills en ordentlig pagination är på plats.  -->
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const seeMoreBtn = document.getElementById('see-more-btn');
-    let currentPostCount = 3;
+    const posts = document.querySelectorAll('.post');
+    let currentPostCount = posts.length;
+
+    // Hide the "See More" button if total posts are 3 or below
+    if (currentPostCount <= 3) {
+        seeMoreBtn.style.display = 'none';
+    }
 
     seeMoreBtn.addEventListener('click', function() {
-      const hiddenPosts = Array.from(document.querySelectorAll('.post.hidden'));
-      const nextPosts = hiddenPosts.slice(0, 3);
-      nextPosts.forEach(post => post.classList.remove('hidden'));
+        const hiddenPosts = Array.from(document.querySelectorAll('.post.hidden'));
+        const nextPosts = hiddenPosts.slice(0, 3);
+        nextPosts.forEach(post => post.classList.remove('hidden'));
 
-      // Check if there are any hidden posts left after revealing the next set
-      if (document.querySelectorAll('.post.hidden').length === 0) {
-        seeMoreBtn.style.display = 'none'; // Hide the button if no more hidden posts
-      }
+        // Check if there are any hidden posts left after revealing the next set
+        if (document.querySelectorAll('.post.hidden').length === 0) {
+            seeMoreBtn.style.display = 'none'; // Hide the button if no more hidden posts
+        }
     });
-  });
+});
+
 
   // Nedan skript är för header fade in animation word-by word
   const h2Element = document.querySelector('.fade-highlight');
@@ -127,7 +128,7 @@ function animateWords(element) {
 .red-divider {
   margin-top: 3rem;
   background-color: #c83c4e;
-  height: 12px;
+  height: 3px;
   width: 0; /* Start with 0 width */
   animation: expandWidth 2s forwards; /* Apply the animation */
   transform-origin: center; /* Ensure expansion from the center */

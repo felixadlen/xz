@@ -85,6 +85,24 @@ html {
   box-sizing: border-box;
 }
 
+.mobile {
+  display: block;
+}
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .desktop {
+    display: block;
+  }
+}
+
 body {
   margin: 0 auto;
   background-color: var(--theme-background);
@@ -182,4 +200,15 @@ pre copy-code-button {
     transform: translateY(2ex);
     opacity: 0;
   }
+}
+
+.menu-object.active a {
+  color: rgb(112, 112, 112);
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.menu-object.active a:hover {
+  cursor: default;
+  background-color: inherit;
 }
