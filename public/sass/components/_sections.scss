@@ -654,14 +654,19 @@
 .about-us {
   display: flex;
   justify-content: center;
-  height: 110vh;
+  height: 90vh;
+  padding-top: 2rem;
+  @media (min-width: $breakpoint-tablet) {
+    height: 110vh;
+    padding-top: 0rem;
+  }
 }
 .text-centercontainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   padding: 0rem 1.4rem;
   @media (min-width: $breakpoint-tablet) {
     margin: 0 auto;
@@ -1420,7 +1425,7 @@
   // margin-top: 2rem;
   justify-content: center;
   font-size: 40px;
-  margin-left: -2rem;
+  margin-left: -2.5rem;
   @media (min-width: $breakpoint-tablet) {
     margin-left: 0;
   }
