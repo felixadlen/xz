@@ -2997,6 +2997,15 @@ header {
   top: 0;
 }
 
+#intro-about {
+  height: 80vh;
+}
+@media (min-width: 768px) {
+  #intro-about {
+    height: 90vh;
+  }
+}
+
 #morph-xz {
   display: -webkit-box;
   display: -webkit-flex;

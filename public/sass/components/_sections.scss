@@ -1402,6 +1402,13 @@
 
 // about us -sidan
 
+#intro-about {
+  height: 80vh;
+  @media (min-width: $breakpoint-tablet) {
+    height: 90vh;
+  }
+}
+
 #aboutUsPresentation {
   // padding: 2rem;
 }
