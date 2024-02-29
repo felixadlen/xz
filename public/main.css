@@ -2231,6 +2231,7 @@ header {
           flex: 0 0 100%;
   padding: 0rem 2rem 4rem 2rem;
   margin-bottom: 6rem;
+  z-index: 2000;
 }
 .split-container .left-split p {
   text-align: left;
@@ -2262,14 +2263,14 @@ header {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-right: -5rem;
-  margin-top: -20rem;
+  margin-top: -15rem;
 }
 .split-container .right-split img {
   max-width: 80%;
   display: block;
 }
 .split-container .right-split .felix-img {
-  margin-top: -10rem;
+  margin-top: -8rem;
 }
 @media (min-width: 768px) {
   .split-container .left-split,
