@@ -835,10 +835,10 @@ header {
 .text-line {
   stroke-dasharray: 770;
   stroke-dashoffset: 770;
-  -webkit-animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
-     -moz-animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
-       -o-animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
-          animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
+  -webkit-animation: dash 8s linear forwards, filling 3.5s ease-in forwards;
+     -moz-animation: dash 8s linear forwards, filling 3.5s ease-in forwards;
+       -o-animation: dash 8s linear forwards, filling 3.5s ease-in forwards;
+          animation: dash 8s linear forwards, filling 3.5s ease-in forwards;
 }
 @media (min-width: 768px) {
   .text-line {
@@ -1267,8 +1267,8 @@ header {
      -moz-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
-  height: 300px;
-  font-size: 50vw;
+  height: 200px;
+  font-size: 6rem;
   font-weight: 800;
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
@@ -1281,7 +1281,7 @@ header {
   }
 }
 .white-bg .intro-subheader {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.3;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
@@ -1296,7 +1296,6 @@ header {
       -ms-flex-item-align: start;
           align-self: flex-start;
   text-align: center;
-  margin-top: 1.5rem;
 }
 @media (min-width: 768px) {
   .white-bg .intro-subheader {
@@ -1374,6 +1373,10 @@ header {
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: white;
+}
+.button-center a:hover {
+  color: #e8e8e8;
 }
 
 #what-we-do {
@@ -1537,7 +1540,7 @@ header {
   font-size: 1.2rem;
   line-height: 1.6;
   margin: 0 auto;
-  padding: 1rem 3rem;
+  padding: 1rem 1.4rem;
 }
 @media (min-width: 768px) {
   #introduction p {
@@ -1554,13 +1557,123 @@ header {
   padding: 0rem 2rem;
   line-height: 1.1;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 15vw;
 }
 @media (min-width: 768px) {
   #introduction h2 {
     font-size: 5rem;
     padding: 0rem;
   }
+}
+
+#introduction-about {
+  height: 90vh;
+  padding: 0 1.4rem;
+}
+#introduction-about h2 {
+  margin-bottom: 1rem;
+}
+#introduction-about p {
+  margin-bottom: 2rem;
+}
+#introduction-about .textvideo-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: auto;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1200px;
+  -webkit-column-gap: 5rem;
+     -moz-column-gap: 5rem;
+          column-gap: 5rem;
+}
+#introduction-about .textvideo-container .left-split-text {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+     -moz-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+     -moz-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin-top: -5rem;
+}
+@media (min-width: 768px) {
+  #introduction-about .textvideo-container .left-split-text {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+       -moz-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 0;
+  }
+}
+#introduction-about .textvideo-container .right-split-video {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+     -moz-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+     -moz-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+@media (min-width: 768px) {
+  #introduction-about .textvideo-container .right-split-video {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 40%;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+       -moz-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+#introduction-about .textvideo-container .right-split-video video {
+  max-width: 550px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px; /* Adds rounded corners with a radius of 5px */
+  -webkit-box-shadow: 0px 20px 34px -3px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0px 20px 34px -3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 20px 34px -3px rgba(0, 0, 0, 0.1);
 }
 
 .embrace-answer,
@@ -2127,6 +2240,9 @@ header {
 }
 #blog3-preview .blogcontainerThree .text-container button {
   display: block;
+}
+#blog3-preview .blogcontainerThree .text-container a:hover {
+  color: white;
 }
 #blog3-preview .blogcontainerThree .text-container h4 {
   margin-top: 1rem;
