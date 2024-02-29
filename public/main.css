@@ -1653,6 +1653,7 @@ header {
      -moz-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+  margin-bottom: 4rem;
 }
 @media (min-width: 768px) {
   #introduction-about .textvideo-container .right-split-video {
