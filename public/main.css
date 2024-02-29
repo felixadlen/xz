@@ -2962,7 +2962,15 @@ header {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: blue;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+@media (min-width: 1024px) {
+  .service-item {
+    height: 80vh;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .service-item-wrapper {

@@ -1135,8 +1135,6 @@
     flex: 0 0 85%;
     // height: 100%;
     padding: 2rem;
-
-    // background-color: grey;
     &:nth-child(2) {
       background-color: rgba(128, 128, 128, 0.102);
     }
@@ -1362,7 +1360,13 @@
 .service-item {
   display: flex;
   align-items: center;
-  background-color: blue;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  @media (min-width: $breakpoint-desktop) {
+    height: 80vh;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .service-item-wrapper {
