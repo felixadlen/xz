@@ -1718,12 +1718,12 @@ header {
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0rem 2rem;
+  padding: 0rem 1rem;
 }
 @media (min-width: 768px) {
   .text-centercontainer {
     margin: 0 auto;
-    max-width: 700px;
+    max-width: 680px;
   }
 }
 @media (min-width: 768px) {
@@ -3018,6 +3018,12 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 40px;
+  margin-left: -1rem;
+}
+@media (min-width: 768px) {
+  #morph-xz {
+    margin-left: 0;
+  }
 }
 
 #morph-xz span {

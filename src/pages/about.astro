@@ -43,7 +43,7 @@
       </div>
       <img class="bird" src="/img/jason-seagull.png" alt="" />
     </section>
-    <script>
+    <script> 
 document.addEventListener("DOMContentLoaded", function () {
     var bird = document.querySelector(".bird");
 
@@ -186,20 +186,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const xRect = xSpan.getBoundingClientRect();
         const zRect = zSpan.getBoundingClientRect();
 
-        // Center positions for X and Z
-        const combinedWidth = xRect.width + zRect.width;
-        const spaceBetween = (containerWidth - combinedWidth) / 2;
+        let xMove, zMove;
 
-        const xCenterPosition = spaceBetween;
-        const zCenterPosition = spaceBetween + xRect.width;
+        if (window.innerWidth < 768) {
+            // Align to the left for mobile
+            xMove = -xRect.left + container.offsetLeft;
+            zMove = -zRect.left + xRect.width + container.offsetLeft;
+        } else {
+            // Center alignment for desktop
+            const combinedWidth = xRect.width + zRect.width;
+            const spaceBetween = (containerWidth - combinedWidth) / 2;
 
-        const xMove = xCenterPosition - xRect.left + container.offsetLeft;
-        const zMove = zCenterPosition - zRect.left + container.offsetLeft;
+            const xCenterPosition = spaceBetween;
+            const zCenterPosition = spaceBetween + xRect.width;
+
+            xMove = xCenterPosition - xRect.left + container.offsetLeft;
+            zMove = zCenterPosition - zRect.left + container.offsetLeft;
+        }
 
         xSpan.style.transform = `translateX(${xMove}px)`;
         zSpan.style.transform = `translateX(${zMove}px)`;
     }, 1800);
 }
+
 
 });
 
