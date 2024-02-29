@@ -37,7 +37,7 @@
     a:last-of-type {
       color: #bcbdb9;
       margin-top: 0rem;
-
+      text-decoration: none;
       font-size: 0.9rem;
       font-weight: 400;
       &:hover {
@@ -102,4 +102,9 @@
 .footer-button {
   font-size: 1.8rem;
   font-weight: 800;
+  color: #c83c4e;
+  cursor: pointer;
+  &:hover {
+    color: #e3455a;
+  }
 }
