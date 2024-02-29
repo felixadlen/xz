@@ -44,7 +44,7 @@ body ::selection {
   -moz-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: #121317;
+  background-color: #1c1e21;
   padding: 1.4rem;
   gap: 0.6rem;
 }
