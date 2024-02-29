@@ -195,6 +195,8 @@ body {
 .footer-button {
   font-size: 1.8rem;
   font-weight: 800;
+  cursor: pointer;
+  color: #c83c4e;
 }
 
 .footer-button:hover {

@@ -103,11 +103,12 @@ const allPosts = (await Astro.glob('../pages/stories/*.{md,mdx}')).sort(
 .stories-post-header {
   /* padding: 1.4rem; */
   margin-top: 4rem;
+  margin-left: 1.4rem;
 }
 @media (min-width: 768px) {
   .stories-post-header {
 margin-top: 0;
-/* padding:0; */
+margin-left: 0;
   }
 }
 
@@ -210,7 +211,6 @@ line-height: 1.05;
     justify-content: left;
     margin-bottom: 2rem;
     margin-top: 0.6rem;
-    margin-left: 1.4rem;
   }
   @media (min-width: 768px) {
     .post-content__subtitle {

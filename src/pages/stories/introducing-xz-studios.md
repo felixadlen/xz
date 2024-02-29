@@ -33,7 +33,7 @@ To make this possible, we combine our own experiences and enthusiasm of explorin
 <h2 style="margin-top: 2rem;">Experiences creates stories</h2>
 We are currently in Canggu, Indonesia. Nice with sun and fried rice indeed, but that's not the only reason why we're here. For 8 months, we are dedicating our lives to exploring and gather new knowledge about marketing trends around the world, which we will adapt into the work we do. Every new lesson is a part of a new story.
 
-This story begins with Chapter 1, and we'll use this space to post our marketing insights, random reflections and learnings once in a while. Ambitiously speaking – perhaps once per week! If you're interested in bringing more marketing value to your business, consider following our cool Instagram or subscribe to our ~~newsletter~~ VIP updates that might interest you. We don't like spam either, so let's keep it professional.
+This is the first of many stories, and we'll use this space to post our marketing insights, random reflections and learnings once in a while. Ambitiously speaking – perhaps once per week! If you're interested in bringing more marketing value to your business, consider following our cool Instagram or subscribe to our updates that might interest you. We don't like spam either, so let's keep it professional.
 
 Last, but not least; we might already have begun a few projects. Both some of our own and some for people we work with, and can't wait to let you know more soon.
 
