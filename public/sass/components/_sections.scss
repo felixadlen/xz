@@ -1470,3 +1470,11 @@
 }
 
 //
+
+// services
+#intro-services {
+  height: 80vh;
+  @media (min-width: $breakpoint-tablet) {
+    height: 90vh;
+  }
+}

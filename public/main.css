@@ -3129,6 +3129,15 @@ header {
   line-height: 1.4;
 }
 
+#intro-services {
+  height: 80vh;
+}
+@media (min-width: 768px) {
+  #intro-services {
+    height: 90vh;
+  }
+}
+
 .form-popup-bg {
   position: fixed;
   inset: 0;
