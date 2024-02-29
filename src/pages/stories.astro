@@ -12,7 +12,7 @@ const allPosts = (await Astro.glob('./stories/*.{md,mdx}')).sort(
 let initialPostCount = 3;
 
 const seo = {
-  title: 'STORIES by XZ',
+  title: 'STORIES',
   description: 'Insights and reflection',
 };
 
@@ -41,15 +41,13 @@ function loadMorePosts() {
 
       <div class="highlightTextContainer">
         
-        <h1 class="fade-highlight">our stories</h1>
+        <h1 class="fade-highlight stories-exception-heading">our stories</h1>
 
         <p class="subheader-stories-index">
           When you explore, you create stories.
           Here are our insights and random reflections from exploring new marketing ideas around the world.</p>      
      
-          <div class="red-divider">
-
-          </div>
+       
         </div>
 
 
@@ -124,6 +122,11 @@ function animateWords(element) {
 
 
 <style>
+@media (max-width: 768px) {
+  .stories-exception-heading {
+font-size: 3rem !important;
+}
+}
 
 .red-divider {
   margin-top: 3rem;
@@ -147,13 +150,21 @@ function animateWords(element) {
 
 
 #stories-header {
-  height: 45vh;
+ height: 50vh;
   width: 100%;
   z-index: -100;
   background-color: #e8e8e8;
   position: relative;
   overflow: hidden;
+  margin-bottom: -1rem;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  #stories-header {
   margin-bottom: 3rem;
+  height: 45vh;
+  margin-top: 0;
+}
 }
 
 #stories-header h3 {
@@ -224,10 +235,13 @@ function animateWords(element) {
 
 
   .subheader-stories-index {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     /* background-color: red; */
     text-align: center;
     max-width: 800px;
+  }
+  @media (min-width: 768px) {
+    text-align: center;
   }
 
   .post.hidden {

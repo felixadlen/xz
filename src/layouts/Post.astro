@@ -27,8 +27,15 @@ const allPosts = (await Astro.glob('../pages/stories/*.{md,mdx}')).sort(
 
 <Layout seo={seo}>
   
-  <!-- <a href="/stories/" class="showAllPosts">Show all stories</a> -->
+  <a href="/stories/" class="showAllPosts">Show all stories</a>
 
+<div class="stories-post-header">
+  <h1 class="post-content__title">{frontmatter.title}</h1>
+  <h2 class="post-content__subtitle">{frontmatter.subtitle}</h2>
+  <p class="post-content__date">
+    <!-- <span style="color: #C83C4E; font-weight: 700;font-style: normal;text-transform: uppercase;">{frontmatter.chapter}&nbsp;</span>&nbsp; -->
+    <time>{formatDate(frontmatter.publishedAt)}</time>&nbsp;in {frontmatter.location} </p>
+  </div>
 
   {
     frontmatter.image && (
@@ -49,19 +56,11 @@ const allPosts = (await Astro.glob('../pages/stories/*.{md,mdx}')).sort(
     )
 } 
 
-<!-- 
-  <h1 class="post-content__title">{frontmatter.title}</h1>
-  <p class="post-content__date"><span style="color: #C83C4E; font-weight: 700;font-style: normal;text-transform: uppercase;">{frontmatter.chapter}&nbsp;</span>&nbsp;
-    <time>{formatDate(frontmatter.publishedAt)}</time>&nbsp;in {frontmatter.location}     </p>
 
-  -->
  
   <Container>
 
-    <h1 class="post-content__title">{frontmatter.title}</h1>
-    <p class="post-content__date"><span style="color: #C83C4E; font-weight: 700;font-style: normal;text-transform: uppercase;">{frontmatter.chapter}&nbsp;</span>&nbsp;
-      <time>{formatDate(frontmatter.publishedAt)}</time>&nbsp;in {frontmatter.location}     </p>
-  
+
     <article class="post-content__article">
       <div class="post-content__top fade-in">
 
@@ -77,14 +76,6 @@ const allPosts = (await Astro.glob('../pages/stories/*.{md,mdx}')).sort(
         } -->
 
         
-
-      
-
-
-        <!-- <h1 class="post-content__title">{frontmatter.title}</h1> -->
-        <h2 class="post-content__subtitle">{frontmatter.subtitle}</h2>
-
-
           <!-- <h4 class="post-content__chapter">{frontmatter.chapter}</h4> -->
 
        
@@ -108,6 +99,18 @@ const allPosts = (await Astro.glob('../pages/stories/*.{md,mdx}')).sort(
 
 
 <style>
+
+.stories-post-header {
+  /* padding: 1.4rem; */
+  margin-top: 4rem;
+}
+@media (min-width: 768px) {
+  .stories-post-header {
+margin-top: 0;
+/* padding:0; */
+  }
+}
+
     #blog-BGbox {
            background-color: #051118;              
         padding: 2rem 2rem;
@@ -136,22 +139,24 @@ const allPosts = (await Astro.glob('../pages/stories/*.{md,mdx}')).sort(
 
   .showAllPosts {
   display: flex;
-  justify-content: left;
-  padding: 0rem 10rem;
-  margin-top: 2.1rem;
-  text-decoration:none;
-  padding-bottom: 0.5rem;
+  justify-content: center;
+  /* padding: 0rem 10rem; */
+  margin-top: 1.1rem;
+  text-decoration:none;´
   }
   @media (min-width: 768px) {
     .showAllPosts {
     margin-top:6rem;
-    /* text-decoration: underline; */
+    padding-bottom: 2.5rem;
+    
+
     }
   }
 
   .showAllPosts::before {
     content: '◀︎';
     font-size: 10px; 
+    color: #C83C4E;
     margin-top: 7px;
     margin-right: 0.4rem;
   }
@@ -177,33 +182,45 @@ const allPosts = (await Astro.glob('../pages/stories/*.{md,mdx}')).sort(
 
 
   .post-content__title {
-    font-size: 3rem;
+    font-size: 2.6rem;
     letter-spacing: -2px;
     line-height: 1.1;
-    padding: 2rem;
     color: #051118;
-    margin-top: 4rem;
-
+    display: flex;
+    margin-top: 2rem;
+    justify-content: left;
   }
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
   .post-content__title {
 font-size: 5vw;
-/* margin: 8rem 0rem 2rem 0rem; */
 text-align: center;
-display: flex;
 justify-content: center;
-/* padding: 0rem 10rem; */
 line-height: 1.05;
 }
 }
 
 
   .post-content__subtitle {
-    font-weight: 200;
-    font-size: 1.7rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #1c1e21;
     max-width: 100%;
-    margin-bottom: 1rem;
-    margin-top: 0.4rem;
+    padding-top: 0;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 2rem;
+    margin-top: 0.6rem;
+    margin-left: 1.4rem;
+  }
+  @media (min-width: 768px) {
+    .post-content__subtitle {
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: 200;
+justify-content: center;
+margin-left: 0;
+
+    }
   }
 
   @media (min-width: 768px;) {
@@ -226,17 +243,16 @@ line-height: 1.05;
 
 
   .post-content__date {
-    /* margin: 0 auto; */
-    font-size: var(--step--1);
+    font-size: 1.1rem;
     color: var(--color-gray);
     font-style: italic;
-    margin-bottom: 6rem;
-    padding: 0rem 2rem;
+    margin-bottom: 0rem;
+    /* padding: 0rem; */
   }
   @media (min-width: 768px) {
     .post-content__date {
       padding: 0rem 10rem;
-      margin-bottom: 12rem;
+      margin-bottom: 4rem;
       display: flex; 
       justify-content: center;
     }
@@ -251,14 +267,13 @@ line-height: 1.05;
   }
   @media (min-width: 768px) {
     .post-content__img {
-      margin: 4rem 2rem 1.5rem 2rem;
-    max-width: 100%;
+      margin: 4rem auto 2rem;
+    max-width: 1200px;
     height: auto;
-    margin: auto;
+border-radius: 5px;
     box-shadow: inset 0px -40px 15px -5px rgba(0, 0, 0, 0.5);
-
     /* border-radius: 1rem; */
-    aspect-ratio:16/9;
+    aspect-ratio:16/7;
     }
   }
   .post-content__content :global(img) {

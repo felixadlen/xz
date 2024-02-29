@@ -3031,7 +3031,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 40px;
-  margin-left: -2.5rem;
+  margin-left: -2.6rem;
 }
 @media (min-width: 768px) {
   #morph-xz {
@@ -3058,6 +3058,10 @@ header {
 
 .hide {
   opacity: 0;
+}
+
+.person-quotetext {
+  line-height: 1.4;
 }
 
 .form-popup-bg {
