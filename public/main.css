@@ -1598,9 +1598,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 1200px;
-  -webkit-column-gap: 5rem;
-     -moz-column-gap: 5rem;
-          column-gap: 5rem;
+  gap: 2rem;
 }
 #introduction-about .textvideo-container .left-split-text {
   -webkit-box-flex: 0;
