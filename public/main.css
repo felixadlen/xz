@@ -835,10 +835,10 @@ header {
 .text-line {
   stroke-dasharray: 770;
   stroke-dashoffset: 770;
-  -webkit-animation: dash 8s linear forwards, filling 3.5s ease-in forwards;
-     -moz-animation: dash 8s linear forwards, filling 3.5s ease-in forwards;
-       -o-animation: dash 8s linear forwards, filling 3.5s ease-in forwards;
-          animation: dash 8s linear forwards, filling 3.5s ease-in forwards;
+  -webkit-animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
+     -moz-animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
+       -o-animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
+          animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
 }
 @media (min-width: 768px) {
   .text-line {
