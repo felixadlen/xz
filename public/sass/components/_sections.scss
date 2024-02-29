@@ -347,8 +347,8 @@
 
 // ---
 
-#white-bg {
-  height: 80vh;
+.white-bg {
+  // height: 80vh;
   width: 100%;
   // background-color: #e8e8e8;
   background: rgb(247, 247, 247);
@@ -666,8 +666,12 @@
   padding: 0rem 2rem;
   @media (min-width: $breakpoint-tablet) {
     margin: 0 auto;
-    max-width: 920px;
-    text-align: center;
+    max-width: 700px;
+  }
+  div {
+    @media (min-width: $breakpoint-tablet) {
+      padding-left: 2rem;
+    }
   }
   h2 {
     text-align: left;
@@ -678,9 +682,6 @@
   }
   p {
     font-size: 1.2rem;
-    @media (min-width: $breakpoint-tablet) {
-      font-size: 1.4rem;
-    }
   }
 }
 
@@ -930,19 +931,27 @@
 
 // TEST ID SPLIT-CONTAINER
 
-#split-container {
-  margin-top: -12rem;
-  padding: 0rem 0rem 0rem 4rem;
+.split-container {
   display: flex;
-  // flex-wrap: wrap;
+  // background-color: blue;
+  flex-wrap: wrap;
   justify-content: center;
+  margin: auto;
+  gap: 0;
   width: 100%;
-  overflow-x: auto;
+  height: 100%;
+  overflow-x: hidden;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-wrap: nowrap;
+    // gap: 10rem;
+  }
+
   .left-split {
-    margin-top: 12rem;
-    flex: 0 0 35%;
-    align-self: center;
-    justify-content: right;
+    flex: 0 0 100%;
+    // background-color: green;
+    padding: 0rem 2rem 4rem 2rem;
+    margin-bottom: 6rem;
     p {
       text-align: left;
       font-size: 1.3rem;
@@ -952,14 +961,88 @@
       display: block;
     }
   }
+
   .right-split {
-    flex: 0 0 50%;
+    flex: 0 0 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-right: -5rem;
+    margin-top: -20rem;
     img {
-      max-width: 100%;
+      max-width: 80%;
       display: block;
+    }
+    .felix-img {
+      margin-top: -8rem;
+    }
+  }
+  @media (min-width: $breakpoint-tablet) {
+    .left-split,
+    .right-split {
+      flex: 0 0 100%;
+    }
+
+    .left-split {
+      order: 1;
+      flex: 0 0 40%;
+      padding-left: 2rem;
+      margin-left: auto;
+    }
+
+    .right-split {
+      order: 2;
+      margin-right: 0;
+      flex: 0 0 50%;
+      align-items: flex-end;
+      max-height: 100%;
+      img {
+        max-width: 100%;
+        display: block;
+      }
     }
   }
 }
+.person-reverse {
+  .split-container {
+    .left-split {
+      order: 1;
+      flex: 0 0 100%;
+    }
+
+    .right-split {
+      order: 2;
+      flex: 0 0 100%;
+    }
+    @media (min-width: $breakpoint-tablet) {
+      .left-split,
+      .right-split {
+        flex: 0 0 100%;
+      }
+
+      .left-split {
+        order: 2;
+        flex: 0 0 40%;
+        padding-left: 2rem;
+        margin-left: auto;
+        margin-right: 4rem;
+      }
+
+      .right-split {
+        order: 1;
+        margin-right: 0;
+        flex: 0 0 50%;
+        align-items: flex-end;
+        max-height: 100%;
+        img {
+          max-width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
 .lock-scroll {
   overflow: hidden;
   height: 100%;
@@ -1205,7 +1288,7 @@
 
 //
 .bird {
-  width: 100px;
+  width: 70px;
   position: absolute;
   bottom: 0px;
   left: 45%;
@@ -1252,12 +1335,19 @@
   height: 90vh;
 }
 
+.vh-100 {
+  height: 100vh;
+}
+
 //
 .red-flag-box {
   background-color: #c83c4e;
   padding: 0.8rem 2rem;
   text-align: center;
   font-weight: 600;
+  p:hover {
+    color: rgb(214, 214, 214);
+  }
 }
 
 //
@@ -1309,3 +1399,32 @@
     }
   }
 }
+
+// about us -sidan
+
+#aboutUsPresentation {
+  // padding: 2rem;
+}
+
+#morph-xz {
+  display: flex;
+  // margin-top: 2rem;
+  justify-content: center;
+  font-size: 40px;
+}
+
+#morph-xz span {
+  display: inline-block;
+  transition: opacity 2s 1.5s, transform 2s 1.5s;
+  font-size: 3rem;
+  font-weight: 700;
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 6rem;
+  }
+}
+
+.hide {
+  opacity: 0;
+}
+
+//

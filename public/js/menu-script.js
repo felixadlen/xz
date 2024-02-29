@@ -134,6 +134,9 @@ for (var i = 0; i < menuObjects.length; i++) {
   }
 }
 
+// TO DO: fixa så att regeln gäller även för undertitlar till stories/blogname..
+
+
 // La till ovan script för att disable ability to click on active menu items.
 
 window.addEventListener("DOMContentLoaded", (event) => {

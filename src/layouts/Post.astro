@@ -27,14 +27,9 @@ const allPosts = (await Astro.glob('../pages/stories/*.{md,mdx}')).sort(
 
 <Layout seo={seo}>
   
-  <a href="/stories/" class="showAllPosts">Show all stories</a>
+  <!-- <a href="/stories/" class="showAllPosts">Show all stories</a> -->
 
 
-  <h1 class="post-content__title">{frontmatter.title}</h1>
-  <p class="post-content__date"><span style="color: #C83C4E; font-weight: 700;font-style: normal;text-transform: uppercase;">{frontmatter.chapter}&nbsp;</span>&nbsp;
-    <time>{formatDate(frontmatter.publishedAt)}</time>&nbsp;in {frontmatter.location}     </p>
-
- 
   {
     frontmatter.image && (
         <picture>
@@ -53,8 +48,20 @@ const allPosts = (await Astro.glob('../pages/stories/*.{md,mdx}')).sort(
         </picture>
     )
 } 
+
+<!-- 
+  <h1 class="post-content__title">{frontmatter.title}</h1>
+  <p class="post-content__date"><span style="color: #C83C4E; font-weight: 700;font-style: normal;text-transform: uppercase;">{frontmatter.chapter}&nbsp;</span>&nbsp;
+    <time>{formatDate(frontmatter.publishedAt)}</time>&nbsp;in {frontmatter.location}     </p>
+
+  -->
+ 
   <Container>
 
+    <h1 class="post-content__title">{frontmatter.title}</h1>
+    <p class="post-content__date"><span style="color: #C83C4E; font-weight: 700;font-style: normal;text-transform: uppercase;">{frontmatter.chapter}&nbsp;</span>&nbsp;
+      <time>{formatDate(frontmatter.publishedAt)}</time>&nbsp;in {frontmatter.location}     </p>
+  
     <article class="post-content__article">
       <div class="post-content__top fade-in">
 
@@ -148,13 +155,7 @@ const allPosts = (await Astro.glob('../pages/stories/*.{md,mdx}')).sort(
     margin-top: 7px;
     margin-right: 0.4rem;
   }
-/* @media (min-width: 768px) {
-  .showAllPosts::before {
-    display: none;
-  } */
 
-  
-/* } */
 
   
   .post-content__category {
@@ -187,11 +188,11 @@ const allPosts = (await Astro.glob('../pages/stories/*.{md,mdx}')).sort(
 @media (min-width: 1000px) {
   .post-content__title {
 font-size: 5vw;
-margin: 8rem 0rem 2rem 0rem;
-text-align: left;
+/* margin: 8rem 0rem 2rem 0rem; */
+text-align: center;
 display: flex;
 justify-content: center;
-padding: 0rem 10rem;
+/* padding: 0rem 10rem; */
 line-height: 1.05;
 }
 }
@@ -237,8 +238,7 @@ line-height: 1.05;
       padding: 0rem 10rem;
       margin-bottom: 12rem;
       display: flex; 
-
- 
+      justify-content: center;
     }
     
   }

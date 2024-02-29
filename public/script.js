@@ -278,3 +278,39 @@ document.querySelector('.bird').addEventListener('click', function() {
 
 // TEST AV BIRD SOM FLYGER PÅ KLICK
 
+
+
+// 
+
+
+// NEDAN ÄR "Felix and Inez" transforms to XZ på about-us-sidan
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    const spans = document.querySelectorAll('#text span');
+    let xSpan, zSpan;
+
+    spans.forEach(el => {
+      const letter = el.textContent.toUpperCase();
+      if (letter === 'X') xSpan = el;
+      if (letter === 'Z') zSpan = el;
+      if (!['X', 'Z'].includes(letter)) {
+        el.classList.add('hide');
+      }
+    });
+
+    // Wait for the other letters to fade out
+    setTimeout(() => {
+      const xRect = xSpan.getBoundingClientRect();
+      const zRect = zSpan.getBoundingClientRect();
+
+      // Calculate the horizontal distance to move X and Z
+      const distanceToMove = (zRect.left - xRect.right) / 2 - 1; // Adjusting the distance by -20px
+
+      xSpan.style.transform = `translateX(${distanceToMove}px)`;
+      zSpan.style.transform = `translateX(${-distanceToMove}px)`;
+    }, 4000); // Delay should match the duration of the fade-out transition
+  }, 2000);
+});
+
+// 

@@ -29,7 +29,7 @@
   <body>
     <div id="master-menu"></div>
 
-    <section id="white-bg">
+    <section class="white-bg vh-90 style="o">
       <div class="highlightTextContainer">
         <h1 class="fade-highlight desktop">we are xz studios</h1>
         <h1 class="nofade-header mobile">
@@ -74,50 +74,137 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     </script>
-    <section class="dark-bg">
-      <div class="about-us">
-        <h2 class="white">What if "what if?"</h2>
 
-        <br />
-        <p class="white">
-          XZ was born from a desire to challenge ourselves to become better at what we do. That's why we decided to do something about our re-occuring 'What if?".
-         <br><br> This is a marketing studio where creativity is fueled by new experiences, diverse perspectives, and the drive to do something different. That's why we decided to go out and explore. To embrace the unknown.
-        </p>
-        <br />
-        <p class="white">
-          Together, Inez and Felix, bring years of marketing expertise to the studio and the mission is simple: to help small businesses create impactful and recognized brands. 
-        </p>
+
+<section class="dark-bg vh-100 about-us">
+  <div class="text-centercontainer">
+    <!-- <h2 class="white" style="justify-self: left;">is it possible?</h2> -->
+
+    <div id="morph-xz" class="white-color">
+      <span>f</span><span>e</span><span>l</span><span>i</span><span>x</span><span>&nbsp;</span><span>a</span><span>n</span><span>d</span><span>&nbsp;</span><span>i</span><span>n</span><span>e</span><span>z</span>
+    </div>  
+
+  
+    <br />
+    <div style="text-align: left;">
+    <p class="white">
+      XZ was born from a desire to challenge ourselves to become better at what we do. That's why we decided to do something about our re-occuring 'What if?".
+     <br><br> This is a marketing studio where creativity is fueled by new experiences, diverse perspectives, and the drive to do something different. That's why we decided to go out and explore. To embrace the unknown.
+    </p>
+    <br />
+    <p class="white">
+      Together, Inez and Felix, bring years of marketing expertise to the studio and the mission is simple: to help small businesses create impactful and recognized brands. 
+    </p>
+  </div>
+ 
+
+  </div>
+  </section>
+
+
+  <div class="red-flag-box"><p class="white-color btnOpenForm">Helping others is fun. We are just a message away! </p></div>
+
+    <section class="white-bg" id="aboutUsPresentation">
      
+      <div class="split-container">
+        <div class="left-split">
+        
+          <span style="font-size: 16rem;font-weight: 900;">"</span>
+          <p style="margin-top: -10rem;">            Ever since childhood, being creative has always been my happy place – whether it's designing, illustrating or writing. Together with my background in strategic communication and graphic design, the field of marketing truly feels like home.
+                                </p>
+                                <h3 style="margin-bottom: 0.4rem;margin-top: 2rem;">
+                                  Inez Nyberg</h3>
+                                  <p style="font-size: 1rem;font-style: italic;">Visual Communication</p>
+  
+          <button class="btn-red btnOpenForm">Say hi!</button>
+        </div>
+        <div class="right-split">
+          <img src="img/grey-inez-test.png" alt="">
+        </div>
+   
       </div>
-      <!-- <div class="fullscreen-img">
-        <div class="about-us">
-          <h2 class="red-color">
-            a personal marketing duo from<br />malmö exploring the world
-          </h2>
-          <p class="dark-color">
-            "I have an idea" Felix said one day. Inez liked the idea. XZ started,
-            and we left Malmö for a while.
-          </p>
-          <br />
-          <p class="dark-color">
-            XZ was born from a shared desire for change – a studio where
-            creativity is fueled by new experiences, diverse perspectives, and an
-            eagerness to do something different.
-          </p>
-          <br />
-          <p class="dark-color">
-            Inez and Felix bring years of marketing expertise to XZ and our
-            mission is simple: to assist small businesses in creating impactful,
-            personal brands. XZ is more than a studio; it's a journey into the
-            heart of creativity, where each project is a part of a story, teaching
-            us to learn, grow, and leave a lasting impression.
-          </p>
-      </div>  -->
+
     </section>
 
-    <section id="white-bg">
-      <h2 class="dark">hello</h2>
-    </section>
+    <section class="dark-bg white-color person-reverse">
+      <div class="split-container">
+        <div class="left-split">
+        
+          <span style="font-size: 16rem;font-weight: 900;">"</span>
+          <p style="margin-top: -10rem;">            Ever since childhood, being creative has always been my happy place – whether it's designing, illustrating or writing. Together with my background in strategic communication and graphic design, the field of marketing truly feels like home.
+                                </p>
+                                <h3 style="margin-bottom: 0.4rem;margin-top: 2rem;">
+                                  Felix Adlén </h3>
+                                  <p style="font-size: 1rem;font-style: italic;">Concept Creative</p>
+  
+        
+  
+          <button class="btn-red btnOpenForm">Beer?</button>
+        </div>
+        <div class="right-split">
+          <img src="img/grey-felix-test.png" alt="" class="felix-img" />
+     </div>
+      </div>
+
+
+    </section> 
+   
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const morphXZ = document.querySelector('#morph-xz');
+    let hasAnimated = false;
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasAnimated) {
+                animateMorphXZ();
+                hasAnimated = true;
+                observer.unobserve(morphXZ); // Optional: Stop observing after animation
+            }
+        });
+    }, { threshold: 0.5 }); // Adjust threshold as needed
+
+    observer.observe(morphXZ);
+
+    function animateMorphXZ() {
+    const spans = document.querySelectorAll('#morph-xz span');
+    let xSpan, zSpan;
+
+    spans.forEach(el => {
+        const letter = el.textContent.toUpperCase();
+        if (letter === 'X') xSpan = el;
+        if (letter === 'Z') zSpan = el;
+        if (!['X', 'Z'].includes(letter)) {
+            el.classList.add('hide');
+        }
+    });
+
+    // Wait for the other letters to fade out
+    setTimeout(() => {
+        const container = document.getElementById('morph-xz');
+        const containerWidth = container.clientWidth;
+        const xRect = xSpan.getBoundingClientRect();
+        const zRect = zSpan.getBoundingClientRect();
+
+        // Center positions for X and Z
+        const combinedWidth = xRect.width + zRect.width;
+        const spaceBetween = (containerWidth - combinedWidth) / 2;
+
+        const xCenterPosition = spaceBetween;
+        const zCenterPosition = spaceBetween + xRect.width;
+
+        const xMove = xCenterPosition - xRect.left + container.offsetLeft;
+        const zMove = zCenterPosition - zRect.left + container.offsetLeft;
+
+        xSpan.style.transform = `translateX(${xMove}px)`;
+        zSpan.style.transform = `translateX(${zMove}px)`;
+    }, 1800);
+}
+
+});
+
+
+    </script>
 
     <!-- NEDAN HÄMTAR FOOTER + KONTAKTFORM -->
     <div id="openContactForm" class="hidden"></div>

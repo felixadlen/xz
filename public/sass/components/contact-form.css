@@ -9,18 +9,18 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
   background-color: rgba(43, 43, 43, 0.673);
@@ -45,11 +45,13 @@
 .form-container {
   background-color: #ecebeb;
   -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-          border-radius: 10px;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 10px rgba(0, 0, 0, 0.23);
-     -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 10px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 10px rgba(0, 0, 0, 0.23);
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+    0 6px 10px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+    0 6px 10px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 10px rgba(0, 0, 0, 0.23);
   border: 1px solid rgb(180, 180, 180);
   display: -webkit-box;
   display: -webkit-flex;
@@ -59,10 +61,10 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
   max-width: 600px;
   margin-left: auto;
@@ -71,48 +73,54 @@
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-     -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-       -o-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   padding: 40px;
   color: black;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  font-size: 1.1em;
-  font-family: "Work Sans", sans-serif;
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  font-size: 1.1rem;
+  font-family: "greycliff-cf", sans-serif;
 }
 
-input:-moz-placeholder, textarea:-moz-placeholder {
-  font-size: 1.1em;
-  font-family: "Work Sans", sans-serif;
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  font-size: 1.1rem;
+  font-family: "greycliff-cf", sans-serif;
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder {
-  font-size: 1.1em;
-  font-family: "Work Sans", sans-serif;
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  font-size: 1.1rem;
+  font-family: "greycliff-cf", sans-serif;
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  font-size: 1.1em;
-  font-family: "Work Sans", sans-serif;
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  font-size: 1.1rem;
+  font-family: "greycliff-cf", sans-serif;
 }
 
-input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-  font-size: 1.1em;
-  font-family: "Work Sans", sans-serif;
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  font-size: 1.1rem;
+  font-family: "greycliff-cf", sans-serif;
 }
 
 input::placeholder,
 textarea::placeholder {
-  font-size: 1.1em;
-  font-family: "Work Sans", sans-serif;
+  font-size: 1.1rem;
+  font-family: "greycliff-cf", sans-serif;
 }
 
 input,
 textarea {
   cursor: text;
+  font-size: 1.1rem;
 }
 
 .close-button {
@@ -132,11 +140,6 @@ textarea {
   color: rgb(132, 132, 132);
 }
 
-button {
-  border: 1px solid transparent;
-  background-color: transparent;
-}
-
 .form-group:first-of-type {
   margin-top: 1rem;
 }
@@ -144,8 +147,8 @@ button {
 .form-control {
   width: 100%;
   -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-          border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   margin-bottom: 1rem;
   height: 3rem;
   border: 1px solid transparent;
@@ -154,4 +157,75 @@ button {
 
 .hidden {
   display: none;
+}
+
+.load {
+  margin-left: 2rem;
+  display: none;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.progress {
+  width: 0.5em;
+  height: 0.5em;
+  margin: 0.2em;
+  scale: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #c83c4e;
+  -webkit-animation: loading_492 2s ease infinite;
+  -moz-animation: loading_492 2s ease infinite;
+  -o-animation: loading_492 2s ease infinite;
+  animation: loading_492 2s ease infinite;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+@-webkit-keyframes loading_492 {
+  50% {
+    scale: 1;
+  }
+}
+
+@-moz-keyframes loading_492 {
+  50% {
+    scale: 1;
+  }
+}
+
+@-o-keyframes loading_492 {
+  50% {
+    scale: 1;
+  }
+}
+
+@keyframes loading_492 {
+  50% {
+    scale: 1;
+  }
+}
+.progress:nth-child(2) {
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+  -o-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+
+.progress:nth-child(3) {
+  -webkit-animation-delay: 1.7s;
+  -moz-animation-delay: 1.7s;
+  -o-animation-delay: 1.7s;
+  animation-delay: 1.7s;
 }
