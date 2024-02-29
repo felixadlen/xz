@@ -201,6 +201,11 @@ body ::selection {
           transform: translate(-50%, -25px);
 }
 
+.footer-button {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
 *,
 html {
   padding: 0;
@@ -287,6 +292,9 @@ a {
   text-decoration: none;
   font-weight: 700;
   color: #c83c4e;
+}
+a:hover {
+  color: #e3455a;
 }
 
 .btnOpenForm {
