@@ -417,6 +417,7 @@ button {
 }
 .btn-red:hover {
   background-color: #e34a5e;
+  color: white;
 }
 
 header {
