@@ -1023,7 +1023,7 @@
     // background-color: green;
     padding: 0rem 2rem 4rem 2rem;
     margin-bottom: 6rem;
-    z-index: 2000;
+    z-index: 2;
     p {
       text-align: left;
       font-size: 1.3rem;
@@ -1368,7 +1368,7 @@
   position: absolute;
   bottom: 0px;
   left: 45%;
-  z-index: 10000;
+  z-index: 2;
   transition: transform 1s ease; /* Default transition */
   transform-origin: bottom;
   cursor: pointer; // To indicate it's clickable

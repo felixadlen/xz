@@ -2351,7 +2351,7 @@ header {
           flex: 0 0 100%;
   padding: 0rem 2rem 4rem 2rem;
   margin-bottom: 6rem;
-  z-index: 2000;
+  z-index: 2;
 }
 .split-container .left-split p {
   text-align: left;
@@ -2916,7 +2916,7 @@ header {
   position: absolute;
   bottom: 0px;
   left: 45%;
-  z-index: 10000;
+  z-index: 2;
   -webkit-transition: -webkit-transform 1s ease;
   transition: -webkit-transform 1s ease;
   -o-transition: -o-transform 1s ease;
