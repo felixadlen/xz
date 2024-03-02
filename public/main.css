@@ -836,19 +836,19 @@ header {
 .text-line {
   stroke-dasharray: 770;
   stroke-dashoffset: 770;
-  -webkit-animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
-     -moz-animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
-       -o-animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
-          animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
+  -webkit-animation: dash 3.5s linear forwards, filling 3.5s ease-in forwards;
+     -moz-animation: dash 3.5s linear forwards, filling 3.5s ease-in forwards;
+       -o-animation: dash 3.5s linear forwards, filling 3.5s ease-in forwards;
+          animation: dash 3.5s linear forwards, filling 3.5s ease-in forwards;
 }
 @media (min-width: 768px) {
   .text-line {
-    -webkit-animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
-       -moz-animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
-         -o-animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
-            animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
-    stroke-dasharray: 550;
-    stroke-dashoffset: 550;
+    -moz-animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
+      -o-animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
+         animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
+    -webkit-animation: dash 3.9s linear forwards, filling 3.8s ease-in forwards;
+    stroke-dasharray: 670;
+    stroke-dashoffset: 670;
   }
 }
 
