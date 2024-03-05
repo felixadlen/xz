@@ -3,5 +3,4 @@ export const settings = {
   name: "XZ STUDIOS",
   title: "STORIES",
   description: "Site description",
-  showLittleSticksPlug: false,
 };

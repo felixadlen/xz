@@ -1,3 +1,9 @@
+---
+import MenuNav from "../components/MenuNav.astro";
+import Footer from "../components/Footer.astro";
+
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,7 +41,7 @@
     </script>
   </head>
   <body>
-    <div id="master-menu"></div>
+<MenuNav />
 
     <section class="white-bg" id="intro-about">
       <div class="highlightTextContainer">
@@ -228,8 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <!-- NEDAN HÄMTAR FOOTER + KONTAKTFORM -->
     <div id="openContactForm" class="hidden"></div>
-    <footer id="master-footer"></footer>
-
+<Footer />
     <script src="/script.js" is:inline></script>
   </body>
 </html>

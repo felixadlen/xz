@@ -1,0 +1,84 @@
+---
+import {formatDate} from '../utils/helpers';
+
+// Fetch posts using Astro.glob
+const posts = await Astro.glob('../pages/stories/*.md'); // Adjust the path to your posts
+
+// Sort posts by date in descending order and select the most recent one
+const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.publishedAt) - new Date(a.frontmatter.publishedAt));
+const recentPost = sortedPosts.length > 0 ? sortedPosts[0] : null;
+
+// Extract title, image URL, and published date of the most recent post
+const title = recentPost ? recentPost.frontmatter.title : 'No recent posts';
+const imageUrl = recentPost ? recentPost.frontmatter.image : '';
+const publishedAt = recentPost ? recentPost.frontmatter.publishedAt : '';
+const formattedDate = publishedAt ? formatDate(publishedAt) : 'N/A';
+---
+
+<article class="recent-post">
+
+
+  <a href={recentPost.url}>
+    <div class="recent-post-image">
+      <picture>
+        <source srcset={`${imageUrl.includes('.') ? imageUrl : imageUrl + '.webp'}`} type="image/webp" />
+        <img
+            class=""
+            src={`${imageUrl.includes('.') ? imageUrl : imageUrl + '.png'}`}
+            alt={`Featured image for ${title}`}
+        />
+      </picture></div>
+      <div class="recent-post-title"> 
+      <h2 class="recent-preview__title">{title}</h2>
+      <p class="post-preview__date">{formattedDate}</p>
+
+    </div>
+  </a>
+</article>
+
+<style>
+ .recent-post {
+background-color: #E8E8E81A;
+
+    /* height: 500px; */
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+ }
+
+ .recent-post-image {
+    /* max-width: 200px; */
+    flex: 0 0 50%;
+    /* background-color: green; */
+ }
+
+ .recent-post-image img {
+    border-radius: 8px;
+ }
+
+ .recent-post-title {
+    color: blue;
+    padding: 0rem 2rem 2rem 2rem;
+    flex: 0 0 50%;
+    color: white;
+    font-size: 2rem;
+ }
+
+
+
+ .post-preview__date {
+  font-size: 1rem;
+  color: #c83c4e;
+  font-weight: 500;
+  margin-top: 0.8rem;
+}
+@media (min-width: 768px) {
+  .post-preview__date {
+    margin-top: 0.4rem;
+  }}
+
+</style>

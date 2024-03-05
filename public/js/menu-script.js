@@ -3,11 +3,7 @@ const menuBox = document.querySelector(".menu-box");
 const overlay = document.querySelector(".menu-box-overlay");
 const notification = document.querySelector(".notification-menu");
 
-
-
 let isMenuOpen = false;
-
-
 
 function openMenu() {
   menuBox.style.display = "block";
@@ -22,7 +18,6 @@ function openMenu() {
   }
 
   if (window.innerWidth <= 768) {
-    // ta bort denna och raden nedanför om jag vi vill kunna skrolla oi mobil när menyn är öppen
     document.body.style.overflow = "hidden";
     menuButton.style.transform = "scale(1.5)";
 
@@ -43,7 +38,6 @@ function closeMenu() {
 
   }
   if (window.innerWidth <= 768) {
-    // ta bort denna och raden nedanför om jag vi vill kunna skrolla oi mobil när menyn är öppen
     document.body.style.overflow = "";
   }
 }
@@ -105,14 +99,13 @@ menuButton.addEventListener('mouseover', function (e) {
 
 menuButton.addEventListener('mouseout', function (e) {
   if (isMenuOpen === false) {
-    menuButton.style.backgroundColor = ''; // Set to original background color
+    menuButton.style.backgroundColor = ''; 
   }
 });
 
 menuButton.addEventListener('click', function (e) {
-  menuButton.style.backgroundColor = ''; // Reset on click as well
+  menuButton.style.backgroundColor = ''; 
 });
-// Någlurnda fungerande 19:59 10 nov.
 
 var menuObjects = document.querySelectorAll(".menu-object a");
 
@@ -134,20 +127,4 @@ for (var i = 0; i < menuObjects.length; i++) {
   }
 }
 
-// TO DO: fixa så att regeln gäller även för undertitlar till stories/blogname..
 
-
-// La till ovan script för att disable ability to click on active menu items.
-
-window.addEventListener("DOMContentLoaded", (event) => {
-  fetch("html/menu.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("master-menu").insertAdjacentHTML = data;
-    });
-});
-
-window.addEventListener("load", (event) => {
-  const smallLogoImage = document.querySelector(".small-logo img");
-  smallLogoImage.style.display = "block";
-});

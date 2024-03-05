@@ -2175,6 +2175,7 @@ header {
 
 #blog3-preview {
   height: 90vh;
+  padding: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
