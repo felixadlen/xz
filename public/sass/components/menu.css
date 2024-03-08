@@ -1,3 +1,26 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "greycliff-cf", "sans-serif";
+  font-style: normal;
+  font-size: 1.125rem;
+  color: #040405;
+  background-color: #e8e8e8;
+}
+body ::-moz-selection {
+  background: rgba(200, 60, 79, 0.1490196078);
+}
+body ::selection {
+  background: rgba(200, 60, 79, 0.1490196078);
+}
+
 header {
   position: fixed;
   left: 1rem;
@@ -22,7 +45,7 @@ header {
   padding: 2rem;
   background: rgba(221, 221, 221, 0.5);
   -webkit-backdrop-filter: blur(60px);
-  backdrop-filter: blur(60px);
+          backdrop-filter: blur(60px);
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -40,8 +63,8 @@ header {
   .menu-box {
     width: 235px;
     -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
+       -moz-border-radius: 20px;
+            border-radius: 20px;
     right: 13px;
     top: 7px;
     background-color: #232629;
@@ -98,8 +121,7 @@ header {
   -moz-transition: margin 0.2s, transform 0.2s, -moz-transform 0.2s;
   -webkit-transition: margin 0.2s, -webkit-transform 0.2s;
   transition: margin 0.2s, transform 0.2s;
-  transition: margin 0.2s, transform 0.2s, -webkit-transform 0.2s,
-    -moz-transform 0.2s, -o-transform 0.2s;
+  transition: margin 0.2s, transform 0.2s, -webkit-transform 0.2s, -moz-transform 0.2s, -o-transform 0.2s;
 }
 
 #menu-icon {
@@ -134,19 +156,19 @@ header {
   pointer-events: none;
   top: 26%;
   -webkit-transform: translateY(26%);
-  -moz-transform: translateY(26%);
-  -ms-transform: translateY(26%);
-  -o-transform: translateY(26%);
-  transform: translateY(26%);
+     -moz-transform: translateY(26%);
+      -ms-transform: translateY(26%);
+       -o-transform: translateY(26%);
+          transform: translateY(26%);
 }
 @media (min-width: 768px) {
   .menu-ul {
     margin-top: 1.8rem;
     -webkit-transform: inherit;
-    -moz-transform: inherit;
-    -ms-transform: inherit;
-    -o-transform: inherit;
-    transform: inherit;
+       -moz-transform: inherit;
+        -ms-transform: inherit;
+         -o-transform: inherit;
+            transform: inherit;
   }
 }
 .menu-ul li a {
@@ -193,18 +215,18 @@ header {
   display: flex;
   -webkit-box-pack: left;
   -webkit-justify-content: left;
-  -moz-box-pack: left;
-  -ms-flex-pack: left;
-  justify-content: left;
+     -moz-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   -webkit-box-align: center;
   -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 85%; /* Match the width of .menu-box */
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; /* This ensures padding is included in the width */
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; /* This ensures padding is included in the width */
 }
 
 .small-logo {
@@ -220,8 +242,8 @@ header {
 .notification-menu {
   background-color: #c83c4e;
   -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
+     -moz-border-radius: 100px;
+          border-radius: 100px;
   aspect-ratio: 1/1;
   width: 14px;
   font-size: 10px;
@@ -234,14 +256,14 @@ header {
   pointer-events: none;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 600;
   position: fixed;
   z-index: 2000;
@@ -261,18 +283,4 @@ header {
   position: relative;
   bottom: 2px;
   margin-left: 3px;
-}
-
-.mobile {
-  display: block;
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
-
-.desktop {
-  display: none;
-  @media (min-width: 768px) {
-    display: block;
-  }
 }

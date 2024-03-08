@@ -2,7 +2,9 @@
 import BaseHead from "../components/BaseHead.astro";
 import type { Props as BaseHeadProps } from '../components/BaseHead.astro';
 import CreateCopyCodeButtons from "../components/CodeButtons/CreateCopyCodeButtons.astro";
+import ContactForm from "../components/ContactForm.astro";
 import '../styles/astro-main.css';
+// import ContactForm from "../components/ContactForm.astro";
 export interface Props {
 	seo?: BaseHeadProps;
 }
@@ -17,7 +19,11 @@ const { seo } = Astro.props;
     <script>
       import '../components/CodeButtons/copy-code-button'
     </script>
-    	
+    <!-- <link rel="stylesheet" href="/sass/abstracts/buttons.css"> -->
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+  />
       <script type="text/javascript">
         // Clarity
         (function (c, l, a, r, i, t, y) {
@@ -46,8 +52,10 @@ const { seo } = Astro.props;
     <slot name="header" />
     <main class="flow">
       <slot />
+  
     </main>
     <slot name="footer" />
-    
+    <ContactForm />
+
   </body>
 </html>

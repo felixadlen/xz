@@ -1,6 +1,7 @@
 @import "../base/body";
 
 #footer-container {
+  z-index: 1000;
   display: flex;
   flex-direction: row;
   max-width: 100vw;
@@ -8,7 +9,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   // background-color: #24272b;
-  background-color: #0b0c0e;
+  background-color: #121417;
   padding: 1.4rem;
   gap: 0.6rem;
   @media (min-width: $breakpoint-tablet) {

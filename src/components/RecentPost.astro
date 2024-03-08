@@ -3,8 +3,6 @@ import {formatDate} from '../utils/helpers';
 
 // Fetch posts using Astro.glob
 const posts = await Astro.glob('../pages/stories/*.md'); // Adjust the path to your posts
-
-// Sort posts by date in descending order and select the most recent one
 const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.publishedAt) - new Date(a.frontmatter.publishedAt));
 const recentPost = sortedPosts.length > 0 ? sortedPosts[0] : null;
 
@@ -39,8 +37,6 @@ const formattedDate = publishedAt ? formatDate(publishedAt) : 'N/A';
 <style>
  .recent-post {
 background-color: #E8E8E81A;
-
-    /* height: 500px; */
     max-width: 900px;
     display: flex;
     flex-wrap: wrap;
@@ -48,6 +44,10 @@ background-color: #E8E8E81A;
     flex-direction: row;
     margin: auto;
     justify-content: center;
+    transition: 1s ease;
+ }
+ .recent-post:hover {
+  transform: scale(1.02);
  }
 
  .recent-post-image {
@@ -67,6 +67,14 @@ background-color: #E8E8E81A;
     color: white;
     font-size: 2rem;
  }
+
+ .recent-post h2 {
+  color: white;
+  font-size: 2rem;
+  margin-top: 2rem;
+ }
+
+
 
 
 

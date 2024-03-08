@@ -16,9 +16,6 @@
   --theme-footer-background: hsl(0, 0%, 3%);
   --theme-on-footer-background: hsl(0, 0%, 90%);
 
-  /* Typography */
-  /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
-
   --step--2: clamp(0.78rem, calc(0.71rem + 0.35vw), 0.96rem);
   --step--1: clamp(0.94rem, calc(0.84rem + 0.51vw), 1.2rem);
   --step-0: clamp(1.13rem, calc(0.98rem + 0.73vw), 1.5rem);
@@ -141,33 +138,27 @@ h1 {
   line-height: 1.2;
 }
 
-/* h2 {
+.post-content__article h2 {
   font-size: var(--step-1);
   font-family: var(--font-family-heading);
   color: #c83c4e;
   padding-top: 2rem;
-} */
+}
 
-h3 {
+.post-content__article h3 {
   font-size: var(--step-2);
   font-family: var(--font-family-heading);
   font-weight: 500;
   line-height: 1.2;
 }
 
-h4 {
+.post-content__article h4 {
   font-size: var(--step-1);
   font-family: var(--font-family-heading);
   color: #c83c4e;
 }
 
-/* h1,
-h2,
-h3 {
-  max-width: 30ch;
-} */
-
-p,
+.post-content__article p,
 li {
   max-width: 100%;
   /* display: flex;
@@ -200,29 +191,4 @@ pre copy-code-button {
     transform: translateY(2ex);
     opacity: 0;
   }
-}
-
-.menu-object.active a {
-  color: rgb(112, 112, 112);
-  font-weight: 600;
-  pointer-events: none;
-}
-
-.menu-object.active a:hover {
-  cursor: default;
-  background-color: inherit;
-}
-
-.btn-outline-black {
-  padding: 0.8rem 2rem;
-  background-color: #1d1d1d;
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 300;
-  border: 1px solid transparent;
-  border-radius: 50px;
-  cursor: pointer;
-}
-.btn-outline-black:hover {
-  background-color: rgba(43, 43, 43, 0.795);
 }
