@@ -3,7 +3,7 @@
 
 <section class={`${Astro.props.bgColor} vh-80`}>
     <div class="highlightTextContainer">
-      <svg stroke="#c83c4e" stroke-width="2" class="text-line" width="100%">
+      <!-- <svg stroke="#c83c4e" stroke-width="2" class="text-line" width="100%">
         <text
           x="50%" 
           dominant-baseline="middle"
@@ -12,16 +12,21 @@
         
         >
           xz studios
-        </text>
-
-
+        </text> -->
+        <svg viewBox="0 0 1350 600">
+          <text x="50%" y="70%" fill="transparent" text-anchor="middle">xz studios</text>
+        </svg>
+     
       
         <h2 class="intro-subheader desktop" style="margin-top: 0.1rem;">
+
+  
             <slot name="subheader"></slot>
         
-            <p style="margin-top: 1.5rem;font-weight: 500;">Marketing exploration from, brands & concepts from Malmö</p>
+            <p style="margin-top: 1rem;font-weight: 400;font-size: 1.1rem;">Marketing & brand concepts <span style="color: #c83c4e">–</span> Est. 2023 Malmö</p>
 
           </h2>
+
           
     
     <h2 class="intro-subheader mobile">

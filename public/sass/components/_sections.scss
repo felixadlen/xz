@@ -282,7 +282,9 @@
     .column-item {
       flex: 0 1 44%;
       display: flex;
-      // background-color: red;
+      background-color: #b8b8b809;
+      padding: 1rem;
+      border-radius: 8px;
       flex-direction: column;
       align-items: flex-start;
       color: rgb(230, 230, 230);
@@ -369,16 +371,51 @@
     h1 {
       align-self: flex-end;
     }
+  }
+
+  .highlightTextContainer {
     svg {
+      max-height: 300px;
       flex: 0 0 100%;
-      height: 200px;
-      font-size: clamp(3rem, 20vw, 18rem);
       font-weight: 800;
       align-self: flex-end;
-      // background-color: blue;
-      @media (min-width: $breakpoint-tablet) {
-        height: 300px;
+      margin-top: 5rem;
+      text {
+        stroke: #c83c4e;
+        font-weight: 700;
+        height: 100%;
+        display: flex;
+        stroke-width: 3;
+        font-size: clamp(6rem, 50vw, 20rem);
+        animation: animationEffect 4s linear forwards,
+          filling 4.5s ease-in forwards;
+        -webkit-animation: animationEffect 4s linear forwards,
+          filling 4.5s ease-in forwards;
+        @media (min-width: $breakpoint-tablet) {
+          font-size: clamp(3rem, 30vw, 37rem);
+        }
       }
+    }
+  }
+  @keyframes filling {
+    0%,
+    90% {
+      fill: #c83c4e;
+      fill-opacity: 0;
+    }
+    100% {
+      fill: #c83c4e;
+      fill-opacity: 1;
+    }
+  }
+  @keyframes animationEffect {
+    0% {
+      stroke-dasharray: 0 100%;
+      /* stroke-dashoffset: 20%; */
+    }
+    100% {
+      stroke-dasharray: 100% 0;
+      /* stroke-dashoffset: -20%; */
     }
   }
 
@@ -387,7 +424,7 @@
     line-height: 1.3;
     flex: 0 0 100%;
     color: #1c1e21;
-    font-weight: 400;
+    font-weight: 300;
     padding: 0rem 2rem;
     margin-top: -2rem;
     align-self: flex-start;
@@ -1498,10 +1535,6 @@
   @media (min-width: $breakpoint-tablet) {
     height: 90vh;
   }
-}
-
-#aboutUsPresentation {
-  // padding: 2rem;
 }
 
 #morph-xz {
