@@ -50,22 +50,22 @@ mouseOverContainer.onmousemove = function(e) {
 };
 
 
-let smileText = document.querySelector(".smile");
+let smileImage = document.querySelector(".smile");
 
-smileText.addEventListener('click', function() {
-  let headerSmiley = document.getElementById('h2SadSmiley')
-  let headerSadSmiley = document.getElementById('h2Smiley')
-    if (smileText.textContent === ':)') {
-        smileText.textContent = ':(';
+smileImage.addEventListener('click', function() {
+    let headerSmiley = document.getElementById('h2SadSmiley');
+    let headerSadSmiley = document.getElementById('h2Smiley');
+
+    if (smileImage.src.includes('red-smiley-happy.svg')) {
+        smileImage.src = '/img/red-smiley-sad.svg';
         headerSadSmiley.classList.remove('hidden');
         headerSmiley.classList.add('hidden');
-      
     } else {
-        smileText.textContent = ':)';
-       headerSadSmiley.classList.add('hidden');
-       headerSmiley.classList.remove('hidden');
+        smileImage.src = '/img/red-smiley-happy.svg';
+        headerSadSmiley.classList.add('hidden');
+        headerSmiley.classList.remove('hidden');
     }
-    console.log('You clicked');
+    console.log('SVG image clicked');
 });
 
 

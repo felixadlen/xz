@@ -397,15 +397,16 @@ button {
   color: white;
   font-size: 1.1rem;
   font-weight: 400;
+  display: inline-block;
   border: 1.5px solid #c83c4e;
   -webkit-border-radius: 50px;
      -moz-border-radius: 50px;
           border-radius: 50px;
   cursor: pointer;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  -moz-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 .btn-red:hover {
   background-color: #e34a5e;
@@ -719,7 +720,8 @@ header {
 }
 
 #home-hero-two {
-  padding: 3rem 2rem 3rem 2rem;
+  padding: 5rem 2rem 0rem 2rem;
+  height: 90vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -752,6 +754,7 @@ header {
 @media (min-width: 768px) {
   #home-hero-two {
     padding: 8rem 0rem 6rem 0rem;
+    height: inherit;
   }
 }
 #home-hero-two .header-welike {
@@ -781,7 +784,6 @@ header {
 }
 #home-hero-two .header-welike h2 {
   font-weight: 700;
-  font-size: 2rem;
   line-height: 1.1;
   text-align: center;
   margin-bottom: 3rem;
@@ -797,23 +799,15 @@ header {
     margin-top: 1.5rem;
   }
 }
-#home-hero-two .welike-text p {
-  font-size: 1.3rem;
-  margin-top: 10rem;
-  padding: 0rem 2rem;
-  text-align: center;
-  line-height: 1.6;
-  margin: auto;
-}
 #home-hero-two .smile {
   cursor: pointer;
   display: inline-block;
   text-align: center;
   margin-left: 2rem;
-  width: 100px;
+  width: 85px;
   font-size: 6rem;
   color: #c83c4e;
-  height: 150px;
+  height: 100px;
   margin-bottom: -2rem;
 }
 @media (min-width: 768px) {
@@ -1298,12 +1292,49 @@ header {
       -ms-flex-item-align: start;
           align-self: flex-start;
   text-align: center;
+  opacity: 0;
+  -webkit-animation: fadeH2 4s ease forwards;
+     -moz-animation: fadeH2 4s ease forwards;
+       -o-animation: fadeH2 4s ease forwards;
+          animation: fadeH2 4s ease forwards;
 }
 @media (min-width: 768px) {
   .white-bg .intro-subheader {
     padding: 0;
     font-size: 2rem;
     margin-top: -3rem;
+  }
+}
+@-webkit-keyframes fadeH2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeH2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeH2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeH2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .white-bg .nofade-header {
@@ -2528,9 +2559,6 @@ header {
   overflow-x: hidden;
   position: relative;
 }
-.customers-container video {
-  width: 100%;
-}
 .customers-container .customers-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2552,6 +2580,13 @@ header {
 }
 .customers-container .customers-wrapper .client-logo img {
   max-width: 120px;
+}
+.customers-container .customers-wrapper .client-logo img:hover {
+  -webkit-transform: scale(1.02);
+     -moz-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+       -o-transform: scale(1.02);
+          transform: scale(1.02);
 }
 .customers-container .customers-wrapper .client-logo:nth-child(3) img {
   height: 50px;

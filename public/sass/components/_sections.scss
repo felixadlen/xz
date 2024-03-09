@@ -22,7 +22,8 @@
 }
 
 #home-hero-two {
-  padding: 3rem 2rem 3rem 2rem;
+  padding: 5rem 2rem 0rem 2rem;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,6 +33,7 @@
   user-select: none;
   @media (min-width: $breakpoint-tablet) {
     padding: 8rem 0rem 6rem 0rem;
+    height: inherit;
   }
 
   .header-welike {
@@ -44,7 +46,6 @@
     }
     h2 {
       font-weight: 700;
-      font-size: clamp(1.6rem, 2rem, 2rem);
       line-height: 1.1;
       text-align: center;
       margin-bottom: 3rem;
@@ -59,16 +60,16 @@
       }
     }
   }
-  .welike-text {
-    p {
-      font-size: 1.3rem;
-      margin-top: 10rem;
-      padding: 0rem 2rem;
-      text-align: center;
-      line-height: 1.6;
-      margin: auto;
-    }
-  }
+  // .welike-text {
+  //   p {
+  //     font-size: 1.3rem;
+  //     margin-top: 10rem;
+  //     padding: 0rem 2rem;
+  //     text-align: center;
+  //     line-height: 1.6;
+  //     margin: auto;
+  //   }
+  // }
 
   .smile {
     cursor: pointer;
@@ -76,10 +77,10 @@
     text-align: center;
     margin-left: 2rem;
     // background-color: red;
-    width: 100px;
+    width: 85px;
     font-size: 6rem;
     color: #c83c4e;
-    height: 150px;
+    height: 100px;
     margin-bottom: -2rem;
     @media (min-width: $breakpoint-tablet) {
       font-size: 7rem;
@@ -379,11 +380,21 @@
     margin-top: -1rem;
     align-self: flex-start;
     text-align: center;
+    opacity: 0;
+    animation: fadeH2 4s ease forwards;
 
     @media (min-width: $breakpoint-tablet) {
       padding: 0;
       font-size: 2rem;
       margin-top: -3rem;
+    }
+  }
+  @keyframes fadeH2 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 
@@ -1035,7 +1046,6 @@
       order: 1;
       flex: 0 0 100%;
     }
-
     .right-split {
       order: 2;
       flex: 0 0 100%;
@@ -1045,7 +1055,6 @@
       .right-split {
         flex: 0 0 100%;
       }
-
       .left-split {
         order: 2;
         flex: 0 0 40%;
@@ -1053,7 +1062,6 @@
         margin-left: auto;
         margin-right: 4rem;
       }
-
       .right-split {
         order: 1;
         margin-right: 0;
@@ -1077,13 +1085,8 @@
   margin: auto;
   justify-content: center;
   max-width: 100%;
-
   overflow-x: hidden;
-
   position: relative;
-  video {
-    width: 100%;
-  }
   .customers-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -1093,6 +1096,9 @@
     .client-logo {
       img {
         max-width: 120px;
+        &:hover {
+          transform: scale(1.02);
+        }
       }
       &:nth-child(3) {
         img {

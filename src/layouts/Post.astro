@@ -62,24 +62,6 @@ const allPosts = (await Astro.glob('../pages/stories/*.{md,mdx}')).sort(
 
 
     <article class="post-content__article">
-      <div class="post-content__top fade-in">
-
-        <!-- AKTIVERA NEDAN DEL OM VI VILL ANVÄNDA POST-TAGGAR FRAMÖVER -->
-        <!-- {
-          frontmatter.category && (
-            <p class="post-content__category">
-              <a href={`/blog/category/${slugify(frontmatter.category)}`}>
-                {frontmatter.category}
-              </a>
-            </p>
-          )
-        } -->
-
-        
-          <!-- <h4 class="post-content__chapter">{frontmatter.chapter}</h4> -->
-
-       
-      </div>
       <div class="post-content__content flow fade-in">
         <slot />
       </div>
@@ -128,7 +110,6 @@ margin-left: 0;
   margin: 3rem auto 0rem auto;
 
 }
-      
     }
 
   .post-content__top {
@@ -170,9 +151,6 @@ margin-left: 0;
   }
 
   
-
-
-  
   .post-content__category {
     padding: 0.5rem 1rem;
     font-size: var(--step--1);
@@ -187,9 +165,11 @@ margin-left: 0;
   }
   .post-content__article {
     padding: 0vh 0;
-    /* background-color: grey; */
   }
 
+  .post-content__content p {
+    font-size: 2rem !important;
+  }
 
   .post-content__title {
     font-size: 2.6rem;
@@ -294,6 +274,12 @@ border-radius: 5px;
   }
 
   .post-content__content {
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+margin: 0 auto;
+  }
+  .post-content__content p {
     max-width: 900px;
     display: flex;
     flex-direction: column;
