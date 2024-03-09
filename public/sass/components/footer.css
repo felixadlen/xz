@@ -22,7 +22,6 @@ body ::selection {
 }
 
 #footer-container {
-  z-index: 1000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;

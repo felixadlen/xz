@@ -44,12 +44,6 @@ P.S. Didn't your aunt say something about her company needing some help to reach
 <strong>Smile and be different.</strong>
 
 <h3 class="signature">/xz studios</h2>
-<!-- 
-<div id="blog-BGbox">
-<span style="font-weight: 600";>XZ STUDIOS</span> helps small businesses to make big impressions. We specialize in marketing, advertising and graphic design with focus on building brands. With our base in Malmö, we use the world as our inspiration to explore new ideas. </div> -->
-
-<!-- <div class="klaviyo-form-XuZYJB"></div>
-<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=Y6DGXR"></script> -->
 
 <style>
 
@@ -71,12 +65,7 @@ P.S. Didn't your aunt say something about her company needing some help to reach
     .hrSpace {
        padding: 1rem 0rem 4rem 0rem;
     }
-.signature {
-    font-family: "lindsey-signature", sans-serif;
-    font-weight: 400;
-    font-size: 5rem;
-    margin-top: 1rem;
-}
+
 
 
 </style>

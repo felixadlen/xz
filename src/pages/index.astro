@@ -158,7 +158,7 @@ import ContactForm from "../components/ContactForm.astro";
 
     <section id="home-hero-two">
       <div id="tilt-card">
-        <span class="smile">:)</span>
+        <img src="/public/img/red-smiley.svg" class="smile" alt="">
       </div>
       <div class="header-welike">
         <h2 id="h2SadSmiley">
@@ -172,8 +172,8 @@ import ContactForm from "../components/ContactForm.astro";
 
       </div>
 
-      <div class="testar-container">
-        <div class="client-container">
+      <div class="customers-container">
+        <div class="customers-wrapper">
           <div class="client-logo"><a href="https://www.eseco.se" target="_blank">
             <img src="img/clients/partners_loggor_eseco_svart.png" alt="" />
           </a>
@@ -198,21 +198,25 @@ import ContactForm from "../components/ContactForm.astro";
    
 
     <section id="blog3-preview" style="overflow: hidden">
-   
 
       <div class="blogcontainerThree">
-        <!-- <div class="text-container">
+        <div class="text-container">
           <h2 class="white">our stories</h2>
           
 
-          <h4>
+          <p class="white-color">
             Experiences creates stories. Here we share marketing insights and
-            random reflections you won't get anywhere else
-          </h4>
-          <a class="btn-red" href="/stories/">Read latest post</a>
-        </div> -->
+            random reflections you won't get anywhere else.
+          </p>
+
+          <a class="btn-red" href="/stories/">Discover stories</a>
+        </div>
+        <RecentPost />
+
       </div>
-      <RecentPost />
+      <div></div>
+
+
     </section>      
 
 
@@ -254,7 +258,6 @@ color: #c83c4e;}
 <ContactForm />
 
     <script src="/script.js" is:inline></script>
-
 
   </body>
 </html>

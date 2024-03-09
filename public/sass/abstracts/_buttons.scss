@@ -103,8 +103,10 @@ button {
   border: 1.5px solid #c83c4e;
   border-radius: 50px;
   cursor: pointer;
+  transition: 0.5s ease;
   &:hover {
     background-color: #e34a5e;
     color: white;
+    transform: scale(1.02);
   }
 }

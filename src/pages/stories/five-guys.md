@@ -4,7 +4,7 @@ title: Five Guys is coming to Malmö
 # title: Introducing XZ STUDIOS
 subtitle: A new marketing duo from Malmö that embraces the unknown
 # chapter: Story 1
-image: /images/test-omslag.jpg
+image: /images/freelance.webp
 publishedAt: "2024-02-29"
 category: "stories"
 location: Canggu, Indonesia

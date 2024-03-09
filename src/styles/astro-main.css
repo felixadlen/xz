@@ -192,3 +192,10 @@ pre copy-code-button {
     opacity: 0;
   }
 }
+
+.signature {
+  font-family: "lindsey-signature", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 5rem !important;
+  margin-top: 1rem;
+}

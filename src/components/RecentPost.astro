@@ -29,6 +29,8 @@ const formattedDate = publishedAt ? formatDate(publishedAt) : 'N/A';
       <div class="recent-post-title"> 
       <h2 class="recent-preview__title">{title}</h2>
       <p class="post-preview__date">{formattedDate}</p>
+      <a class="preview-link-cta" href={recentPost.url}>Read latest post</a>
+
 
     </div>
   </a>
@@ -36,8 +38,8 @@ const formattedDate = publishedAt ? formatDate(publishedAt) : 'N/A';
 
 <style>
  .recent-post {
-background-color: #E8E8E81A;
-    max-width: 900px;
+    background-color: #E8E8E81A;
+    max-width: 450px;
     display: flex;
     flex-wrap: wrap;
     border-radius: 8px;
@@ -45,42 +47,46 @@ background-color: #E8E8E81A;
     margin: auto;
     justify-content: center;
     transition: 1s ease;
- }
- .recent-post:hover {
-  transform: scale(1.02);
- }
+}
 
- .recent-post-image {
-    /* max-width: 200px; */
-    flex: 0 0 50%;
-    /* background-color: green; */
- }
+.recent-post-image img {
+    filter: grayscale(100%);
+    transition: filter 1s ease;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
 
- .recent-post-image img {
-    border-radius: 8px;
- }
+.recent-post:hover .recent-post-image img {
+    filter: grayscale(0%);
+}
 
- .recent-post-title {
-    color: blue;
-    padding: 0rem 2rem 2rem 2rem;
-    flex: 0 0 50%;
+.recent-post:hover {
+    transform: scale(1.02);
+}
+
+.recent-post-title {
     color: white;
-    font-size: 2rem;
- }
+    font-size: 1.5rem;
+  padding: 0rem 1.5rem 1rem 1.5rem;
+}
+
+.preview-link-cta {
+  font-size: 1rem;
+}
+
 
  .recent-post h2 {
   color: white;
   font-size: 2rem;
   margin-top: 2rem;
  }
+ .recent-post:hover .preview-link-cta {
 
-
-
-
+ }
 
  .post-preview__date {
   font-size: 1rem;
-  color: #c83c4e;
+color: white;
   font-weight: 500;
   margin-top: 0.8rem;
 }
