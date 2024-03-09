@@ -14,85 +14,102 @@ const formattedDate = publishedAt ? formatDate(publishedAt) : 'N/A';
 ---
 
 <article class="recent-post">
-
-
-  <a href={recentPost.url}>
-    <div class="recent-post-image">
+  <a href={recentPost.url} class="recent-post-link">
+    <div class="recent-post-image-container">
       <picture>
         <source srcset={`${imageUrl.includes('.') ? imageUrl : imageUrl + '.webp'}`} type="image/webp" />
-        <img
-            class=""
-            src={`${imageUrl.includes('.') ? imageUrl : imageUrl + '.png'}`}
-            alt={`Featured image for ${title}`}
-        />
-      </picture></div>
-      <div class="recent-post-title"> 
-      <h2 class="recent-preview__title">{title}</h2>
-      <p class="post-preview__date">{formattedDate}</p>
-      <a class="preview-link-cta" href={recentPost.url}>Read latest post</a>
-
-
+        <img src={`${imageUrl.includes('.') ? imageUrl : imageUrl + '.png'}`} alt={`Featured image for ${title}`} />
+      </picture>
+      
+      <!-- Overlay Text -->
+      <div class="overlay-text">
+        <div class="text-container">
+          <p class="post-preview__date">{formattedDate}</p>
+          <h2 class="recent-preview__title">{title}</h2>
+          <a class="preview-link-cta" href={recentPost.url}>Read latest post</a>
+        </div>
+      </div>
     </div>
   </a>
 </article>
 
+
 <style>
+.recent-post-image-container {
+  position: relative;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.342);
+  display: flex;
+  align-items: flex-end; /* Vertical center */
+  justify-content: center; /* Horizontal center */
+}
+
+.text-container {
+  text-align: center;
+  color: white;
+}
  .recent-post {
-    background-color: #E8E8E81A;
-    max-width: 450px;
+    background-color: #e8e8e8e4;
+    max-width: 600px;
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
     border-radius: 8px;
     flex-direction: row;
     margin: auto;
-    justify-content: center;
+    justify-content: left;
     transition: 1s ease;
+    cursor: pointer;
 }
 
-.recent-post-image img {
+.recent-post-image-container img {
     filter: grayscale(100%);
     transition: filter 1s ease;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+     border: 2px solid #e8e8e8;
+border-radius: 8px;
 }
 
-.recent-post:hover .recent-post-image img {
+.recent-post:hover .recent-post-image-container img {
     filter: grayscale(0%);
 }
 
 .recent-post:hover {
     transform: scale(1.02);
+    background-color: #e8e8e8;
 }
 
-.recent-post-title {
-    color: white;
-    font-size: 1.5rem;
-  padding: 0rem 1.5rem 1rem 1.5rem;
-}
+.recent-post h2 {
+  color: #e8e8e8;
+  font-size: 2.4rem;
+  flex: 0 0 100%;
+margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0px 3px 20px rgba(28, 30, 33, 0.8);
+ }
 
 .preview-link-cta {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0px 3px 20px rgba(28, 30, 33, 0.8);
 }
 
-
- .recent-post h2 {
-  color: white;
-  font-size: 2rem;
-  margin-top: 2rem;
- }
  .recent-post:hover .preview-link-cta {
-
+color: #e34a5e;
  }
 
  .post-preview__date {
-  font-size: 1rem;
-color: white;
+  font-size: 1.3rem;
+color: #e8e8e8;
   font-weight: 500;
-  margin-top: 0.8rem;
+  text-shadow: 0px 3px 20px rgba(28, 30, 33, 0.8);
 }
-@media (min-width: 768px) {
-  .post-preview__date {
-    margin-top: 0.4rem;
-  }}
+
 
 </style>
