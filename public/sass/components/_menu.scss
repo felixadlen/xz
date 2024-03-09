@@ -185,26 +185,38 @@ header {
       }
     }
     &.inactive a {
-      color: grey; // or any color you prefer for inactive state
-      pointer-events: none; // optional, prevents clicking
-      opacity: 0.5; // makes it visually "disabled"
-
-      // &:hover {
-      //   cursor: default;
-      //   background-color: inherit; // keeps background unchanged on hover
-      // }
+      color: grey;
+      pointer-events: none;
+      opacity: 0.5;
     }
   }
 }
 
-.contact-logo-container {
-  position: absolute;
-  bottom: 2rem;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  width: 85%; /* Match the width of .menu-box */
-  box-sizing: border-box; /* This ensures padding is included in the width */
+.contact-logo-container,
+.social-logo-mobilemenu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .contact-logo-container {
+    position: absolute;
+    bottom: 4rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 85%; /* Match the width of .menu-box */
+    box-sizing: border-box; /* This ensures padding is included in the width */
+  }
+
+  .social-logo-mobilemenu {
+    position: absolute;
+    bottom: 4rem;
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+    align-items: center;
+    width: 85%; /* Match the width of .menu-box */
+    box-sizing: border-box; /* This ensures padding is included in the width */
+  }
 }
 
 .small-logo {
