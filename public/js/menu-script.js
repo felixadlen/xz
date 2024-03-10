@@ -20,6 +20,8 @@ function openMenu() {
   if (window.innerWidth <= 768) {
     document.body.style.overflow = "hidden";
     menuButton.style.transform = "scale(1.5)";
+    document.body.style.overflow = "";
+
 
   }
 }
