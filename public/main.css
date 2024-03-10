@@ -46,7 +46,7 @@ body ::selection {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #121417;
-  padding: 1.4rem;
+  padding: 0rem 33px;
   gap: 0.6rem;
 }
 @media (min-width: 768px) {
@@ -626,10 +626,10 @@ header {
        -moz-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 85%; /* Match the width of .menu-box */
+    width: 85%;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
-            box-sizing: border-box; /* This ensures padding is included in the width */
+            box-sizing: border-box;
   }
   .social-logo-mobilemenu {
     position: absolute;
@@ -650,10 +650,10 @@ header {
        -moz-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 85%; /* Match the width of .menu-box */
+    width: 85%;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
-            box-sizing: border-box; /* This ensures padding is included in the width */
+            box-sizing: border-box;
   }
 }
 .small-logo {
@@ -1316,7 +1316,7 @@ header {
           flex: 0 0 100%;
   color: #1c1e21;
   font-weight: 300;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   margin-top: -1rem;
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
@@ -1900,11 +1900,22 @@ header {
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 7rem 1.4rem 5rem 1.4rem;
+  padding: 7rem 5rem 5rem 5rem;
 }
 @media (min-width: 768px) {
   .about-us {
     padding: 10rem 2rem;
+  }
+}
+.about-us .text-centercontainer {
+  text-align: center;
+}
+.about-us .text-centercontainer h2 {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .about-us .text-centercontainer {
+    text-align: left;
   }
 }
 
@@ -1941,12 +1952,13 @@ header {
   }
 }
 @media (min-width: 768px) {
-  .text-centercontainer div {
+  .text-centercontainer #morph-xz {
     padding-left: 2rem;
   }
 }
 .text-centercontainer h2 {
   text-align: left;
+  width: 100%;
   line-height: 1.1;
 }
 @media (min-width: 768px) {
@@ -1960,6 +1972,7 @@ header {
 @media (min-width: 768px) {
   .text-centercontainer p {
     font-size: 1.2rem;
+    padding: 0rem 2rem;
   }
 }
 
@@ -3150,9 +3163,8 @@ header {
 }
 @media (min-width: 1024px) {
   .service-item {
-    height: 80vh;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 }
 
@@ -3238,6 +3250,12 @@ header {
      -moz-box-flex: 0;
       -ms-flex: 0 0 30%;
           flex: 0 0 30%;
+  text-align: left;
+}
+@media (min-width: 1024px) {
+  .service-item-heading {
+    text-align: right;
+  }
 }
 
 .service-item-text {
@@ -3263,6 +3281,7 @@ header {
        -moz-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    text-align: left;
   }
 }
 

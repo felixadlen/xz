@@ -45,7 +45,7 @@ body ::selection {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #121417;
-  padding: 1.4rem;
+  padding: 0rem 33px;
   gap: 0.6rem;
 }
 @media (min-width: 768px) {

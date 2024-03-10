@@ -83,9 +83,6 @@ header {
     right: 2.4rem;
     top: 2rem;
   }
-  // &:hover {
-  //   background-color: red;
-  // }
 
   .bar {
     margin: 5px;
@@ -203,8 +200,8 @@ header {
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 85%; /* Match the width of .menu-box */
-    box-sizing: border-box; /* This ensures padding is included in the width */
+    width: 85%;
+    box-sizing: border-box;
   }
 
   .social-logo-mobilemenu {
@@ -214,8 +211,8 @@ header {
     justify-content: right;
     gap: 1rem;
     align-items: center;
-    width: 85%; /* Match the width of .menu-box */
-    box-sizing: border-box; /* This ensures padding is included in the width */
+    width: 85%;
+    box-sizing: border-box;
   }
 }
 
