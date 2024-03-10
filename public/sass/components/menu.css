@@ -314,3 +314,9 @@ header {
   bottom: 2px;
   margin-left: 3px;
 }
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
