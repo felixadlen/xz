@@ -1010,7 +1010,12 @@ header {
   margin: auto;
   font-size: 6rem;
   white-space: nowrap;
-  margin-bottom: 4.5rem;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 768px) {
+  .services-spec h2 {
+    margin-bottom: 4.5rem;
+  }
 }
 .services-spec .four-columns {
   cursor: default;
@@ -1088,7 +1093,7 @@ header {
       -ms-flex-align: start;
           align-items: flex-start;
   color: rgb(230, 230, 230);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 }
 .services-spec .four-columns .column-item:hover {
   color: white;
@@ -1096,6 +1101,8 @@ header {
 @media (min-width: 768px) {
   .services-spec .four-columns .column-item {
     margin-bottom: 0;
+    margin-bottom: 2.5rem;
+    padding: 1rem;
   }
 }
 @media (min-width: 768px) {
@@ -1208,7 +1215,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   stroke-width: 3;
-  font-size: clamp(3rem, 40vw, 20rem);
+  font-size: clamp(3rem, 70vw, 19rem);
   -moz-animation: animationEffect 4s linear forwards, filling 4.5s ease-in forwards;
     -o-animation: animationEffect 4s linear forwards, filling 4.5s ease-in forwards;
        animation: animationEffect 4s linear forwards, filling 4.5s ease-in forwards;
@@ -1412,7 +1419,7 @@ header {
 }
 
 .button-center {
-  margin-top: 6rem;
+  margin-top: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -1424,6 +1431,11 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   color: white;
+}
+@media (min-width: 768px) {
+  .button-center {
+    margin-top: 2rem;
+  }
 }
 
 #what-we-do {

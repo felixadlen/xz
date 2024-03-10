@@ -193,7 +193,11 @@
     margin: auto;
     font-size: clamp(2rem, 6rem, 7rem);
     white-space: nowrap;
-    margin-bottom: 4.5rem;
+    margin-bottom: 2.5rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 4.5rem;
+    }
   }
   .four-columns {
     cursor: default;
@@ -217,18 +221,19 @@
     .column-item {
       flex: 0 1 44%;
       display: flex;
-      // background-color: #b8b8b809;
       padding: 1rem;
       border-radius: 8px;
       flex-direction: column;
       align-items: flex-start;
       color: rgb(230, 230, 230);
-      margin-bottom: 2.5rem;
+      margin-bottom: 1rem;
       &:hover {
         color: white;
       }
-      @media (min-width: 768px) {
+      @media (min-width: $breakpoint-tablet) {
         margin-bottom: 0;
+        margin-bottom: 2.5rem;
+        padding: 1rem;
       }
     }
     .top-column {
@@ -315,14 +320,13 @@
       font-weight: 800;
       align-self: flex-end;
       padding-bottom: -2rem;
-
       text {
         stroke: #c83c4e;
         font-weight: 700;
         height: 100%;
         display: flex;
         stroke-width: 3;
-        font-size: clamp(3rem, 40vw, 20rem);
+        font-size: clamp(3rem, 70vw, 19rem);
         animation: animationEffect 4s linear forwards,
           filling 4.5s ease-in forwards;
         -webkit-animation: animationEffect 4s linear forwards,
@@ -416,10 +420,13 @@
 }
 
 .button-center {
-  margin-top: 6rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   color: white;
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: 2rem;
+  }
 }
 
 #what-we-do {
