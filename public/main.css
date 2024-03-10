@@ -1331,6 +1331,7 @@ header {
 @media (min-width: 768px) {
   .white-bg .intro-subheader {
     margin-top: -3rem;
+    font-size: 2rem;
   }
 }
 @-webkit-keyframes fadeH2 {
@@ -1541,6 +1542,17 @@ header {
           transform: scale(1.03);
 }
 
+#intro-hero {
+  padding: 15rem 0rem 15rem 0rem;
+  height: 80vh;
+}
+@media (min-width: 768px) {
+  #intro-hero {
+    padding: 20rem 2rem 20rem 2rem;
+    height: 85vh;
+  }
+}
+
 #introduction {
   padding: 15rem 0rem 15rem 0rem;
   background-color: #1c1e21;
@@ -1624,7 +1636,7 @@ header {
 }
 
 #introduction-about {
-  padding: 4rem 2rem;
+  padding: 4rem 1.4rem;
 }
 @media (min-width: 768px) {
   #introduction-about {

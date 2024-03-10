@@ -371,9 +371,9 @@
     text-align: center;
     opacity: 0;
     animation: fadeH2 4s ease forwards;
-
     @media (min-width: $breakpoint-tablet) {
       margin-top: -3rem;
+      font-size: 2rem;
     }
   }
   @keyframes fadeH2 {
@@ -483,6 +483,15 @@
 
 // INTRODUCTION
 
+#intro-hero {
+  padding: 15rem 0rem 15rem 0rem;
+  height: 80vh;
+  @media (min-width: $breakpoint-tablet) {
+    padding: 20rem 2rem 20rem 2rem;
+    height: 85vh;
+  }
+}
+
 #introduction {
   padding: 15rem 0rem 15rem 0rem;
   background-color: #1c1e21;
@@ -526,7 +535,7 @@
 }
 
 #introduction-about {
-  padding: 4rem 2rem;
+  padding: 4rem 1.4rem;
   @media (min-width: $breakpoint-tablet) {
     padding: 8rem 2rem;
   }
