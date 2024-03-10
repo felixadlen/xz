@@ -3374,24 +3374,49 @@ header {
   height: 100%;
   width: 100%;
   background-color: rgba(43, 43, 43, 0.673);
-  opacity: 1;
-  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
-  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
-  -o-transition: opacity 0.3s 0s, visibility 0s 0.3s;
-  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -webkit-animation: fadeContactOverlay 0.4s;
+     -moz-animation: fadeContactOverlay 0.4s;
+       -o-animation: fadeContactOverlay 0.4s;
+          animation: fadeContactOverlay 0.4s;
   overflow-y: auto;
   z-index: 10000;
 }
 
-.form-popup-bg.is-visible {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
-  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
-  -o-transition: opacity 0.3s 0s, visibility 0s 0s;
-  transition: opacity 0.3s 0s, visibility 0s 0s;
+@-webkit-keyframes fadeContactOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
+@-moz-keyframes fadeContactOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeContactOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeContactOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .form-container {
   background-color: #ecebeb;
   -webkit-border-radius: 10px;
@@ -3415,18 +3440,60 @@ header {
           flex-direction: column;
   width: 100%;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-     -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-       -o-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   padding: 40px;
   color: black;
+  -webkit-animation: slideUpContactForm 0.6s ease-out forwards;
+     -moz-animation: slideUpContactForm 0.6s ease-out forwards;
+       -o-animation: slideUpContactForm 0.6s ease-out forwards;
+          animation: slideUpContactForm 0.6s ease-out forwards;
+}
+@-webkit-keyframes slideUpContactForm {
+  from {
+    -webkit-transform: translate(-50%, 100vh);
+            transform: translate(-50%, 100vh);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+@-moz-keyframes slideUpContactForm {
+  from {
+    -moz-transform: translate(-50%, 100vh);
+         transform: translate(-50%, 100vh);
+  }
+  to {
+    -moz-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+  }
+}
+@-o-keyframes slideUpContactForm {
+  from {
+    -o-transform: translate(-50%, 100vh);
+       transform: translate(-50%, 100vh);
+  }
+  to {
+    -o-transform: translate(-50%, -50%);
+       transform: translate(-50%, -50%);
+  }
+}
+@keyframes slideUpContactForm {
+  from {
+    -webkit-transform: translate(-50%, 100vh);
+       -moz-transform: translate(-50%, 100vh);
+         -o-transform: translate(-50%, 100vh);
+            transform: translate(-50%, 100vh);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
