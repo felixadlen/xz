@@ -57,8 +57,9 @@ import ContactForm from "../components/ContactForm.astro";
          A marketing and concept duo from Malmö with good ambitions
         </h2>
       </div>
-      <img class="bird" src="/img/jason-seagull.png" alt="" />
-    </section>
+        <img class="bird" src="/img/jason-seagull.png" alt="" />
+      </div>
+        </section>
     <script> 
 document.addEventListener("DOMContentLoaded", function () {
     var bird = document.querySelector(".bird");
@@ -78,12 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             // Disable transition and fly away
             this.style.transition = 'none';
-            this.style.animation = "reverseBackflip 4s ease forwards";
+            this.style.animation = "flyAway 4s ease forwards";
 
-            // Re-enable transition after 0.5s
-            setTimeout(() => {
-                this.style.transition = 'transform 1s ease';
-            }, 500);
+      
         }
     });
 });

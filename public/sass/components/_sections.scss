@@ -397,7 +397,7 @@
     transition: opacity 1s;
     color: grey;
     @media (min-width: $breakpoint-tablet) {
-      font-size: 8vw;
+      font-size: 10vw;
     }
   }
 
@@ -688,7 +688,7 @@
 .about-us {
   display: flex;
   justify-content: center;
-  padding: 7rem 5rem 5rem 5rem;
+  padding: 7rem 1.4rem 5rem 1.4rem;
   @media (min-width: $breakpoint-tablet) {
     padding: 10rem 2rem;
   }
@@ -716,7 +716,7 @@
   }
   #morph-xz {
     @media (min-width: $breakpoint-tablet) {
-      padding-left: 2rem;
+      padding-left: 1.4rem;
     }
   }
   h2 {
@@ -1319,13 +1319,14 @@
 }
 
 //
+
 .bird {
   width: 90px;
   position: absolute;
   bottom: 0px;
   left: 45%;
   z-index: 2;
-  transition: transform 1s ease; /* Default transition */
+  transition: transform 1s ease forwards; /* Default transition */
   transform-origin: bottom;
   cursor: pointer; // To indicate it's clickable
   &:hover {
@@ -1344,14 +1345,18 @@
     }
   }
 
-  @keyframes reverseBackflip {
+  @keyframes flyAway {
+    50% {
+      transform: rotate(-20deg) translateX(75vw) translateY(-200px);
+    }
+    60% {
+      transform: rotate(-20deg) translateX(75vw) translateY(-300px) scaleX(-1);
+    }
     100% {
-      transform: rotate(-20deg) translateX(100vw) translateY(-300px);
-      transition: transform 4s ease;
+      transform: translateX(15vw) translateY(-514px) scaleX(-1);
     }
   }
 }
-
 .bird-two {
   top: -170px;
   transform: rotate(140deg);
