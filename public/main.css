@@ -1933,8 +1933,13 @@ header {
   text-align: left;
 }
 @media (min-width: 768px) {
+  .about-us .text-centercontainer h2 {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
   .about-us .text-centercontainer {
-    text-align: left;
+    text-align: center;
   }
 }
 

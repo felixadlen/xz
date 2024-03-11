@@ -701,9 +701,12 @@
     text-align: left;
     h2 {
       text-align: left;
+      @media (min-width: $breakpoint-tablet) {
+        text-align: center;
+      }
     }
     @media (min-width: $breakpoint-tablet) {
-      text-align: left;
+      text-align: center;
     }
   }
 }
