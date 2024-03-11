@@ -11,10 +11,6 @@ const allPosts = (await Astro.glob('./stories/*.{md,mdx}')).sort(
 
 let initialPostCount = 3;
 
-const seo = {
-  title: 'STORIES',
-  description: 'Insights and reflection',
-};
 
 let displayedPosts = allPosts.slice(0, initialPostCount);
 
@@ -34,7 +30,7 @@ function loadMorePosts() {
 <meta name="title" content="STORIES | Marketing insights by XZ" />
 <meta name="description" content="Here are our insights and reflections from exploring new marketing ideas around the world. Read more." />
 
-<Layout seo={seo}>
+<Layout>
   <Container>
 
     <section id="stories-header">
