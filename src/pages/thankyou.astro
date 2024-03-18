@@ -49,6 +49,7 @@ import ContactForm from "../components/ContactForm.astro";
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         height: 90vh;
         text-align: center;
       }
@@ -57,7 +58,17 @@ import ContactForm from "../components/ContactForm.astro";
         transition: filter 1s ease-out;
         filter: blur(0);
       }
-    
+      #thankyouContainer {
+  display: none;
+  opacity: 0;
+  justify-content: center;
+  transition: opacity 1s ease-in; /* Transition for fading in */
+  position: absolute; /* Make the container absolutely positioned */
+  top: 50%; /* Set to 50% of the viewport's height */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for true centering */
+  width: 100%; /* Adjust as needed */
+}
       #form-name {
         transition: opacity 1s ease-out, filter 1s ease-out;
         opacity: 1;
@@ -75,6 +86,9 @@ import ContactForm from "../components/ContactForm.astro";
         padding: 2rem;
         transition: opacity 1s ease-in;
         opacity: 0;
+        transition: opacity 1s ease-in, margin-top 1s ease-in-out; /* Added margin-top transition */
+    opacity: 0;
+    margin-top: 0;
       }
     
       #form-name input {
@@ -99,29 +113,37 @@ import ContactForm from "../components/ContactForm.astro";
       <h1 id="welcome-message">
         <!-- Welcome message will be set here -->
       </h1>
-      <div id="thankyou-container">
-        <!-- Additional content can go here -->
-      </div>
+      <div id="thankyouContainer">
+<p style="max-width: 800px;font-size: 1.4rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sequi voluptatibus quasi nemo impedit voluptates, excepturi nobis obcaecati, iure, sint facilis qui dolores harum ex quo eum voluptas consequatur eius!</p>      </div>
     </section>
     
     <script is:inline>
-    function displayWelcome() {
-      var name = document.getElementById("name-input").value;
-      var welcomeMessage = "Hello " + name;
-      document.getElementById("welcome-message").textContent = welcomeMessage;
-    
-      var form = document.getElementById("form-name");
-      form.classList.add("hidden");
-    
+function displayWelcome() {
+  var name = document.getElementById("name-input").value;
+  var welcomeMessage = "Hello " + name;
+  document.getElementById("welcome-message").textContent = welcomeMessage;
+
+  var form = document.getElementById("form-name");
+  form.classList.add("hidden");
+
+  setTimeout(function() {
+    form.style.display = 'none';
+    var welcome = document.getElementById("welcome-message");
+    welcome.style.display = 'flex';
+    setTimeout(function() {
+      welcome.style.opacity = 1;
       setTimeout(function() {
-        form.style.display = 'none';
-        var welcome = document.getElementById("welcome-message");
-        welcome.style.display = 'flex';
+        welcome.style.marginTop = '-200px'; // Margin change
         setTimeout(function() {
-          welcome.style.opacity = 1;
-        }, 100); // slight delay to ensure the display change has taken effect
-      }, 400); // Adjusted to match the length of the blur transition
-    }
+          var thankyou = document.getElementById("thankyouContainer");
+          thankyou.style.display = 'flex'; // Or 'flex' if it suits your layout
+          thankyou.style.opacity = 1;
+        }, 1800); // Adjust this delay as needed
+      }, 1000); // Delay for 1 second for margin change
+    }, 100); 
+  }, 400); 
+}
+
     </script>
     
 
