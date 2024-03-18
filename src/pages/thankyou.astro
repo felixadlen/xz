@@ -1,0 +1,133 @@
+---
+import MenuNav from "../components/MenuNav.astro";
+import Footer from "../components/Footer.astro";
+import ContactForm from "../components/ContactForm.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WE ARE XZ</title>
+    <meta name="title" content="WE ARE XZ | Our marketing approach" />
+<meta name="description" content="A marketing studio from Malmö, driven by new experiences and to do something different. This is our story." />
+<meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/iza3jks.css" />
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v6.5.0/css/all.css"
+    />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM8RYLZY5G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SM8RYLZY5G');
+</script>
+    <script type="text/javascript">
+      // Clarity
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "jovcl27t8k");
+    </script>
+  </head>
+  <body>
+    <style>
+      .vh-90-thankyou {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        text-align: center;
+      }
+    
+      #thanks-container {
+        transition: filter 1s ease-out;
+        filter: blur(0);
+      }
+    
+      #form-name {
+        transition: opacity 1s ease-out, filter 1s ease-out;
+        opacity: 1;
+        filter: blur(0);
+      }
+    
+      #form-name.hidden {
+        opacity: 0;
+        filter: blur(5px);
+      }
+    
+      #welcome-message {
+        display: none;
+        color: #1c1e21;
+        padding: 2rem;
+        transition: opacity 1s ease-in;
+        opacity: 0;
+      }
+    
+      #form-name input {
+        background-color: white;
+        padding: 1rem 2rem;
+        border: 1px solid transparent;
+        border-radius: 50px;
+        width: 400px;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px;
+      }
+    </style>
+    
+    <section class="vh-90-thankyou">
+      <div id="thanks-container">
+        <div id="form-name">
+          <form id="name-form" onsubmit="displayWelcome(); return false;">
+            <input type="text" id="name-input" placeholder="Enter your name">
+            <button type="submit" class="btn-red">Enter here</button>
+          </form>
+        </div>
+      </div>
+      <h1 id="welcome-message">
+        <!-- Welcome message will be set here -->
+      </h1>
+      <div id="thankyou-container">
+        <!-- Additional content can go here -->
+      </div>
+    </section>
+    
+    <script is:inline>
+    function displayWelcome() {
+      var name = document.getElementById("name-input").value;
+      var welcomeMessage = "Hello " + name;
+      document.getElementById("welcome-message").textContent = welcomeMessage;
+    
+      var form = document.getElementById("form-name");
+      form.classList.add("hidden");
+    
+      setTimeout(function() {
+        form.style.display = 'none';
+        var welcome = document.getElementById("welcome-message");
+        welcome.style.display = 'flex';
+        setTimeout(function() {
+          welcome.style.opacity = 1;
+        }, 100); // slight delay to ensure the display change has taken effect
+      }, 400); // Adjusted to match the length of the blur transition
+    }
+    </script>
+    
+
+
+<ContactForm />
+    <script src="/script.js" is:inline></script>
+  </body>
+</html>
+

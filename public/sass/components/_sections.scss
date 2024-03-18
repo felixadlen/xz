@@ -1088,7 +1088,6 @@
   margin: auto;
   justify-content: center;
   max-width: 100%;
-  overflow-x: hidden;
   position: relative;
   @media (min-width: $breakpoint-tablet) {
     padding-top: 0;
@@ -1104,7 +1103,7 @@
     max-width: 450px;
     @media (min-width: $breakpoint-tablet) {
       row-gap: 1rem;
-      column-gap: 6rem;
+      column-gap: 5rem;
       max-width: inherit;
     }
     .client-logo {
@@ -1248,42 +1247,22 @@
       transform: translateY(0) rotate(-360deg); /* Complete the rotation */
     }
   }
-
-  @keyframes flyAway {
-    50% {
-      transform: rotate(-20deg) translateX(75vw) translateY(-200px);
-    }
-    60% {
-      transform: rotate(-20deg) translateX(75vw) translateY(-300px) scaleX(-1);
-    }
-    // 100% {
-    //   transform: translateX(15vw) translateY(-514px) scaleX(-1);
-    // }
-    100% {
-      transform: translateX(15vw) translateY(-514px) scaleX(-1);
-    }
-  }
 }
 
-@media (max-width: 768px) {
-  .bird {
-    @keyframes flyAway {
-      50% {
-        transform: rotate(-20deg) translateX(80vw) translateY(-200px);
-      }
-      60% {
-        transform: rotate(-20deg) translateX(70vw) translateY(-400px) scaleX(-1);
-      }
-      100% {
-        transform: translateX(6vw) translateY(-441px) scaleX(-1);
-      }
-    }
+@keyframes flyAway {
+  0% {
+    transform: rotate(0) translate(0, 0);
   }
-}
-
-.bird-two {
-  top: -170px;
-  transform: rotate(140deg);
+  50% {
+    transform: rotate(-20deg) translate(75vw, -200px);
+  }
+  60% {
+    transform: rotate(-20deg) translate(75vw, -300px) scaleX(-1);
+  }
+  100% {
+    transform: rotate(0) translate(var(--translate-x), var(--translate-y))
+      scaleX(-1);
+  }
 }
 
 //
