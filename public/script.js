@@ -54,16 +54,25 @@ let smileImage = document.querySelector(".smile");
 
 smileImage.addEventListener('click', function() {
     let headerSmiley = document.getElementById('h2SadSmiley');
+    let headerSmileyMobile = document.getElementById('h2SadSmileyMobile');
+
     let headerSadSmiley = document.getElementById('h2Smiley');
 
     if (smileImage.src.includes('red-smiley-happy.svg')) {
         smileImage.src = '/img/red-smiley-sad.svg';
         headerSadSmiley.classList.remove('hidden');
         headerSmiley.classList.add('hidden');
+        headerSmileyMobile.classList.add('hidden');
+        headerSmileyMobile.classList.remove('mobile');
+    
     } else {
         smileImage.src = '/img/red-smiley-happy.svg';
         headerSadSmiley.classList.add('hidden');
         headerSmiley.classList.remove('hidden');
+        headerSmileyMobile.classList.remove('hidden');
+        headerSmileyMobile.classList.add('mobile');
+     
+  
     }
     console.log('SVG image clicked');
 });
