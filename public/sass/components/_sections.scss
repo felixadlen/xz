@@ -1002,7 +1002,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
-    margin-right: -5rem;
+    margin-right: -14rem;
     margin-top: -17rem;
 
     img {
@@ -1036,7 +1036,6 @@
       flex: 0 0 50%;
       align-items: flex-end;
       max-height: 100%;
-      background-color: red;
       img {
         // margin-top: 5rem;
         max-width: 100%;
@@ -1259,13 +1258,10 @@
     transform: rotate(0) translate(0, 0);
   }
   50% {
-    transform: rotate(-20deg) translate(75vw, -200px);
-  }
-  60% {
-    transform: rotate(-20deg) translate(80vw, -300px) scaleX(-1);
+    transform: rotate(-20deg) translate(85vw, -200px);
   }
   100% {
-    transform: rotate(-20deg) translate(100vw, -300px) scaleX(-1);
+    transform: rotate(-20deg) translate(100vw, -300px);
   }
 }
 
