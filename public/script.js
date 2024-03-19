@@ -57,10 +57,15 @@ smileImage.addEventListener('click', function() {
     let headerSmileyMobile = document.getElementById('h2SadSmileyMobile');
 
     let headerSadSmiley = document.getElementById('h2Smiley');
+    let headerSadSmileyMobile = document.getElementById('h2SmileyMobile');
+
 
     if (smileImage.src.includes('red-smiley-happy.svg')) {
         smileImage.src = '/img/red-smiley-sad.svg';
         headerSadSmiley.classList.remove('hidden');
+        headerSadSmiley.classList.remove('mobile');
+        headerSadSmiley.classList.remove('mobile');
+        headerSadSmileyMobile.classList.remove('hidden')
         headerSmiley.classList.add('hidden');
         headerSmileyMobile.classList.add('hidden');
         headerSmileyMobile.classList.remove('mobile');
@@ -71,10 +76,10 @@ smileImage.addEventListener('click', function() {
         headerSmiley.classList.remove('hidden');
         headerSmileyMobile.classList.remove('hidden');
         headerSmileyMobile.classList.add('mobile');
-     
+        headerSadSmileyMobile.classList.add('hidden')
+
   
     }
-    console.log('SVG image clicked');
 });
 
 
