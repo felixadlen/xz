@@ -13,6 +13,7 @@ const publishedAt = recentPost ? recentPost.frontmatter.publishedAt : '';
 const formattedDate = publishedAt ? formatDate(publishedAt) : 'N/A';
 ---
 
+<div class="recentPostContainer">
 <article class="recent-post">
   <a href={recentPost.url} class="recent-post-link">
     <div class="recent-post-image-container">
@@ -22,17 +23,18 @@ const formattedDate = publishedAt ? formatDate(publishedAt) : 'N/A';
       </picture>
       
       <!-- Overlay Text -->
-      <div class="overlay-text">
-        <div class="text-container">
-          <p class="post-preview__date">{formattedDate}</p>
-          <h2 class="recent-preview__title">{title}</h2>
-          <a class="preview-link-cta" href={recentPost.url}>Read latest post</a>
-        </div>
+      <!-- <div class="overlay-text"> -->
+      
       </div>
-    </div>
+      <div class="text-container">
+        <p class="post-preview__date">{formattedDate}</p>
+        <h2 class="recent-preview__title">{title}</h2>
+        <a class="preview-link-cta" href={recentPost.url}>Go to latest post</a>
+      </div>
+    <!-- </div> -->
   </a>
 </article>
-
+</div>
 
 <style>
 .recent-post-image-container {
@@ -53,21 +55,30 @@ const formattedDate = publishedAt ? formatDate(publishedAt) : 'N/A';
 
 .text-container {
   text-align: center;
+  width: 100%;
+  padding: 1rem;
   color: white;
 }
+
+.recentPostContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
  .recent-post {
-    background-color: #e8e8e8e4;
-    max-width: 600px;
+    background-color: #e8e8e8;
+    max-width: 900px;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
     border-radius: 8px;
     flex-direction: row;
-    margin: auto;
-    justify-content: left;
+    margin: 1.4rem;
+    justify-content: center;
     transition: 1s ease;
     cursor: pointer;
 }
+
 
 .recent-post-image-container img {
     filter: grayscale(100%);
@@ -81,23 +92,26 @@ border-radius: 8px;
 }
 
 .recent-post:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
     background-color: #e8e8e8;
 }
 
 .recent-post h2 {
-  color: #e8e8e8;
-  font-size: 2.4rem;
+  color: #1c1e21;
+  font-size: 1.6rem;
   flex: 0 0 100%;
 margin-bottom: 1rem;
   font-weight: 700;
-  text-shadow: 0px 3px 20px rgba(28, 30, 33, 0.8);
  }
-
+ @media (min-width: 768px) {
+    .recent-post h2 {
+      font-size: 2.6rem;
+    }
+    
+  }
 .preview-link-cta {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  text-shadow: 0px 3px 20px rgba(28, 30, 33, 0.8);
 }
 
  .recent-post:hover .preview-link-cta {
@@ -105,11 +119,16 @@ color: #e34a5e;
  }
 
  .post-preview__date {
-  font-size: 1.3rem;
-color: #e8e8e8;
+  font-size: 1rem;
+color: #1c1e21;
+margin-bottom: 0.5rem;
   font-weight: 500;
-  text-shadow: 0px 3px 20px rgba(28, 30, 33, 0.8);
 }
+@media (min-width: $breakpoint-tablet) {
+    .post-preview__date {
+      font-size: 1.3rem;
 
+    }
+  }
 
 </style>

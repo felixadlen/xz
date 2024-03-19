@@ -909,15 +909,15 @@
       @media (min-width: $breakpoint-tablet) {
         order: 0;
       }
-      h2 {
-        flex: 0 0 100%;
-        font-size: 10vw;
-        text-align: left;
-        line-height: 1.1;
-        @media (min-width: $breakpoint-tablet) {
-          font-size: 8vw;
-        }
-      }
+      // h2 {
+      //   flex: 0 0 100%;
+      //   font-size: 10vw;
+      //   text-align: left;
+      //   line-height: 1.1;
+      //   @media (min-width: $breakpoint-tablet) {
+      //     font-size: 8vw;
+      //   }
+      // }
       p {
         margin-bottom: 2rem;
         margin-top: 1rem;
@@ -1011,7 +1011,7 @@
     }
     .felix-img {
       margin-top: -10rem;
-      margin-right: -2rem;
+      margin-right: 0rem;
       @media (min-width: $breakpoint-tablet) {
         margin-top: -10rem;
       }
