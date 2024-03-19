@@ -1,7 +1,8 @@
-import { c as createAstro, d as createComponent, r as renderTemplate, g as renderHead } from '../astro_vTHV1pJ8.mjs';
+import { c as createAstro, d as createComponent, r as renderTemplate, f as renderComponent, h as renderHead } from '../astro_MM15vAtA.mjs';
 import 'kleur/colors';
 import 'clsx';
 import 'cssesc';
+import { $ as $$ContactForm, a as $$Footer, b as $$MenuNav } from './_slug__1TBfXjIV.mjs';
 /* empty css                              */
 
 var __freeze = Object.freeze;
@@ -12,7 +13,7 @@ const $$Astro = createAstro("https://xzstudios.se/stories");
 const $$Integrity = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Integrity;
-  return renderTemplate(_a || (_a = __template(['<html lang="sv" data-astro-cid-woyfynmw> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1"><title>Integrity policy</title><link rel="stylesheet" href="/main.css"><link rel="stylesheet" href="https://use.typekit.net/iza3jks.css"><link rel="stylesheet" href="//use.fontawesome.com/releases/v6.5.0/css/all.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-SM8RYLZY5G"><\/script><script type="text/javascript">\n      // Clarity\n      (function (c, l, a, r, i, t, y) {\n        c[a] =\n          c[a] ||\n          function () {\n            (c[a].q = c[a].q || []).push(arguments);\n          };\n        t = l.createElement(r);\n        t.async = 1;\n        t.src = "https://www.clarity.ms/tag/" + i;\n        y = l.getElementsByTagName(r)[0];\n        y.parentNode.insertBefore(t, y);\n      })(window, document, "clarity", "script", "jovcl27t8k");\n    <\/script>', `</head> <div id="master-menu" data-astro-cid-woyfynmw></div>   <div id="master-menu" data-astro-cid-woyfynmw></div> <section class="white-bg" data-astro-cid-woyfynmw> <div style="display: flex; justify-content: center;" data-astro-cid-woyfynmw> <h1 class="h1-integrity" style="margin-top: 10rem;margin-bottom: 4rem;" data-astro-cid-woyfynmw>integrity</h1> </div> </section> <section data-astro-cid-woyfynmw><div style="max-width: 1200px;margin: auto;padding: 2rem; border-radius: 30px;" data-astro-cid-woyfynmw> <h3 style="line-height: 1;margin-bottom: 1rem;" data-astro-cid-woyfynmw>We care about your privacy!</h3> <p data-astro-cid-woyfynmw> Here we have summorized how we at XZ
+  return renderTemplate(_a || (_a = __template(['<html lang="en" data-astro-cid-woyfynmw> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1"><title>Integrity policy</title><link rel="stylesheet" href="/main.css"><link rel="stylesheet" href="https://use.typekit.net/iza3jks.css"><link rel="stylesheet" href="//use.fontawesome.com/releases/v6.5.0/css/all.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-SM8RYLZY5G"><\/script><script type="text/javascript">\n      // Clarity\n      (function (c, l, a, r, i, t, y) {\n        c[a] =\n          c[a] ||\n          function () {\n            (c[a].q = c[a].q || []).push(arguments);\n          };\n        t = l.createElement(r);\n        t.async = 1;\n        t.src = "https://www.clarity.ms/tag/" + i;\n        y = l.getElementsByTagName(r)[0];\n        y.parentNode.insertBefore(t, y);\n      })(window, document, "clarity", "script", "jovcl27t8k");\n    <\/script>', "</head> ", `  </html> <div id="master-menu" data-astro-cid-woyfynmw></div> <section class="white-bg" data-astro-cid-woyfynmw> <div style="display: flex; justify-content: center;" data-astro-cid-woyfynmw> <h1 class="h1-integrity" style="margin-top: 10rem;margin-bottom: 4rem;" data-astro-cid-woyfynmw>integrity</h1> </div> </section> <section data-astro-cid-woyfynmw><div style="max-width: 1200px;margin: auto;padding: 2rem; border-radius: 30px;" data-astro-cid-woyfynmw> <h3 style="line-height: 1;margin-bottom: 1rem;" data-astro-cid-woyfynmw>We care about your privacy!</h3> <p data-astro-cid-woyfynmw> Here we have summorized how we at XZ
       gathers and stores your personal data. If you have any questions, don't
       hesitate to contact us.</p> <h4 data-astro-cid-woyfynmw>Cookies and Personal data</h4> <p data-astro-cid-woyfynmw>We use cookies to be able to save your earlier choices and preferences, so you don't have to do
       it each time you visit our site. We also use cookies for marketing
@@ -30,7 +31,7 @@ You can always choose to turn off or clear your cookies in your web
         browsers settings. However, note that some services might not work the
         way they used to after you done this, since yout earlier choices,
         settings and history will be lost.
-</p> </div> </section> <!-- NEDAN H\xC4MTAR FOOTER + KONTAKTFORM --> <div id="openContactForm" class="hidden" data-astro-cid-woyfynmw></div> <footer id="master-footer" data-astro-cid-woyfynmw></footer> <script src="/script.js"><\/script> </html> `])), renderHead());
+</p> </div> </section> `, ' <script src="/script.js"><\/script> ', " "])), renderHead(), renderComponent($$result, "MenuNav", $$MenuNav, { "data-astro-cid-woyfynmw": true }), renderComponent($$result, "Footer", $$Footer, { "data-astro-cid-woyfynmw": true }), renderComponent($$result, "ContactForm", $$ContactForm, { "data-astro-cid-woyfynmw": true }));
 }, "/Users/felixadlen/Lokalt/(master) xz-studios/xzstudios.se/src/pages/integrity.astro", void 0);
 
 const $$file = "/Users/felixadlen/Lokalt/(master) xz-studios/xzstudios.se/src/pages/integrity.astro";
