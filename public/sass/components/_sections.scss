@@ -1262,11 +1262,10 @@
     transform: rotate(-20deg) translate(75vw, -200px);
   }
   60% {
-    transform: rotate(-20deg) translate(75vw, -300px) scaleX(-1);
+    transform: rotate(-20deg) translate(80vw, -300px) scaleX(-1);
   }
   100% {
-    transform: rotate(0) translate(var(--translate-x), var(--translate-y))
-      scaleX(-1);
+    transform: rotate(-20deg) translate(100vw, -300px) scaleX(-1);
   }
 }
 
