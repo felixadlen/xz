@@ -1,11 +1,23 @@
+---
+import MenuNav from "../components/MenuNav.astro";
+import Footer from "../components/Footer.astro";
+import ContactForm from "../components/ContactForm.astro";
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
     <title>WE ARE XZ</title>
     <meta name="title" content="What we do | XZ STUDIOS" />
 <meta name="description" content="We help you tell your story through brand concepts, marketing,  communications, advertising, and graphic design. Read more." />
+=======
+    <title>WHAT WE DO</title>
+    <meta name="title" content="What we do | XZ STUDIOS" />
+<meta name="description" content="We help you tell your story through brand concepts, marketing, communications, advertising, and graphic design. Read more." />
+>>>>>>> staging
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="https://use.typekit.net/iza3jks.css" />
     <link
@@ -37,8 +49,7 @@
     </script>
   </head>
   <body>
-    <div id="master-menu"></div>
-
+<MenuNav />
     <section class="white-bg" id="intro-services">
       <div class="highlightTextContainer">
         <h1 class="fade-highlight">what we do</h1>
@@ -48,7 +59,7 @@
       </div>
     </section>
 
-    <section class="dark-bg vh-90 about-us">
+    <section class="dark-bg about-us">
       <div class="text-centercontainer">
         <h2 class="white">every business<br> has a story to tell</h2>
 
@@ -65,15 +76,13 @@
       <section class="white-bg dark-color service-item">
         <div class="service-item-wrapper">
 
-          <div class="service-item-heading"><h2>strategic<br>marketing</h2></div>
+          <div class="service-item-heading""><h2>strategic<br>marketing</h2></div>
 
           <div><p>Think of the classic communications model. You have a sender, a message and a receiver. These are the three pillars of all communication, and they all play a big part in your marketing. All your actions leads the way.</p>
           
 
             <ul class="custom-bullet"> 
-              <!-- <li>Website optimization</li>  -->
               <li>Marketing evaluation & analytics</li> <li>PR-activities</li> <li>SEM (Search Engine Marketing); Paid search & Google Ads</li> <li>SEO (Search Engine Optimization); Improve your organic ranking on search engines</li> 
-              <!-- <li>Marketing strategies</li> -->
                <li>Content production; e.g. social media, blog posts and articles</li> </ul>
 
           </div>
@@ -109,8 +118,6 @@
             It all depends on the goal; e.g. brand awareness, more traffic to your website or increased sales. We help you with the ideas, production and analysis. 
             
             
-          
-
             <ul class="custom-bullet"> 
               <li>Campaign plans & strategy</li> <li>A/B testing</li> <li>Digital advertising; e.g. on social media and websites</li> <li>Print advertising</li> 
           </ul>
@@ -184,10 +191,10 @@
     </section>
    
 
-    <!-- NEDAN HÄMTAR FOOTER + KONTAKTFORM -->
-    <div id="openContactForm" class="hidden"></div>
-    <footer id="master-footer"></footer>
 
+    <Footer />
+    <ContactForm />
+‚
     <script src="/script.js" is:inline></script>
   </body>
 </html>

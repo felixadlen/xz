@@ -9,9 +9,7 @@
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-size: 1.5rem;
-    // text-align: center;
     text-transform: lowercase;
-    // font-family: "juniper";
     font-weight: 200;
     @media (min-width: $breakpoint-tablet) {
       font-size: 4.2rem;
@@ -24,10 +22,9 @@
 }
 
 #home-hero-two {
-  padding: 3rem 2rem 0rem 2rem;
+  padding: 5rem 2rem 0rem 2rem;
+  // height: 8vh;
   display: flex;
-  background-color: #eaeaea;
-  // background-color: red;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -35,22 +32,20 @@
   z-index: 100;
   user-select: none;
   @media (min-width: $breakpoint-tablet) {
-    padding: 20rem 0rem 0rem 0rem;
+    padding: 8rem 0rem 6rem 0rem;
+    height: inherit;
   }
 
   .header-welike {
     display: flex;
     z-index: 100;
-
     flex-direction: column;
     align-items: center;
-    padding-bottom: 3rem;
     @media (min-width: $breakpoint-tablet) {
-      padding-bottom: 10rem;
+      padding-bottom: 14rem;
     }
     h2 {
       font-weight: 700;
-      font-size: clamp(1.6rem, 2rem, 2rem);
       line-height: 1.1;
       text-align: center;
       margin-bottom: 3rem;
@@ -65,77 +60,19 @@
       }
     }
   }
-  .welike-text {
-    p {
-      font-size: 1.3rem;
-      margin-top: 10rem;
-      padding: 0rem 2rem;
-      text-align: center;
-      line-height: 1.6;
-      margin: auto;
-      // max-width: 550px;
-    }
-  }
 
   .smile {
-    font-family: "Juniper";
     cursor: pointer;
     display: inline-block;
-    text-align: center;
     margin-left: 2rem;
-    // background-color: red;
-    width: 200px;
+    width: 60px;
+    margin-right: 30px;
     font-size: 6rem;
     color: #c83c4e;
-    height: 150px;
+    height: 100px;
     margin-bottom: -2rem;
-    transform: rotateZ(90deg);
-    @media (min-width: $breakpoint-tablet) {
-      font-size: 7rem;
-    }
   }
 }
-
-// NEDAN ÄR BORDER OUTLINE ANIMATIONEN i H1
-
-.text-line {
-  stroke-dasharray: 770;
-  stroke-dashoffset: 770;
-  animation: dash 3.5s linear forwards, filling 3.5s ease-in forwards;
-  // font-size: 2vw;
-  @media (min-width: $breakpoint-tablet) {
-    animation: dash 4s linear forwards, filling 3.5s ease-in forwards;
-    -webkit-animation: dash 3.9s linear forwards, filling 3.8s ease-in forwards;
-
-    stroke-dasharray: 670;
-    stroke-dashoffset: 670;
-  }
-}
-
-.text-line text {
-  font-family: "greycliff-cf", Arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes filling {
-  0%,
-  90% {
-    fill: #c83c4e;
-    fill-opacity: 0;
-  }
-  100% {
-    fill: #c83c4e;
-    fill-opacity: 1;
-  }
-}
-// ----
 
 // PROFILE- TWO COLUMNS WITH OVERLAY
 
@@ -247,17 +184,20 @@
 
 .services-spec {
   background-color: #1c1e21;
-  padding: 5rem 2rem;
-
+  padding: 5rem 1.4rem;
   box-shadow: 0px -20px 20px -10px rgba(0, 0, 0, 0.3);
   position: relative;
   h2 {
     color: #e7e8ef;
-    max-width: 1000px;
+    max-width: 1025px;
     margin: auto;
     font-size: clamp(2rem, 6rem, 7rem);
     white-space: nowrap;
-    margin-bottom: 4.5rem;
+    margin-bottom: 2.5rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 4.5rem;
+    }
   }
   .four-columns {
     cursor: default;
@@ -265,14 +205,13 @@
     flex-direction: column;
     flex-wrap: wrap;
     margin: auto;
-    max-width: 1000px;
+    max-width: 1050px;
     justify-content: space-between;
     align-items: center;
     @media (min-width: $breakpoint-tablet) {
       flex-direction: row;
     }
     h3 {
-      // text-transform: uppercase;
       margin-left: 0;
       margin-bottom: 0.3rem;
       padding-left: 0;
@@ -282,16 +221,17 @@
     .column-item {
       flex: 0 1 44%;
       display: flex;
-      // background-color: red;
+      border-radius: 8px;
       flex-direction: column;
       align-items: flex-start;
       color: rgb(230, 230, 230);
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
       &:hover {
         color: white;
       }
-      @media (min-width: 768px) {
-        margin-bottom: 0;
+      @media (min-width: $breakpoint-tablet) {
+        margin-bottom: 2.5rem;
+        padding: 1rem;
       }
     }
     .top-column {
@@ -368,37 +308,80 @@
     align-items: center;
     h1 {
       align-self: flex-end;
+      line-height: 0.9;
     }
+  }
+
+  .highlightTextContainer {
     svg {
+      max-height: 260px;
       flex: 0 0 100%;
-      height: 200px;
-      font-size: 4.7rem;
       font-weight: 800;
       align-self: flex-end;
-      // background-color: blue;
-      @media (min-width: $breakpoint-tablet) {
-        font-size: 8rem;
-        height: 200px;
+      padding-bottom: -2rem;
+      text {
+        stroke: #c83c4e;
+        font-weight: 700;
+        height: 100%;
+        display: flex;
+        stroke-width: 3;
+        font-size: clamp(3rem, 70vw, 19rem);
+        animation: animationEffect 4s linear forwards,
+          filling 4.5s ease-in forwards;
+        -webkit-animation: animationEffect 4s linear forwards,
+          filling 4.5s ease-in forwards;
+        @media (min-width: $breakpoint-tablet) {
+          font-size: clamp(3rem, 40vw, 40rem);
+          margin-top: 3rem;
+        }
       }
+    }
+  }
+  @keyframes filling {
+    0%,
+    90% {
+      fill: #c83c4e;
+      fill-opacity: 0;
+    }
+    100% {
+      fill: #c83c4e;
+      fill-opacity: 1;
+    }
+  }
+  @keyframes animationEffect {
+    0% {
+      stroke-dasharray: 0 100%;
+      /* stroke-dashoffset: 20%; */
+    }
+    100% {
+      stroke-dasharray: 100% 0;
+      /* stroke-dashoffset: -20%; */
     }
   }
 
   .intro-subheader {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     line-height: 1.3;
     flex: 0 0 100%;
     color: #1c1e21;
-    font-weight: 400;
+    font-weight: 300;
     padding: 0rem 2rem;
-    margin-top: -2rem;
+    margin-top: -1rem;
     align-self: flex-start;
     text-align: center;
-    // margin-top: 1.5rem;
-
+    opacity: 0;
+    animation: fadeH2 4s ease forwards;
     @media (min-width: $breakpoint-tablet) {
-      padding: 0;
-
-      font-size: 1.8rem;
+      margin-top: -3rem;
+      font-size: 2rem;
+    }
+  }
+  @keyframes fadeH2 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 
@@ -414,7 +397,7 @@
     transition: opacity 1s;
     color: grey;
     @media (min-width: $breakpoint-tablet) {
-      font-size: 8vw;
+      font-size: 10vw;
     }
   }
 
@@ -432,24 +415,15 @@
       color: #1c2535;
     }
   }
-  h4 {
-    margin-top: -2rem;
-    font-size: 6rem;
-    color: #c83c4e;
-    font-family: "Juniper";
-    font-weight: 700;
-  }
 }
 
 .button-center {
-  margin-top: 8rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   color: white;
-  a {
-    &:hover {
-      color: #e8e8e8;
-    }
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: 2rem;
   }
 }
 
@@ -509,6 +483,15 @@
 
 // INTRODUCTION
 
+#intro-hero {
+  padding: 11rem 0rem 15rem 0rem;
+  height: 80vh;
+  @media (min-width: $breakpoint-tablet) {
+    padding: 18rem 2rem 20rem 2rem;
+    height: 85vh;
+  }
+}
+
 #introduction {
   padding: 15rem 0rem 15rem 0rem;
   background-color: #1c1e21;
@@ -518,7 +501,7 @@
   align-items: center;
   color: white;
   @media (min-width: $breakpoint-tablet) {
-    padding: 25rem 2rem 25rem 2rem;
+    padding: 20rem 2rem 20rem 2rem;
   }
   .intro-container {
     display: flex;
@@ -552,9 +535,9 @@
 }
 
 #introduction-about {
-  padding: 4rem 1.4rem;
+  padding: 2rem 1.4rem 5rem 1.4rem;
   @media (min-width: $breakpoint-tablet) {
-    height: 90vh;
+    padding: 8rem 2rem;
   }
   h2 {
     margin-bottom: 1rem;
@@ -584,13 +567,14 @@
     .right-split-video {
       flex: 0 0 100%;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       order: 1;
       margin-bottom: 4rem;
 
       @media (min-width: $breakpoint-tablet) {
         flex: 0 0 40%;
         order: 2;
+        justify-content: flex-end;
       }
       video {
         max-width: 550px;
@@ -698,14 +682,10 @@
 
 //
 
-//
-
 // SECTION VARIABLES - BACKGROUNDS
 
 .dark-bg {
   background-color: #1c1e21;
-  // display: block;
-  // height: 80vh;
 }
 
 // -------------
@@ -713,40 +693,53 @@
 .about-us {
   display: flex;
   justify-content: center;
-  height: 90vh;
-  padding-top: 2rem;
+  padding: 7rem 1.4rem 5rem 1.4rem;
   @media (min-width: $breakpoint-tablet) {
-    height: 110vh;
-    padding-top: 0rem;
+    padding: 10rem 2rem;
+  }
+  .text-centercontainer {
+    text-align: left;
+    h2 {
+      text-align: left;
+      @media (min-width: $breakpoint-tablet) {
+        text-align: center;
+      }
+    }
+    @media (min-width: $breakpoint-tablet) {
+      text-align: center;
+    }
   }
 }
+
 .text-centercontainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 4rem;
-  padding: 0rem 1.4rem;
   @media (min-width: $breakpoint-tablet) {
     margin: 0 auto;
     max-width: 680px;
+    padding: 0rem 1.4rem;
   }
-  div {
+  #morph-xz {
     @media (min-width: $breakpoint-tablet) {
-      padding-left: 2rem;
+      padding-left: 1.4rem;
     }
   }
   h2 {
     text-align: left;
+    width: 100%;
     line-height: 1.1;
     @media (min-width: $breakpoint-tablet) {
       text-align: center;
     }
   }
   p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     @media (min-width: $breakpoint-tablet) {
       font-size: 1.2rem;
+      padding: 0rem 2rem;
     }
   }
 }
@@ -819,7 +812,6 @@
     margin-left: -6rem;
   }
   h2 {
-    font-family: "juniper";
     font-weight: 800;
     font-size: 5rem;
   }
@@ -901,65 +893,43 @@
 // BLOG FULL WIDTH
 
 #blog3-preview {
-  height: 90vh;
-  // padding: 4rem;
-  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
   background-color: #1c1e21;
-  // video {
-  //   height: 100%;
-  //   width: 100%;
-  //   z-index: -10;
-  //   filter: grayscale(80%);
-  //   position: absolute;
-  //   object-fit: cover;
-  // }
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 6rem;
+  }
 
   .blogcontainerThree {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    padding: 2rem;
-
-    @media (min-width: $breakpoint-tablet) {
-      padding: 2rem;
-    }
+    flex-direction: column;
+    margin: auto;
+    padding-top: 2rem;
     .text-container {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 800px;
-      justify-content: center;
-      h2 {
-        flex: 0 0 100%;
-        // font-size: 6rem;
-        font-size: 10vw;
-        text-align: center;
-        line-height: 1.1;
-        @media (min-width: $breakpoint-tablet) {
-          font-size: 8vw;
-        }
+      order: 2;
+      padding: 0rem 1.4rem;
+      text-align: center;
+      @media (min-width: $breakpoint-tablet) {
+        order: 0;
       }
-      button {
-        display: block;
-      }
-      a {
-        &:hover {
-          color: white;
-        }
-      }
-
-      h4 {
-        margin-top: 1rem;
-        display: block;
-        flex: 0 0 100%;
-
-        font-size: 1.5rem;
-        color: white;
-        font-weight: 400;
-        text-align: center;
+      // h2 {
+      //   flex: 0 0 100%;
+      //   font-size: 10vw;
+      //   text-align: left;
+      //   line-height: 1.1;
+      //   @media (min-width: $breakpoint-tablet) {
+      //     font-size: 8vw;
+      //   }
+      // }
+      p {
         margin-bottom: 2rem;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        max-width: 500px;
+        margin: 2rem auto;
+      }
+      .btn-red {
+        margin-bottom: 4rem;
       }
     }
   }
@@ -979,7 +949,7 @@
   }
   .endnote {
     border-radius: 8px;
-    padding: 2rem;
+    padding: 1.4rem;
     color: #1c1e21;
     @media (min-width: $breakpoint-tablet) {
       max-width: 800px;
@@ -1004,23 +974,19 @@
 
 .split-container {
   display: flex;
-  // background-color: blue;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
   gap: 0;
-  max-width: 1500px;
+  max-width: 1300px;
   height: 100%;
   overflow-x: hidden;
-
   @media (min-width: $breakpoint-tablet) {
     flex-wrap: nowrap;
-    // gap: 10rem;
   }
 
   .left-split {
     flex: 0 0 100%;
-    // background-color: green;
     padding: 0rem 2rem 4rem 2rem;
     margin-bottom: 6rem;
     z-index: 2;
@@ -1039,15 +1005,19 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
-    margin-right: -5rem;
-    margin-top: -15rem;
+    margin-right: -14rem;
+    margin-top: -17rem;
 
     img {
-      max-width: 80%;
+      max-width: 100%;
       display: block;
     }
     .felix-img {
-      margin-top: -8rem;
+      margin-top: -10rem;
+      margin-right: 0rem;
+      @media (min-width: $breakpoint-tablet) {
+        margin-top: -10rem;
+      }
     }
   }
   @media (min-width: $breakpoint-tablet) {
@@ -1070,9 +1040,9 @@
       align-items: flex-end;
       max-height: 100%;
       img {
-        margin-top: 5rem;
-        max-width: 80%;
-        max-height: 650px;
+        // margin-top: 5rem;
+        max-width: 100%;
+        max-height: 700px;
         display: block;
       }
     }
@@ -1084,7 +1054,6 @@
       order: 1;
       flex: 0 0 100%;
     }
-
     .right-split {
       order: 2;
       flex: 0 0 100%;
@@ -1094,7 +1063,6 @@
       .right-split {
         flex: 0 0 100%;
       }
-
       .left-split {
         order: 2;
         flex: 0 0 40%;
@@ -1102,7 +1070,6 @@
         margin-left: auto;
         margin-right: 4rem;
       }
-
       .right-split {
         order: 1;
         margin-right: 0;
@@ -1110,10 +1077,10 @@
         align-items: flex-end;
         justify-content: center;
         max-height: 100%;
+        margin-top: 1rem;
         img {
-          max-width: 80%;
+          max-width: 100%;
           max-height: 800px;
-          margin-top: 0rem;
           display: block;
         }
       }
@@ -1121,35 +1088,40 @@
   }
 }
 
-.lock-scroll {
-  overflow: hidden;
-  height: 100%;
-}
-
-.testar-container {
+.customers-container {
   display: flex;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   margin: auto;
-  // background-color: #eaeaea;
   justify-content: center;
   max-width: 100%;
-  height: 60vh;
-  overflow-x: hidden;
-  // margin-top: -20rem;
   position: relative;
-  video {
-    width: 100%;
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 0;
+    padding-bottom: 0;
   }
-  .client-container {
+  .customers-wrapper {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    background-color: red($color: #000000);
-
-    column-gap: 6rem;
+    column-gap: 4rem;
+    row-gap: 1rem;
     justify-content: center;
+    max-width: 450px;
+    @media (min-width: $breakpoint-tablet) {
+      row-gap: 1rem;
+      column-gap: 5rem;
+      max-width: inherit;
+    }
     .client-logo {
       img {
-        max-width: 120px;
+        max-width: 100px;
+        &:hover {
+          transform: scale(1.02);
+        }
+        @media (min-width: $breakpoint-tablet) {
+          max-width: 120px;
+        }
       }
       &:nth-child(3) {
         img {
@@ -1183,7 +1155,6 @@
       font-size: 1.4rem;
       color: #c83c4e;
       font-weight: 600;
-      // font-family: "Juniper";
     }
     img {
       max-width: 60px;
@@ -1191,124 +1162,19 @@
   }
 }
 
-//  SERVICES SIDA
-
-#graphics {
-  padding: 0rem 2rem;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  justify-content: space-between;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  .service-item {
-    flex: 0 0 85%;
-    // height: 100%;
-    padding: 2rem;
-    &:nth-child(2) {
-      background-color: rgba(128, 128, 128, 0.102);
-    }
-  }
-}
-#services-twoColumns {
-  display: flex;
-  gap: 2rem;
-  padding: 20rem 2rem;
-  justify-content: center;
-  align-items: center;
-  div {
-    max-width: 600px;
-    display: flex;
-    flex-wrap: wrap;
-    img {
-      margin-bottom: 2rem;
-      margin-top: 2rem;
-      // margin-left: -2rem;
-      max-width: 50%;
-      order: 0;
-    }
-    &:first-of-type {
-      // background-color: red;
-      display: flex;
-      justify-content: left;
-    }
-    &:last-of-type {
-      display: flex;
-      // background-color: red;
-    }
-    h2 {
-      text-align: center;
-    }
-  }
-}
-
-// CLIENT LOGO SLIDER ANIMATION
-#logo-container {
-  display: flex;
-  max-width: 800px;
-  margin: auto;
-  margin-top: 2rem;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; /* Hide overflowing logos */
-  position: relative;
-  height: 300px; /* Adjust as needed */
-  .logo-container-overlay {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    z-index: 2000;
-    justify-content: space-between;
-    div {
-      width: 150px;
-      opacity: 0;
-      background-size: 150px 100%;
-      background-repeat: no-repeat;
-      &:first-of-type {
-        background: linear-gradient(to right, #e8e8e8 20%, transparent 60%);
-      }
-      &:last-of-type {
-        background: linear-gradient(to left, #e8e8e8 20%, transparent 60%);
-      }
-      @media (min-width: $breakpoint-tablet) {
-        opacity: 1;
-      }
-    }
-  }
-}
-
-.client-logo2 {
-  opacity: 0.3;
-  transition: transform 1s ease, opacity 1s ease, width 1s ease; /* Smooth transition for movement and opacity */
-  width: 20%; /* Adjust size as needed */
-  position: absolute;
-  display: flex;
-  align-items: center;
-}
-
-.featured {
-  opacity: 1;
-  // transform: scale(1.5); /* Slightly larger */
-  width: 40%;
-}
-
-// END
-
 // CUSTOMERBOXES (services-sidan)
 
 .services-customer-section2 {
-  padding: 8rem 2rem;
-
+  padding: 4rem 2rem;
   @media (min-width: $breakpoint-tablet) {
     padding: 8rem 2rem 4rem 2rem;
   }
   h2 {
     text-align: left;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
     @media (min-width: $breakpoint-tablet) {
       text-align: center;
+      margin-bottom: 6rem;
     }
   }
 }
@@ -1327,6 +1193,11 @@
   flex: 0 0 100%;
   border-radius: 8px;
   margin-bottom: 2rem;
+  &:hover {
+    color: black;
+    cursor: default;
+    background-color: #d3d0d036;
+  }
 
   @media (min-width: $breakpoint-desktop) {
     align-items: center;
@@ -1354,22 +1225,18 @@
       margin-right: 1.5rem;
       order: 0;
     }
-    &:hover {
-      color: black;
-      cursor: default;
-      background-color: #d3d0d036;
-    }
   }
 }
 
 //
+
 .bird {
   width: 90px;
   position: absolute;
   bottom: 0px;
   left: 45%;
   z-index: 2;
-  transition: transform 1s ease; /* Default transition */
+  transition: transform 1s ease forwards; /* Default transition */
   transform-origin: bottom;
   cursor: pointer; // To indicate it's clickable
   &:hover {
@@ -1387,18 +1254,18 @@
       transform: translateY(0) rotate(-360deg); /* Complete the rotation */
     }
   }
-
-  @keyframes reverseBackflip {
-    100% {
-      transform: rotate(-20deg) translateX(100vw) translateY(-300px);
-      transition: transform 4s ease;
-    }
-  }
 }
 
-.bird-two {
-  top: -170px;
-  transform: rotate(140deg);
+@keyframes flyAway {
+  0% {
+    transform: rotate(0) translate(0, 0);
+  }
+  50% {
+    transform: rotate(-20deg) translate(85vw, -200px);
+  }
+  100% {
+    transform: rotate(-20deg) translate(100vw, -300px);
+  }
 }
 
 //
@@ -1431,12 +1298,11 @@
 .service-item {
   display: flex;
   align-items: center;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   @media (min-width: $breakpoint-desktop) {
-    height: 80vh;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 }
 
@@ -1483,12 +1349,13 @@
 }
 
 .service-item-heading {
-  // background-color: green;
-  // height: 100%;
   flex: 0 0 30%;
+  text-align: left;
+  @media (min-width: $breakpoint-desktop) {
+    text-align: right;
+  }
 }
 .service-item-text {
-  // background-color: blue;
   height: 100%;
   flex: 0 0 60%;
 }
@@ -1498,6 +1365,7 @@
     order: 0;
     @media (min-width: $breakpoint-desktop) {
       order: 2;
+      text-align: left;
     }
   }
 }
@@ -1509,10 +1377,6 @@
   @media (min-width: $breakpoint-tablet) {
     height: 90vh;
   }
-}
-
-#aboutUsPresentation {
-  // padding: 2rem;
 }
 
 #morph-xz {
@@ -1553,3 +1417,82 @@
     height: 90vh;
   }
 }
+
+// /thankyou page
+
+.vh-90-thankyou {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  text-align: center;
+}
+
+#thanks-container {
+  transition: filter 1s ease-out;
+  filter: blur(0);
+}
+#thankyouContainer {
+  display: none;
+  opacity: 0;
+  justify-content: center;
+  transition: opacity 1s ease-in; /* Transition for fading in */
+  position: absolute; /* Make the container absolutely positioned */
+  top: 50%; /* Set to 50% of the viewport's height */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for true centering */
+  width: 100%; /* Adjust as needed */
+}
+#form-name {
+  transition: opacity 1s ease-out, filter 1s ease-out;
+  opacity: 1;
+  filter: blur(0);
+  padding: 1rem;
+  button {
+    margin-top: 1rem;
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: 1rem;
+    }
+  }
+}
+
+#form-name.hidden {
+  opacity: 0;
+  filter: blur(5px);
+}
+
+#welcome-message {
+  display: none;
+  color: #1c1e21;
+  padding: 2rem;
+  transition: opacity 1s ease-in;
+  opacity: 0;
+  transition: opacity 1s ease-in, margin-top 1s ease-in-out; /* Added margin-top transition */
+  opacity: 0;
+  margin-top: 0;
+  margin-bottom: 4rem;
+  font-size: clamp(2rem, 5rem, 50vw);
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 0;
+    font-size: clamp(2rem, 10rem, 50vw);
+  }
+}
+
+#form-name input {
+  background-color: white;
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  width: 100%;
+  transition: 0.6s all ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px;
+  @media (min-width: $breakpoint-tablet) {
+    width: 400px;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+// end of thankyou-page

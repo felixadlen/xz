@@ -1,7 +1,7 @@
 ---
 import Layout from './Base.astro';
 import type { Props as BaseHeadProps } from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
+import MenuNav from '../components/MenuNav.astro';
 import Footer from '../components/Footer.astro';
 
 export interface Props {
@@ -12,7 +12,7 @@ const { seo } = Astro.props as Props;
 ---
 
 <Layout seo={seo}>
-  <Header slot="header" />
+  <MenuNav slot="header" />
 		<slot />
   <Footer slot="footer" />
 </Layout>

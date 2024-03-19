@@ -2,7 +2,6 @@ $header-z-index: 997;
 $menu-box-z-index: 998;
 $menu-nav-z-index: 999;
 $small-logo-z-index: 996;
-// $breakpoint-tablet: 768px;
 
 header {
   position: fixed;
@@ -84,9 +83,6 @@ header {
     right: 2.4rem;
     top: 2rem;
   }
-  // &:hover {
-  //   background-color: red;
-  // }
 
   .bar {
     margin: 5px;
@@ -186,26 +182,38 @@ header {
       }
     }
     &.inactive a {
-      color: grey; // or any color you prefer for inactive state
-      pointer-events: none; // optional, prevents clicking
-      opacity: 0.5; // makes it visually "disabled"
-
-      // &:hover {
-      //   cursor: default;
-      //   background-color: inherit; // keeps background unchanged on hover
-      // }
+      color: grey;
+      pointer-events: none;
+      opacity: 0.5;
     }
   }
 }
 
-.contact-logo-container {
-  position: absolute;
-  bottom: 2rem;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  width: 85%; /* Match the width of .menu-box */
-  box-sizing: border-box; /* This ensures padding is included in the width */
+.contact-logo-container,
+.social-logo-mobilemenu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .contact-logo-container {
+    position: absolute;
+    bottom: 3rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 85%;
+    box-sizing: border-box;
+  }
+
+  .social-logo-mobilemenu {
+    position: absolute;
+    bottom: 3rem;
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+    align-items: center;
+    width: 85%;
+    box-sizing: border-box;
+  }
 }
 
 .small-logo {
@@ -249,4 +257,10 @@ header {
   position: relative;
   bottom: 2px;
   margin-left: 3px;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }

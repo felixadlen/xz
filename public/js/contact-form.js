@@ -1,29 +1,28 @@
 const btnOpenForms = document.querySelectorAll('.btnOpenForm');
 const formContainer = document.getElementById('contactForm');
+const formContent = document.querySelector('.form-container');
 const form = document.getElementById("form");
 const result = document.getElementById("result");
 const btnCloseForms = document.querySelectorAll('.btnCloseForm'); 
 const thankYouMessage = document.getElementById("thankYouMessage");
-const openContactForm = document.getElementById('openContactForm')
+const openContactForm = document.getElementsByClassName('openContactForm')
 
 btnOpenForms.forEach(btn => {
   btn.addEventListener('click', function() {
-      openContactForm.classList.remove('hidden');
+    formContainer.classList.toggle('hidden'); // Toggle visibility
   });
 });
 
 btnCloseForms.forEach(btn => {
   btn.addEventListener('click', function() {
-    openContactForm.classList.add('hidden');
+    formContainer.classList.add('hidden');
   });
 });
-
 formContainer.addEventListener('click', function(event) {
-  if (event.target === formContainer) {
-    openContactForm.classList.add('hidden');
+  if (!formContent.contains(event.target)) {
+    formContainer.classList.add('hidden');
   }
 });
-
 
 //
 

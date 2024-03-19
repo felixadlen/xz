@@ -1,5 +1,12 @@
+---
+import MenuNav from "../components/MenuNav.astro";
+import Footer from "../components/Footer.astro";
+import ContactForm from "../components/ContactForm.astro";
+
+---
+
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -38,9 +45,7 @@
     </script>
     </head>
   
-
-    <div id="master-menu"></div>
-
+<MenuNav />
     <style>
       #policy {
         margin: 4rem auto;
@@ -108,12 +113,11 @@
     </div>
     </section>
 
-    <!-- NEDAN HÄMTAR FOOTER + KONTAKTFORM -->
-    <div id="openContactForm" class="hidden"></div>
-    <footer id="master-footer"></footer>
-
+ 
+  <Footer />
 
     <script src="/script.js" is:inline></script>
+    <ContactForm />
 
   </body>
 </html>

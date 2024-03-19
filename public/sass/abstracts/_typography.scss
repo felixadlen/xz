@@ -1,10 +1,3 @@
-@font-face {
-  font-family: Juniper;
-  src: url("fonts/Juniper-Bay-Regular.a86e1ea.woff") format("woff");
-  font-style: normal;
-  font-weight: 600;
-}
-
 h1 {
   font-size: 4.4rem;
   // display: none;
@@ -17,7 +10,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.6rem;
   line-height: 1;
 
   @media (min-width: $breakpoint-tablet) {
@@ -32,12 +25,6 @@ h2.white {
 
 h4 {
   font-size: 5rem;
-}
-
-h5 {
-  font-family: "Juniper";
-  font-size: 3rem;
-  font-weight: 300;
 }
 
 p.white {

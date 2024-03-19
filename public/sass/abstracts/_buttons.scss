@@ -100,11 +100,26 @@ button {
   color: white;
   font-size: 1.1rem;
   font-weight: 400;
+  display: inline-block;
   border: 1.5px solid #c83c4e;
   border-radius: 50px;
   cursor: pointer;
+  transition: 0.4s ease;
   &:hover {
     background-color: #e34a5e;
     color: white;
+    transform: scale(1.02);
   }
+}
+
+.btn-closed {
+  padding: 0.8rem 2rem;
+  background-color: #969696;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 400;
+  display: inline-block;
+  border: 1.5px solid transparent;
+  border-radius: 50px;
+  cursor: default;
 }

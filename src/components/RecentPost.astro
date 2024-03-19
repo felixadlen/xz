@@ -1,0 +1,134 @@
+---
+import {formatDate} from '../utils/helpers';
+
+// Fetch posts using Astro.glob
+const posts = await Astro.glob('../pages/stories/*.md'); // Adjust the path to your posts
+const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.publishedAt) - new Date(a.frontmatter.publishedAt));
+const recentPost = sortedPosts.length > 0 ? sortedPosts[0] : null;
+
+// Extract title, image URL, and published date of the most recent post
+const title = recentPost ? recentPost.frontmatter.title : 'No recent posts';
+const imageUrl = recentPost ? recentPost.frontmatter.image : '';
+const publishedAt = recentPost ? recentPost.frontmatter.publishedAt : '';
+const formattedDate = publishedAt ? formatDate(publishedAt) : 'N/A';
+---
+
+<div class="recentPostContainer">
+<article class="recent-post">
+  <a href={recentPost.url} class="recent-post-link">
+    <div class="recent-post-image-container">
+      <picture>
+        <source srcset={`${imageUrl.includes('.') ? imageUrl : imageUrl + '.webp'}`} type="image/webp" />
+        <img src={`${imageUrl.includes('.') ? imageUrl : imageUrl + '.png'}`} alt={`Featured image for ${title}`} />
+      </picture>
+      
+      <!-- Overlay Text -->
+      <!-- <div class="overlay-text"> -->
+      
+      </div>
+      <div class="text-container">
+        <p class="post-preview__date">{formattedDate}</p>
+        <h2 class="recent-preview__title">{title}</h2>
+        <a class="preview-link-cta" href={recentPost.url}>Go to latest post</a>
+      </div>
+    <!-- </div> -->
+  </a>
+</article>
+</div>
+
+<style>
+.recent-post-image-container {
+  position: relative;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.342);
+  display: flex;
+  align-items: flex-end; /* Vertical center */
+  justify-content: center; /* Horizontal center */
+}
+
+.text-container {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  color: white;
+}
+
+.recentPostContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+ .recent-post {
+    background-color: #e8e8e8;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 8px;
+    flex-direction: row;
+    margin: 1.4rem;
+    justify-content: center;
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+
+.recent-post-image-container img {
+    filter: grayscale(100%);
+    transition: filter 1s ease;
+     border: 2px solid #e8e8e8;
+border-radius: 8px;
+}
+
+.recent-post:hover .recent-post-image-container img {
+    filter: grayscale(0%);
+}
+
+.recent-post:hover {
+    transform: scale(1.01);
+    background-color: #e8e8e8;
+}
+
+.recent-post h2 {
+  color: #1c1e21;
+  font-size: 1.7rem;
+  flex: 0 0 100%;
+margin-bottom: 1rem;
+  font-weight: 700;
+ }
+ @media (min-width: 768px) {
+    .recent-post h2 {
+      font-size: 2.6rem;
+    }
+    
+  }
+.preview-link-cta {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+ .recent-post:hover .preview-link-cta {
+color: #e34a5e;
+ }
+
+ .post-preview__date {
+  font-size: 1.1rem;
+color: #1c1e21;
+margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+@media (min-width: $breakpoint-tablet) {
+    .post-preview__date {
+      font-size: 1.3rem;
+
+    }
+  }
+
+</style>
