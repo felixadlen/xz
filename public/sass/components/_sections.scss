@@ -893,9 +893,12 @@
 // BLOG FULL WIDTH
 
 #blog3-preview {
-  padding-top: 6rem;
+  padding-top: 2rem;
   padding-bottom: 6rem;
   background-color: #1c1e21;
+  @media (min-width: $breakpoint-tablet) {
+    padding-top: 6rem;
+  }
 
   .blogcontainerThree {
     display: flex;
@@ -957,7 +960,7 @@
       margin-bottom: 2rem;
     }
     h3 {
-      font-size: 3rem;
+      font-size: 2.4rem;
       line-height: 1.1;
       color: #1c1e21;
       @media (min-width: $breakpoint-tablet) {
