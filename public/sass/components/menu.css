@@ -213,7 +213,7 @@ header {
 @media (max-width: 768px) {
   .contact-logo-container {
     position: absolute;
-    bottom: 4rem;
+    bottom: 3rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -236,7 +236,7 @@ header {
   }
   .social-logo-mobilemenu {
     position: absolute;
-    bottom: 4rem;
+    bottom: 3rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
