@@ -2306,7 +2306,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto;
-  padding-top: 2rem;
+  padding: 2rem 1.4rem;
 }
 #blog3-preview .blogcontainerThree .text-container {
   -webkit-box-ordinal-group: 3;
