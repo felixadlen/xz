@@ -28,7 +28,7 @@ import { PropRenderer } from '@igor.dvlpr/astro-post-excerpt';
     
     <p class="post-excerpt">
       <!-- <PostExcerpt post={post} words={20} addEllipsis={false} /> -->
-      <PostExcerpt post={post} words={30} addEllipsis={true} headings={PropHeadings.None} renderer={PropRenderer.Text} />
+      <PostExcerpt post={post} words={30} addEllipsis={true} headings={PropHeadings.None} renderer={PropRenderer.Hybrid} />
     </p>
     <p class="post-preview__date">{formatDate(post.frontmatter.publishedAt)}</p>
     <p class="post-content__content">{post.frontmatter.text}</p> 

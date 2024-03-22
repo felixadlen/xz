@@ -122,7 +122,7 @@ body {
   font-size: var(--step-1);
   font-family: var(--font-family-heading);
   color: #c83c4e;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .post-content__article h3 {
@@ -143,6 +143,12 @@ li {
   max-width: 100%;
   /* display: flex;
   justify-content: center; */
+}
+
+.post-content__article li {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 3em;
 }
 
 pre {

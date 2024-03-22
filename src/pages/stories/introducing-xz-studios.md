@@ -14,7 +14,7 @@ location: Canggu, Indonesia
 
 What happens to creativity if we don't need to chase inspiration? But rather, let inspiration seek us. From that curiosity the idea of XZ was born. We both had great jobs within marketing. Still something was missing and we knew we had to find it.
 
-**Jump to September 12, 2023** and we are on a plane to Albania – the first stop to make XZ studios possible.
+**Jump to September 12, 2023** and we are on a plane to Albania – the first stop to make XZ STUDIOS possible.
 
 <!-- ![image](/images/DSCF9276-3.png) -->
 

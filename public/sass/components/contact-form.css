@@ -28,7 +28,7 @@
      -moz-animation: fadeContactOverlay 0.4s;
        -o-animation: fadeContactOverlay 0.4s;
           animation: fadeContactOverlay 0.4s;
-  overflow-y: auto;
+  overflow-y: hidden;
   z-index: 10000;
 }
 

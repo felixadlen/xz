@@ -1223,7 +1223,6 @@ header {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
           align-self: flex-end;
-  padding-bottom: -2rem;
 }
 .white-bg .highlightTextContainer svg text {
   stroke: #c83c4e;
@@ -1564,13 +1563,25 @@ header {
 }
 
 #intro-hero {
-  padding: 11rem 0rem 15rem 0rem;
   height: 80vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 @media (min-width: 768px) {
   #intro-hero {
-    padding: 18rem 2rem 20rem 2rem;
+    padding: 2rem;
     height: 85vh;
+    background-color: green;
   }
 }
 
@@ -3368,7 +3379,7 @@ header {
      -moz-animation: fadeContactOverlay 0.4s;
        -o-animation: fadeContactOverlay 0.4s;
           animation: fadeContactOverlay 0.4s;
-  overflow-y: auto;
+  overflow-y: hidden;
   z-index: 10000;
 }
 
