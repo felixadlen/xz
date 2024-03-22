@@ -97,6 +97,7 @@ We'd love to hear your thoughts or secret recipes to boost inspiration and creat
      .stories-rightimage {
     width: 200px;
     max-width: 100%;
+    margin: 0rem 1rem;
     overflow-x: hidden;
          filter: grayscale(100);
          transition: 0.5s all ease;
