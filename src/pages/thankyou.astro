@@ -62,7 +62,7 @@ import ContactForm from "../components/ContactForm.astro";
       <div id="thankyouContainer">
 <p style="max-width: 800px;font-size: 1.5rem;">Do you know what you are? A curious one. A few weeks ago, we went live with XZ. And you, <span class="name-placeholder"></span>, made difference that day.
  
-  <button style="margin: 2rem auto 0rem auto;display: block"><a href="#thankyouSectionTwo" class="btn-red">Stop talking in riddles</a></button>
+  <button style="margin: 2rem auto 0rem auto;display: block"><a href="#thankyouSectionTwo" class="btn-red">What difference?</a></button>
   
   </p>      </div>
     </section>
@@ -84,22 +84,13 @@ function displayWelcome() {
     welcome.style.display = 'flex';
     setTimeout(function() {
       welcome.style.opacity = 1;
+      var thankyou = document.getElementById("thankyouContainer");
+      thankyou.style.display = 'block'; // Show the container
       setTimeout(function() {
-        welcome.style.marginTop = '-250px'; // Margin change
-        setTimeout(function() {
-          var thankyou = document.getElementById("thankyouContainer");
-          thankyou.style.display = 'flex'; // Or 'flex' if it suits your layout
-          thankyou.style.opacity = 1;
-        }, 1800);
-        setTimeout(function() {
-          var thankyouTwo = document.getElementById("thankyouSectionTwo");
-          thankyouTwo.style.display = 'flex';
-          var thankyouThree = document.getElementById("thankyouSectionThree");
-          thankyouThree.style.display = 'flex';
-        }, 1800); // Adjust this delay as needed
-      }, 1000); // Delay for 1 second for margin change
-    }, 100); 
-  }, 400); 
+        thankyou.style.opacity = 1; // Fade in the container
+      }, 200); // Time for fade-in effect
+    }, 100); // Delay before starting the opacity transition
+  }, 400); // Delay before hiding the form and showing the welcome message
 }
 
 document.getElementById("name-input").addEventListener("input", function() {
@@ -109,38 +100,35 @@ document.getElementById("name-input").addEventListener("input", function() {
   if (nameInput.value.length >= 3) {
     submitButton.classList.remove("btn-closed");
     submitButton.classList.add("btn-red");
-    submitButton.disabled = false; // Enable the button
+    submitButton.disabled = false;
   } else {
     submitButton.classList.remove("btn-red");
     submitButton.classList.add("btn-closed");
-    submitButton.disabled = true; // Keep the button disabled
+    submitButton.disabled = true;
   }
 });
 
 document.getElementById('name-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the default form submission
+  event.preventDefault();
 
-  var formData = new FormData(this); // Get form data
+  var formData = new FormData(this);
 
-  // AJAX request to Web3Forms
   var xhr = new XMLHttpRequest();
   xhr.open('POST', 'https://api.web3forms.com/submit', true);
-  xhr.setRequestHeader('Accept', 'application/json'); // Set appropriate header for Web3Forms
+  xhr.setRequestHeader('Accept', 'application/json');
 
   xhr.onreadystatechange = function() {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       var status = xhr.status;
       if (status === 0 || (status >= 200 && status < 400)) {
-        // The request has been completed successfully
-        displayWelcome(); // Call your custom function after successful submission
+        displayWelcome();
       } else {
-        // Handle errors here
         console.error('Form submission failed: ', xhr.statusText);
       }
     }
   };
 
-  xhr.send(formData); // Send the form data
+  xhr.send(formData);
 });
 
 function updateNameInElements(name) {
@@ -188,7 +176,9 @@ function updateNameInElements(name) {
   flex-direction: column;
   height: 100vh;
   text-align: center;
+  width: 100%; /* Ensure full width */
 }
+
 
 .thankyou-images img {
   flex: 0 0 15%; /* Allows the image to grow and shrink, but not beyond its content size */
@@ -212,24 +202,27 @@ filter: grayscale (0);
   transition: filter 1s ease-out;
   filter: blur(0);
 }
+
 #thankyouContainer {
-  display: none;
+  display: none; /* Initially hidden */
   opacity: 0;
   padding: 1.4rem;
-  justify-content: center;
-  transition: opacity 1s ease-in; /* Transition for fading in */
-  position: absolute; /* Make the container absolutely positioned */
-  top: 50%; /* Set to 50% of the viewport's height */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust for true centering */
-  width: 100%; /* Adjust as needed */
-  margin-top: 4rem;
-  text-align: center;
-}
-@media(min-width: 768px) {
-  text-align: center;
+  transition: opacity 1s ease-in; /* Smooth transition for opacity */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
+#welcome-message, #thankyouContainer {
+  width: 100%; /* Full width of the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#thankyouContainer > * {
+  text-align: center;
+  max-width: 800px; /* Adjust as needed */
+  margin-left: auto;
+  margin-right: auto;
+}
 #thankyouSectionThree {
   background-color: #c83c4e;
   padding: 4rem 2rem;
@@ -255,8 +248,7 @@ filter: grayscale (0);
 #welcome-message {
   display: none;
   color: #1c1e21;
-  padding: 2rem;
-  transition: opacity 1s ease-in;
+  padding: 0rem 1.4rem;
   opacity: 0;
   transition: opacity 1s ease-in, margin-top 1s ease-in-out; /* Added margin-top transition */
   opacity: 0;
@@ -268,7 +260,7 @@ filter: grayscale (0);
 @media (min-width: 768px) {
   #welcome-message {
     margin-bottom: 0;
-    font-size: clamp(2rem, 10rem, 50vw);
+    font-size: clamp(2rem, 9rem, 50vw);
   }
   }
 
