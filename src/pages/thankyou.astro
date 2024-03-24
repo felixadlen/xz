@@ -88,6 +88,8 @@ import ContactForm from "../components/ContactForm.astro";
         embraceTextThanks.classList.add('hidden');
     
         setTimeout(function() {
+          var introThanks = document.querySelector('.vh-90-thankyou')
+          introThanks.style.height = '100vh';
           form.style.display = 'none';
           embraceTextThanks.style.display = 'none';
           var welcomeContainer = document.getElementById("welcome-container");
@@ -202,11 +204,13 @@ import ContactForm from "../components/ContactForm.astro";
   justify-content: center;
   max-height: 500px;
   width: 100%;
-  margin-bottom: -200px;
+  margin-bottom: -150px;
   min-height: 500px; /* or any other suitable height */
   transition: margin-top 1s ease-in-out; /* Smooth transition for margin-top */
 @media (min-width: 768px) {
   margin-top: 4rem;
+  margin-bottom: -150px;
+
   
 }
 }
@@ -218,8 +222,9 @@ import ContactForm from "../components/ContactForm.astro";
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 80dvh;
   flex-direction: column;
-  height: 100vh;
+  // height: 100vh;
   text-align: center;
 }
 
