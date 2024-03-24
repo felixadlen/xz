@@ -64,7 +64,7 @@ import ContactForm from "../components/ContactForm.astro";
         <div id="thankyouContainer">
 <p style="max-width: 950px;font-size: 1.5rem;">A few weeks ago we went live with XZ. And you <span class="name-placeholder"></span>, made difference that day.
  
-  <button style="margin: 2rem auto 0rem auto;display: block"><a href="#thankyouSectionTwo" class="btn-red">What difference?</a></button>
+  <button style="margin: 2rem auto 0rem auto;display: block;cursor: pointer;"><a href="#thankyouSectionTwo" class="btn-red" style="cursor: pointer;">What difference?</a></button>
   
   </p>      
 </div>
@@ -73,6 +73,8 @@ import ContactForm from "../components/ContactForm.astro";
     
     <script is:inline>
       function displayWelcome() {
+        window.scrollTo(0, 0); 
+        document.body.style.overflow = 'hidden';
         var name = document.getElementById("name-input").value;
         var formattedName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
         var welcomeMessage = "Hello " + formattedName;
@@ -84,7 +86,6 @@ import ContactForm from "../components/ContactForm.astro";
         form.classList.add("hidden");
         let embraceTextThanks = document.getElementById('embraceThanks');
         embraceTextThanks.classList.add('hidden');
-        document.body.style.overflow = 'hidden';
     
         setTimeout(function() {
           form.style.display = 'none';
@@ -114,7 +115,6 @@ import ContactForm from "../components/ContactForm.astro";
             thankyouThree.style.display = 'flex';
             var thankyouEnding = document.getElementById("thankyou-end-strip");
             thankyouEnding.style.display = 'flex';
-
             // Unlock scroll here
             document.body.style.overflow = '';
           }, 1800);
@@ -386,7 +386,8 @@ import ContactForm from "../components/ContactForm.astro";
 }
 
 .thankyou-special {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
   max-width: 800px;
   text-align: left;
 
