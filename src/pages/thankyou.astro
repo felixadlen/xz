@@ -47,7 +47,7 @@ import ContactForm from "../components/ContactForm.astro";
     
     <section class="vh-90-thankyou">
       <div id="thanks-container">
-<img src="img/thankyou-embrace.svg" alt="" style="max-width: 500px;max-height: 200px;margin-bottom: -80px;">        <div id="form-name">
+<img src="/img/thankyou-img/thankyou-embrace.png" id="embraceThanks" alt="red text that says embrace the unknown">        <div id="form-name">
           <form id="name-form" onsubmit="displayWelcome(); return false;" action="https://api.web3forms.com/submit" method="POST">
             <!-- <input type="hidden" name="access_key" value="4b11ec5a-de92-40f5-8959-d81dcb232e08"> -->
             <input type="hidden" name="subject" value="Submission from ThankYou-page">
@@ -77,12 +77,14 @@ import ContactForm from "../components/ContactForm.astro";
     
       var form = document.getElementById("form-name");
       form.classList.add("hidden");
-    
+      let embraceTextThanks = document.getElementById('embraceThanks');
+    embraceTextThanks.classList.add('hidden');
       // Lock scroll here
       document.body.style.overflow = 'hidden';
     
       setTimeout(function() {
         form.style.display = 'none';
+        embraceTextThanks.style.display = 'none';
         var welcome = document.getElementById("welcome-message");
         welcome.style.display = 'flex';
         setTimeout(function() {
@@ -246,9 +248,16 @@ function updateNameInElements(name) {
     
   }
 }
-
+#embraceThanks {
+  max-width: 300px;max-height: 200px;margin-bottom:0px;
+  @media (min-width: 768px) {
+    margin-bottom: -20px;
+    
+  }
+}
 .thankyou-container {
   max-width: 950px;
+  margin-top: -2rem;
 }
 
 #thanks-container,
@@ -260,8 +269,8 @@ function updateNameInElements(name) {
 #thankyouContainer {
   display: none;
   opacity: 0;
-  margin-top: 1.3rem;
-  padding: 1.4rem;
+  margin-top: 0rem;
+  padding: 0rem 1.4rem;
   justify-content: center;
   transition: opacity 1s ease-in;
   position: absolute;
