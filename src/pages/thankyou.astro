@@ -50,7 +50,7 @@ import ContactForm from "../components/ContactForm.astro";
 <img src="/img/thankyou-img/thankyou-embrace.png" id="embraceThanks" alt="red text that says embrace the unknown">       
  <div id="form-name">
           <form id="name-form" onsubmit="displayWelcome(); return false;" action="https://api.web3forms.com/submit" method="POST">
-            <!-- <input type="hidden" name="access_key" value="4b11ec5a-de92-40f5-8959-d81dcb232e08"> -->
+            <input type="hidden" name="access_key" value="4b11ec5a-de92-40f5-8959-d81dcb232e08">
             <input type="hidden" name="subject" value="Submission from ThankYou-page">
             <input type="text" name="name" id="name-input" placeholder="Enter your first name">
             <button type="submit" class="btn-closed" disabled>Just do it</button>
@@ -106,7 +106,7 @@ import ContactForm from "../components/ContactForm.astro";
         thankyou.style.transition = "opacity 0.5s ease-in-out 1s";
 
           setTimeout(function() {
-            welcomeContainer.style.marginTop = '-250px'; // Margin change for welcome container
+            welcomeContainer.style.marginTop = '-150px'; // Margin change for welcome container
             thankyou.style.opacity = 1;
           }, 1000);
         }, 400);
@@ -204,12 +204,12 @@ import ContactForm from "../components/ContactForm.astro";
   justify-content: center;
   max-height: 500px;
   width: 100%;
-  margin-bottom: -150px;
+  margin-bottom: 50px;
   min-height: 500px; /* or any other suitable height */
   transition: margin-top 1s ease-in-out; /* Smooth transition for margin-top */
 @media (min-width: 768px) {
   margin-top: 4rem;
-  margin-bottom: -150px;
+  margin-bottom: 50px;
 
   
 }
@@ -292,12 +292,10 @@ import ContactForm from "../components/ContactForm.astro";
 #thankyouContainer {
   display: none;
   opacity: 0;
-
   margin-top: 1rem;
   padding: 0rem 1.4rem;
   justify-content: center;
   transition: opacity 1s ease-in;
-
   width: 100%;
   text-align: center;
 
