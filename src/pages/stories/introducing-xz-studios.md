@@ -16,7 +16,7 @@ What happens to creativity if we don't need to chase inspiration? But rather, le
 
 **Jump to September 12, 2023** and we are on a plane to Albania – the first stop to make XZ STUDIOS possible.
 
-![image](/images/DSCF9276-3.jpg)
+![image](/images/DSCF9276-3-resized-800x545.jpeg)
 
 ## We are going to fail. That's a promise.
 
