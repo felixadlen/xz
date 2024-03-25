@@ -70,7 +70,7 @@ You don't need to travel to find inspiration. And what bursts _your_ creativity,
 
 - <span style="font-weight: 600;">Do something intentionally as ugly or bad as possible</span>
 
-  Just to get rid of that paralized state of not knowing what to do at all.
+  Just to get rid of that paralyzed state of not knowing what to do at all.
 
 - <span style="font-weight: 600;">Challenge yourself just like kids play "the floor is lava"</span>
 
