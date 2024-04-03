@@ -1,17 +1,25 @@
-
 ---
-import Hero from "../../components/Hero.astro"
+import Hero from "../../components/Hero.astro";
+import MenuNav from "../../components/MenuNav.astro";
+import Footer from "../../components/Footer.astro";
+import RecentPost from "../../components/RecentPost.astro";
+import ContactForm from "../../components/ContactForm.astro";
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
+
+changeLanguage("sv");
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={i18next.language}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XZ STUDIOS</title>
-    <link rel="stylesheet" href="main.css" />
+    <title>XZ STUDIOS | Building brands & fans in Malmö</title>
+    <meta name="title" content="XZ STUDIOS | Building brands & fans in Malmö" />
+<meta name="description" content="We help small businesses make big impressions. A Malmö based studio for building brands through strategy, marketing and design." />
+    <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="https://use.typekit.net/iza3jks.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="//use.fontawesome.com/releases/v6.5.0/css/all.css"
@@ -44,23 +52,22 @@ import Hero from "../../components/Hero.astro"
         y.parentNode.insertBefore(t, y);
       })(window, document, "clarity", "script", "jovcl27t8k");
     </script>
+     <HeadHrefLangs />
   </head>
   <body>
     <div class="notification-menu">1</div>
 
-    <!-- MENYN HÄMTAS VIA JS -->
-    <div id="master-menu"></div>
+<MenuNav />
 
 
+    <Hero bgColor="white-bg"> 
+      <span slot="subheader">{t('home.subtitle')}</span>
 
-    <Hero bgColor="white-bg">
-      <span slot="subheader">We help small businesses to make big impressions</span>
-            <span slot="subheaderMobile">We help small businesses <br> to make big impressions</span>
+      <span slot="subheaderMobile">We help small businesses <br> make big impressions</span>
     </Hero>
-
     <section id="introduction">
       <div class="intro-container">
-        <h2 class="embraceText">svenska</h2>
+        <h2 class="embraceText">{t('home.embracetext')}</h2>
         <p class="embrace-answer hidden">
           <strong>See what you did?</strong> Your curiosity led you to explore
           what lay behind that button. That very curiosity is the heartbeat of
@@ -90,32 +97,31 @@ import Hero from "../../components/Hero.astro"
     <section id="introduction-about">
     <div class="textvideo-container">
       <div class="left-split-text">
-        <h2>
-        a malmö studio for building brands </h2>
-        <p>
-          We help small businesses with marketing and branding to create something new and different. 
-          With our base in Malmö, we use the world as our inspiration to explore new ideas. Your brand should not just be seen, but remembered. 
+        <h2>{t('home.about-xz-header')}
+ </h2>
+        <p> {t('home.about-xz-text')}
+        
           
           
                   </p>
 
         <a href="/about/" class="btn-red">We are XZ</a>
       </div>
+  
+       
+   
+
       <div class="right-split-video">
-        <video src="video/xz-video2.mp4" width="100%" height="100%" loop autoplay muted playsinline></video>
+        <video src="/video/xz-video2.mp4" width="100%" height="100%" loop autoplay muted playsinline></video>
+
+
 
       </div>
-    </div>
 
   </section>
 
     <section class="services-spec">
-      <h2 class="testh2">we do</h2>
-      <!-- <p class="white">
-        solo business owner who needs some action on your social media, or a
-        startup who needs some good looking landing pages for your first
-        campaign?
-      </p> -->
+      <h2>we do</h2>
 
       <div class="four-columns">
         <div class="column-item top-column">
@@ -148,7 +154,7 @@ import Hero from "../../components/Hero.astro"
 
           <a
             href="/services/"
-            class="btn-outline-red"
+            class="btn-red"
             >Here we explain more</a
           >
         
@@ -157,36 +163,45 @@ import Hero from "../../components/Hero.astro"
 
     <section id="home-hero-two">
       <div id="tilt-card">
-        <span class="smile">:)</span>
+        <img src="/img/red-smiley-happy.svg" class="smile" alt="red happy smiley">
       </div>
       <div class="header-welike">
-        <h2 id="h2SadSmiley">
+        <h2 id="h2SadSmiley" class="desktop">
           We like to make good<br />
           things to good people.
         </h2>
-        <h2 id="h2Smiley" class="hidden">
+        <h2 id="h2SadSmileyMobile" class="mobile">
+          We like to make<br /> good
+          things to good people.
+        </h2>
+        <h2 id="h2Smiley" class="hidden desktop">
           We like to make good<br />
+          things to sad people too.
+        </h2>
+        <h2 id="h2SmileyMobile" class="hidden mobile">
+          We like to make<br />good
           things to sad people too.
         </h2>
 
       </div>
 
-      <div class="testar-container">
-        <div class="client-container">
-          <div class="client-logo">
-            <img src="img/clients/partners_loggor_eseco_svart.png" alt="" />
+      <div class="customers-container">
+        <div class="customers-wrapper">
+          <div class="client-logo"><a href="https://www.eseco.se" target="_blank">
+            <img src="/img/clients/partners_loggor_eseco_svart.webp" alt="logotype of Eseco" />
+          </a>
           </div>
-          <div class="client-logo">
-            <img src="img/clients/partners_loggor-10.png" alt="" />
+          <div class="client-logo">       <a href="https://adlen.nu" target="_blank">
+            <img src="/img/clients/partners_loggor-10.webp" alt="logotype of Göran Adlén" /></a>
           </div>
-          <div class="client-logo">
-            <img src="img/clients/partners_loggor-07.png" alt="" />
+          <div class="client-logo"><a href="https://ne.se" target="_blank">
+            <img src="/img/clients/partners_loggor-07.webp" alt="Logotype of NE" /></a>
           </div>
-          <div class="client-logo">
-            <img src="img/clients/partners_loggor-06.png" alt="" />
+          <div class="client-logo"><a href="https://equitours.se" target="_blank">
+            <img src="/img/clients/partners_loggor-06.webp" alt="Logotype of Equi Tours" /></a>
           </div>
-          <div class="client-logo">
-            <img src="img/clients/labrats_logo.png" alt="" />
+          <div class="client-logo"><a href="https://thelabrats.se" target="_blank">
+            <img src="/img/clients/labrats_logo.webp" alt="Logotype of The Lab Rats" /></a>
           </div>
 
         </div>
@@ -195,57 +210,25 @@ import Hero from "../../components/Hero.astro"
     </section>
    
 
-    <section id="blog3-preview" style="overflow: hidden">
-   
-
+    <section id="blog3-preview">
       <div class="blogcontainerThree">
         <div class="text-container">
-          <h2 class="white">our stories</h2>
-          <h4>
-            Experiences creates stories. Here we share marketing insights and
-            random reflections you won't get anywhere else
-          </h4>
-          <a class="btn-red" href="/stories/">Read latest post</a>
+          <h2 class="white">experiences<br>creates stories</h2>
+          <p class="white-color">Here are our marketing insights and
+            random reflections you won't get anywhere else.
+          </p>
+
+          <a class="btn-red" href="/stories/">Discover stories</a>
         </div>
       </div>
-    </section>
-
-    <!-- 
-<section id="blog-preview">
-
-  <h2 class="white">read our book</h2>
-<div class="blogpreview-container">
-
-  <div class="blogpreview-text">
-    <h4>RECENT POST</h4>
-    <h3 class="white">Det var en kväll i juni, <br>då när solen sken som mest</h3>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium officia dolore, tempore corrupti quasi culpa autem id sequi amet hic explicabo vero odio enim unde voluptatem non reprehenderit quia asperiores.
-
-    <button class="btn-outline-red">kom och läs</button>
-  </div>
-
-  <div class="blogpreview-image">
-
-    <div class="blogpreview-overlay">       -->
-    <!-- <button class="btn-outline-white">Go to article</button> -->
-    <!-- </div>
-  <img src="stories/public/images/ales-nesetril-Im7lZjxeLhg-unsplash.png" alt="">
-
-</div>
-  </div>
-</div>
-
-</section> -->
+  
+      <RecentPost />
+    </section>      
 
 
-    <!-- instagram modul     <figure data-behold-id="gCORfjAodBbOP4YM43DH"></figure>
-<script src="https://w.behold.so/widget.js" type="module"></script>
-
- -->
 
     <section id="ending">
       <!-- <video src="video/compr-Flying_Over_White_Clouds_fhd - 02.mp4" loop autoplay muted></video> -->
-      <!-- <div data-aos="fade-up"> -->
         <div class="endnote">
           <h3>
             If you've come all the way to the page bottom, we clearly have
@@ -260,8 +243,16 @@ import Hero from "../../components/Hero.astro"
           <div class="klaviyo-form-UuHhsQ desktop"></div>
           <div class="klaviyo-form-Wbf2n2 mobile"></div>
         </div>
-      <!-- </div> -->
     </section>
+    <style>
+   
+
+      div.endnote h3 {
+font-weight: 700 !important;}
+    
+div.endnote a {
+color: #c83c4e;}
+    </style>
 
     <script
       async
@@ -269,19 +260,10 @@ import Hero from "../../components/Hero.astro"
       src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=Y6DGXR"
     ></script>
 
-    <!-- FETCH FOOTER-->
-    <footer id="master-footer"></footer>
-    <style>.footer-button a {
-      color: #c83c4e !important;
-    }</style>
-
-    <!-- FETCH CONTACT-POPUP !-->
-    <div id="openContactForm" class="hidden"></div>
+<Footer />
+<ContactForm />
 
     <script src="/script.js" is:inline></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- <script>
-      AOS.init();
-    </script> -->
+
   </body>
 </html>

@@ -2,20 +2,23 @@
 import Hero from "../components/Hero.astro";
 import MenuNav from "../components/MenuNav.astro";
 import Footer from "../components/Footer.astro";
-import RecentPost from '../components/RecentPost.astro';
+import RecentPost from "../components/RecentPost.astro";
 import ContactForm from "../components/ContactForm.astro";
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
 
+changeLanguage("en");
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={i18next.language}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XZ STUDIOS</title>
+    <title>XZ STUDIOS | Building brands & fans in Malmö</title>
     <meta name="title" content="XZ STUDIOS | Building brands & fans in Malmö" />
 <meta name="description" content="We help small businesses make big impressions. A Malmö based studio for building brands through strategy, marketing and design." />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="https://use.typekit.net/iza3jks.css" />
     <link
       rel="stylesheet"
@@ -49,6 +52,7 @@ import ContactForm from "../components/ContactForm.astro";
         y.parentNode.insertBefore(t, y);
       })(window, document, "clarity", "script", "jovcl27t8k");
     </script>
+     <HeadHrefLangs />
   </head>
   <body>
     <div class="notification-menu">1</div>
@@ -56,17 +60,14 @@ import ContactForm from "../components/ContactForm.astro";
 <MenuNav />
 
 
-    <Hero bgColor="white-bg">
-      <span slot="subheader">We help small businesses make big impressions</span>
-            <span slot="subheader2">Marketing</span>
+    <Hero bgColor="white-bg"> 
+      <span slot="subheader">{t('home.subtitle')}</span>
 
       <span slot="subheaderMobile">We help small businesses <br> make big impressions</span>
     </Hero>
-
-
     <section id="introduction">
       <div class="intro-container">
-        <h2 class="embraceText">hello</h2>
+        <h2 class="embraceText">{t('home.embracetext')}</h2>
         <p class="embrace-answer hidden">
           <strong>See what you did?</strong> Your curiosity led you to explore
           what lay behind that button. That very curiosity is the heartbeat of
@@ -96,11 +97,10 @@ import ContactForm from "../components/ContactForm.astro";
     <section id="introduction-about">
     <div class="textvideo-container">
       <div class="left-split-text">
-        <h2>
-        a malmö studio building brands </h2>
-        <p>
-          We help small businesses with marketing and branding to create something new and different. 
-          With our base in Malmö, we use the world as our inspiration to explore new ideas. Your brand should not just be seen, but remembered. 
+        <h2>{t('home.about-xz-header')}
+ </h2>
+        <p> {t('home.about-xz-text')}
+        
           
           
                   </p>
@@ -112,7 +112,7 @@ import ContactForm from "../components/ContactForm.astro";
    
 
       <div class="right-split-video">
-        <video src="video/xz-video2.mp4" width="100%" height="100%" loop autoplay muted playsinline></video>
+        <video src="/video/xz-video2.mp4" width="100%" height="100%" loop autoplay muted playsinline></video>
 
 
 
@@ -188,20 +188,20 @@ import ContactForm from "../components/ContactForm.astro";
       <div class="customers-container">
         <div class="customers-wrapper">
           <div class="client-logo"><a href="https://www.eseco.se" target="_blank">
-            <img src="img/clients/partners_loggor_eseco_svart.webp" alt="logotype of Eseco" />
+            <img src="/img/clients/partners_loggor_eseco_svart.webp" alt="logotype of Eseco" />
           </a>
           </div>
           <div class="client-logo">       <a href="https://adlen.nu" target="_blank">
-            <img src="img/clients/partners_loggor-10.webp" alt="logotype of Göran Adlén" /></a>
+            <img src="/img/clients/partners_loggor-10.webp" alt="logotype of Göran Adlén" /></a>
           </div>
           <div class="client-logo"><a href="https://ne.se" target="_blank">
-            <img src="img/clients/partners_loggor-07.webp" alt="Logotype of NE" /></a>
+            <img src="/img/clients/partners_loggor-07.webp" alt="Logotype of NE" /></a>
           </div>
           <div class="client-logo"><a href="https://equitours.se" target="_blank">
-            <img src="img/clients/partners_loggor-06.webp" alt="Logotype of Equi Tours" /></a>
+            <img src="/img/clients/partners_loggor-06.webp" alt="Logotype of Equi Tours" /></a>
           </div>
           <div class="client-logo"><a href="https://thelabrats.se" target="_blank">
-            <img src="img/clients/labrats_logo.webp" alt="Logotype of The Lab Rats" /></a>
+            <img src="/img/clients/labrats_logo.webp" alt="Logotype of The Lab Rats" /></a>
           </div>
 
         </div>

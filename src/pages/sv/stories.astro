@@ -1,14 +1,14 @@
 
 ---
 import { changeLanguage } from "i18next";
-import Layout from "../layouts/Page.astro";
-import Container from "../components/Container.astro";
-import BlogPostsList from "../components/BlogPostsList.astro";
-import Footer from "../components/Footer.astro";
+import Layout from "../../layouts/Page.astro";
+import Container from "../../components/Container.astro";
+import BlogPostsList from "../../components/BlogPostsList.astro";
+import Footer from "../../components/Footer.astro";
 
-changeLanguage("en");
+changeLanguage("sv");
 
-const allPosts = (await Astro.glob("./stories/*.{md,mdx}")).sort((a, b) => new Date(b.frontmatter.publishedAt).valueOf() - new Date(a.frontmatter.publishedAt).valueOf());
+const allPosts = (await Astro.glob("../stories/*.{md,mdx}")).sort((a, b) => new Date(b.frontmatter.publishedAt).valueOf() - new Date(a.frontmatter.publishedAt).valueOf());
 let initialPostCount = 3;
 let displayedPosts = allPosts.slice(0, initialPostCount);
 function loadMorePosts() {

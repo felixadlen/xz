@@ -1,0 +1,13 @@
+{
+  "site": {
+    "title": "svensk titel!",
+    "description": "Here is the description of my awesome website!"
+  },
+  "home": {
+    "title": "svensk titel!",
+    "subtitle": "Vi hjälper företag att nå ut!",
+    "embracetext": "hallå",
+    "about-xz-header": "a malmö studio building brands",
+    "about-xz-text": " Vi hjälper sköna rackare med deras grej osv. För allt är en evighet.  "
+  }
+}
