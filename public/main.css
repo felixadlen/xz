@@ -2671,6 +2671,8 @@ header {
 }
 .customers-container .customers-wrapper .client-logo img {
   max-width: 100px;
+  width: 100%;
+  height: auto;
 }
 .customers-container .customers-wrapper .client-logo img:hover {
   -webkit-transform: scale(1.02);
@@ -2685,15 +2687,18 @@ header {
   }
 }
 .customers-container .customers-wrapper .client-logo:nth-child(3) img {
-  height: 50px;
+  max-height: 50px;
+  width: auto;
   margin-top: 10px;
 }
 .customers-container .customers-wrapper .client-logo:nth-child(4) img {
   height: 60px;
+  width: auto;
   margin-top: 5px;
 }
 .customers-container .customers-wrapper .client-logo:nth-child(5) img {
   margin-top: 18px;
+  width: auto;
 }
 .customers-container .overlay {
   position: absolute;

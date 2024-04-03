@@ -1120,6 +1120,8 @@
     .client-logo {
       img {
         max-width: 100px;
+        width: 100%;
+        height: auto;
         &:hover {
           transform: scale(1.02);
         }
@@ -1129,19 +1131,22 @@
       }
       &:nth-child(3) {
         img {
-          height: 50px;
+          max-height: 50px;
+          width: auto;
           margin-top: 10px;
         }
       }
       &:nth-child(4) {
         img {
           height: 60px;
+          width: auto;
           margin-top: 5px;
         }
       }
       &:nth-child(5) {
         img {
           margin-top: 18px;
+          width: auto;
         }
       }
     }
