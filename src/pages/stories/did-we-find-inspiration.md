@@ -3,7 +3,7 @@ layout: "../../layouts/Post.astro"
 title: Did we find inspiration?
 subtitle: Reflections from leaving safe spaces to try something new
 # chapter: Story 2
-image: /images/story2-header.jpg
+image: /images/story2-header.webp
 publishedAt: "2024-03-22"
 category: "stories"
 location: Ubud, Indonesia
@@ -41,8 +41,8 @@ While travelling, it's been a luxury to constantly get more new inputs than usua
 We're all guilty of repeating good old patterns. It can be a time saver and sometimes the best way to go. When it comes to inspiration however, it doesn't spring from doing the same things. Our journey, from starting a company to leaving home for 8 months and visiting unfamiliar places, is about learning by doing. You don’t need to travel for this, but new paths do good.
 
 <div style="display: flex;align-items: center;justify-content: center;gap: 1rem;">
-<img src="/images/story2-grab.jpg" style="max-height: 380px;" class="stories-rightimage" alt="Laptop in lap in the taxi">
-<img src="/images/story2-workplace.jpg" class="stories-rightimage" alt="A funny workplace with two laptops on a ironing board"></div>
+<img src="/images/story2-grab.webp" style="max-height: 380px;" class="stories-rightimage" alt="Laptop in lap in the taxi">
+<img src="/images/story2-workplace.webp" class="stories-rightimage" alt="A funny workplace with two laptops on a ironing board"></div>
 
 <span style="color: #c83c4e">►</span> <strong style="font-style: italic">Actualize the "bad" ideas. Remember when internet was just a passing fad?</strong>
 

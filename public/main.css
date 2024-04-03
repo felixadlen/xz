@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: "greycliff-cf", "sans-serif";
+  font-display: swap;
   font-style: normal;
   font-size: 1.125rem;
   color: #040405;
@@ -242,6 +243,7 @@ html {
 
 body {
   font-family: "greycliff-cf", "sans-serif";
+  font-display: swap;
   font-style: normal;
   font-size: 1.125rem;
   color: #040405;
