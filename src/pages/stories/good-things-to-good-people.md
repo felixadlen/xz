@@ -3,7 +3,7 @@ layout: "../../layouts/Post.astro"
 title: Good things to good people
 subtitle: Sometimes small actions become big actions
 # chapter: Story 2
-image: /images/tygpåse.webp
+image: /images/tygpase.webp
 publishedAt: "2024-04-22"
 category: "stories"
 location: Barcelona, Spain
