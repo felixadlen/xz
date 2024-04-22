@@ -412,6 +412,12 @@ button {
   -o-transition: 0.4s ease;
   -moz-transition: 0.4s ease;
   transition: 0.4s ease;
+  -webkit-transform-origin: center center;
+     -moz-transform-origin: center center;
+      -ms-transform-origin: center center;
+       -o-transform-origin: center center;
+          transform-origin: center center;
+  vertical-align: middle;
 }
 .btn-red:hover {
   background-color: #e34a5e;
@@ -2298,13 +2304,12 @@ header {
 }
 
 #blog3-preview {
-  padding-top: 2rem;
-  padding-bottom: 6rem;
   background-color: #1c1e21;
+  padding: 0px;
 }
 @media (min-width: 768px) {
   #blog3-preview {
-    padding-top: 6rem;
+    padding: 2rem 1rem;
   }
 }
 #blog3-preview .blogcontainerThree {
@@ -2321,7 +2326,6 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto;
-  padding: 2rem 1.4rem;
 }
 #blog3-preview .blogcontainerThree .text-container {
   -webkit-box-ordinal-group: 3;
@@ -2329,7 +2333,6 @@ header {
      -moz-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  padding: 0rem 1.4rem;
   text-align: center;
 }
 @media (min-width: 768px) {

@@ -72,7 +72,6 @@ const allPosts = (await Astro.glob('../pages/stories/*.{md,mdx}')).sort(
 </Container>
 <div id="blog-BGbox">
   <span style="font-weight: 600";>XZ STUDIOS</span> helps small businesses to make big impressions. We specialize in marketing, advertising and graphic design with focus on building brands. With our base in Malmö, we use the world as our inspiration to explore new ideas. Let’s turn thoughts into conversations – <strong class="btnOpenForm inline-contactForm">we're just a message away!</strong></div>
-  <h2 style="text-align: center;margin-top: 6rem;">More stories</h2>
  
   <RelatedPostsList posts={allPosts} currentPostUrl={Astro.props.url} />
 
