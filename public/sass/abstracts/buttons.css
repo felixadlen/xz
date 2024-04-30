@@ -98,7 +98,6 @@ button {
   font-size: 1.1rem;
   font-weight: 400;
   display: inline-block;
-  border: 1.5px solid #c83c4e;
   -webkit-border-radius: 50px;
      -moz-border-radius: 50px;
           border-radius: 50px;
@@ -107,12 +106,6 @@ button {
   -o-transition: 0.4s ease;
   -moz-transition: 0.4s ease;
   transition: 0.4s ease;
-  -webkit-transform-origin: center center;
-     -moz-transform-origin: center center;
-      -ms-transform-origin: center center;
-       -o-transform-origin: center center;
-          transform-origin: center center;
-  vertical-align: middle;
 }
 .btn-red:hover {
   background-color: #e34a5e;
