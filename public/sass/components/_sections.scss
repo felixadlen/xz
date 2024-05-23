@@ -303,7 +303,6 @@
   .highlightTextContainer {
     justify-content: center;
     display: flex;
-    // background-color: green;
     flex-wrap: wrap;
     height: 100%;
     align-items: center;
@@ -314,13 +313,12 @@
   }
 
   .highlightTextContainer {
+    cursor: default;
     svg {
       max-height: 260px;
       flex: 0 0 100%;
       font-weight: 800;
       align-self: flex-end;
-      // background-color: blue;
-      // padding-bottom: -2rem;
       text {
         stroke: #c83c4e;
         font-weight: 700;
@@ -492,11 +490,10 @@
   @media (min-width: $breakpoint-tablet) {
     padding: 2rem;
     height: 85vh;
-    background-color: green;
   }
 }
 #introduction {
-  padding: 15rem 0rem 15rem 0rem;
+  padding: 10rem 0rem 10rem 0rem;
   background-color: #1c1e21;
   display: flex;
   flex-direction: column;
@@ -534,6 +531,21 @@
       font-size: 5rem;
       padding: 0rem;
     }
+  }
+}
+
+.service-tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  span {
+    background-color: #272a2e;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    color: #e8e8e8b2;
+    white-space: nowrap;
   }
 }
 
@@ -938,6 +950,10 @@
   align-items: center;
   padding: 3rem 0rem;
   position: relative;
+
+  div.endnote a {
+    color: #c83c4e;
+  }
   @media (min-width: $breakpoint-tablet) {
     padding: 6rem 0rem;
   }
@@ -960,6 +976,9 @@
       @media (min-width: $breakpoint-tablet) {
         font-size: 3rem;
       }
+    }
+    .signature {
+      font-size: 1rem;
     }
   }
 }
@@ -1420,3 +1439,37 @@
 // /thankyou page
 
 // end of thankyou-page
+
+// NEDAN ÄR ANNONSLANDSIDA PÅ SVENSKA
+
+.intro-hero-new {
+  position: fixed;
+  width: 100%;
+  z-index: -2000; /* Lower than the content section */
+  height: 80vh; /* Adjust based on your design */
+  top: 0;
+  left: 0;
+}
+
+.ne-video-container {
+  margin: 0 auto;
+  width: 90%;
+  height: 100%; /* Adjust based on the parent container or viewport */
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+  justify-content: center;
+  overflow: hidden;
+}
+video {
+  width: 100%;
+  height: 100%; /* This will cover the area of the .video-container */
+  object-fit: cover; /* This will ensure the video covers the area without losing its aspect ratio */
+}
+
+.fixed-container-new {
+  position: relative;
+  z-index: 2; /* Higher to scroll over the fixed section */
+  margin-top: 80vh; /* Same as the height of the first section */
+  background-color: white;
+}

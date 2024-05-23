@@ -13,9 +13,11 @@
      -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
      -moz-box-pack: center;
@@ -23,11 +25,11 @@
           justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: rgba(43, 43, 43, 0.673);
-  -webkit-animation: fadeContactOverlay 0.4s;
-     -moz-animation: fadeContactOverlay 0.4s;
-       -o-animation: fadeContactOverlay 0.4s;
-          animation: fadeContactOverlay 0.4s;
+  background-color: rgba(43, 43, 43, 0.5);
+  -webkit-animation: fadeContactOverlay 0.5s;
+     -moz-animation: fadeContactOverlay 0.5s;
+       -o-animation: fadeContactOverlay 0.5s;
+          animation: fadeContactOverlay 0.5s;
   overflow-y: hidden;
   z-index: 10000;
 }
@@ -68,7 +70,7 @@
   }
 }
 .form-container {
-  background-color: #ecebeb;
+  background-color: rgba(236, 235, 235, 0.8117647059);
   -webkit-border-radius: 10px;
      -moz-border-radius: 10px;
           border-radius: 10px;
@@ -89,13 +91,15 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   margin: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 40px;
+  right: -40px;
+  padding: 30px;
   color: black;
+  top: 49%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   -webkit-animation: slideUpContactForm 0.6s ease-out forwards;
      -moz-animation: slideUpContactForm 0.6s ease-out forwards;
        -o-animation: slideUpContactForm 0.6s ease-out forwards;
@@ -103,46 +107,103 @@
 }
 @-webkit-keyframes slideUpContactForm {
   from {
-    -webkit-transform: translate(-50%, 100vh);
-            transform: translate(-50%, 100vh);
+    -webkit-transform: translate(-70px, 100vh);
+            transform: translate(-70px, 100vh);
   }
   to {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-70px, -50px);
+            transform: translate(-70px, -50px);
   }
 }
 @-moz-keyframes slideUpContactForm {
   from {
-    -moz-transform: translate(-50%, 100vh);
-         transform: translate(-50%, 100vh);
+    -moz-transform: translate(-70px, 100vh);
+         transform: translate(-70px, 100vh);
   }
   to {
-    -moz-transform: translate(-50%, -50%);
-         transform: translate(-50%, -50%);
+    -moz-transform: translate(-70px, -50px);
+         transform: translate(-70px, -50px);
   }
 }
 @-o-keyframes slideUpContactForm {
   from {
-    -o-transform: translate(-50%, 100vh);
-       transform: translate(-50%, 100vh);
+    -o-transform: translate(-70px, 100vh);
+       transform: translate(-70px, 100vh);
   }
   to {
-    -o-transform: translate(-50%, -50%);
-       transform: translate(-50%, -50%);
+    -o-transform: translate(-70px, -50px);
+       transform: translate(-70px, -50px);
   }
 }
 @keyframes slideUpContactForm {
   from {
-    -webkit-transform: translate(-50%, 100vh);
-       -moz-transform: translate(-50%, 100vh);
-         -o-transform: translate(-50%, 100vh);
-            transform: translate(-50%, 100vh);
+    -webkit-transform: translate(-70px, 100vh);
+       -moz-transform: translate(-70px, 100vh);
+         -o-transform: translate(-70px, 100vh);
+            transform: translate(-70px, 100vh);
   }
   to {
-    -webkit-transform: translate(-50%, -50%);
-       -moz-transform: translate(-50%, -50%);
-         -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-70px, -50px);
+       -moz-transform: translate(-70px, -50px);
+         -o-transform: translate(-70px, -50px);
+            transform: translate(-70px, -50px);
+  }
+}
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 600px;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    color: black;
+    -webkit-animation: slideUpContactForm 0.6s ease-out forwards;
+       -moz-animation: slideUpContactForm 0.6s ease-out forwards;
+         -o-animation: slideUpContactForm 0.6s ease-out forwards;
+            animation: slideUpContactForm 0.6s ease-out forwards;
+  }
+  @-webkit-keyframes slideUpContactForm {
+    from {
+      -webkit-transform: translate(-50%, 100vh);
+              transform: translate(-50%, 100vh);
+    }
+    to {
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
+  }
+  @-moz-keyframes slideUpContactForm {
+    from {
+      -moz-transform: translate(-50%, 100vh);
+           transform: translate(-50%, 100vh);
+    }
+    to {
+      -moz-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+    }
+  }
+  @-o-keyframes slideUpContactForm {
+    from {
+      -o-transform: translate(-50%, 100vh);
+         transform: translate(-50%, 100vh);
+    }
+    to {
+      -o-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+    }
+  }
+  @keyframes slideUpContactForm {
+    from {
+      -webkit-transform: translate(-50%, 100vh);
+         -moz-transform: translate(-50%, 100vh);
+           -o-transform: translate(-50%, 100vh);
+              transform: translate(-50%, 100vh);
+    }
+    to {
+      -webkit-transform: translate(-50%, -50%);
+         -moz-transform: translate(-50%, -50%);
+           -o-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
   }
 }
 
@@ -288,4 +349,66 @@ textarea {
      -moz-animation-delay: 1.7s;
        -o-animation-delay: 1.7s;
           animation-delay: 1.7s;
+}
+
+.stickyContactIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 5000;
+  display: inline-block;
+}
+
+.stickyContactIcon svg {
+  color: yellow; /* Updated the SVG color here */
+  -webkit-transform: scaleX(-1);
+     -moz-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+       -o-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.stickyContactIcon:hover {
+  -webkit-transform: scale(1.04);
+     -moz-transform: scale(1.04);
+      -ms-transform: scale(1.04);
+       -o-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+.chaticon-text {
+  position: absolute;
+  right: 70px; /* Start offscreen to the right */
+  bottom: 13px;
+  background-color: #2b2d30;
+  color: white;
+  font-weight: 600;
+  padding: 5px;
+  font-size: 0.7rem;
+  mix-blend-mode: exclusion;
+  white-space: nowrap;
+  z-index: -4999;
+  visibility: hidden;
+  -webkit-transform: translateX(100%);
+     -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+       -o-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 0.5s ease-in-out forwards;
+  -o-transition: all 0.5s ease-in-out forwards;
+  -moz-transition: all 0.5s ease-in-out forwards;
+  transition: all 0.5s ease-in-out forwards;
+}
+
+.stickyContactIcon:hover .chaticon-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+div.endnote a {
+  color: #c83c4e;
+}
+
+#thankYouMessage .contactForm {
+  bottom: 0;
 }

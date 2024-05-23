@@ -3,12 +3,13 @@
   inset: 0;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: rgba(43, 43, 43, 0.673);
-  animation: fadeContactOverlay 0.4s;
+  // background-color: rgba(43, 43, 43, 0.673);
+  background-color: rgba(43, 43, 43, 0.5);
+  animation: fadeContactOverlay 0.5s;
   overflow-y: hidden;
   z-index: 10000;
 }
@@ -23,27 +24,45 @@
 }
 
 .form-container {
-  background-color: #ecebeb;
+  background-color: #ecebebcf;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 10px rgba(0, 0, 0, 0.23);
   border: 1px solid rgb(180, 180, 180);
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   margin: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 40px;
+  right: -40px;
+  padding: 30px;
   color: black;
+  top: 49%;
+  backdrop-filter: blur(10px);
   animation: slideUpContactForm 0.6s ease-out forwards;
   @keyframes slideUpContactForm {
     from {
-      transform: translate(-50%, 100vh);
+      transform: translate(-70px, 100vh);
     }
     to {
-      transform: translate(-50%, -50%);
+      transform: translate(-70px, -50px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    max-width: 600px;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    color: black;
+    animation: slideUpContactForm 0.6s ease-out forwards;
+    @keyframes slideUpContactForm {
+      from {
+        transform: translate(-50%, 100vh);
+      }
+      to {
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }
@@ -130,3 +149,52 @@ textarea {
   animation-delay: 1.7s;
 }
 //
+
+.stickyContactIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 5000;
+  display: inline-block;
+}
+
+.stickyContactIcon svg {
+  color: yellow; /* Updated the SVG color here */
+  transform: scaleX(-1);
+}
+
+.stickyContactIcon:hover {
+  transform: scale(1.04);
+}
+
+// Chatikon nedanför längst ned till höger
+
+.chaticon-text {
+  position: absolute;
+  right: 70px; /* Start offscreen to the right */
+  bottom: 13px;
+  background-color: #2b2d30;
+  color: white;
+  font-weight: 600;
+  padding: 5px;
+  font-size: 0.7rem;
+  mix-blend-mode: exclusion;
+  white-space: nowrap;
+  z-index: -4999;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out forwards;
+}
+
+.stickyContactIcon:hover .chaticon-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+div.endnote a {
+  color: #c83c4e;
+}
+
+#thankYouMessage .contactForm {
+  bottom: 0;
+}

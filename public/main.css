@@ -303,6 +303,12 @@ p.p-big {
   font-size: 1.4rem;
 }
 
+.signature {
+  font-family: "lindsey-signature";
+  font-weight: 400;
+  font-size: 5rem !important;
+}
+
 a {
   text-decoration: none;
   font-weight: 700;
@@ -1215,6 +1221,9 @@ header {
           align-self: flex-end;
   line-height: 0.9;
 }
+.white-bg .highlightTextContainer {
+  cursor: default;
+}
 .white-bg .highlightTextContainer svg {
   max-height: 260px;
   -webkit-box-flex: 0;
@@ -1584,12 +1593,11 @@ header {
   #intro-hero {
     padding: 2rem;
     height: 85vh;
-    background-color: green;
   }
 }
 
 #introduction {
-  padding: 15rem 0rem 15rem 0rem;
+  padding: 10rem 0rem 10rem 0rem;
   background-color: #1c1e21;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1668,6 +1676,29 @@ header {
     font-size: 5rem;
     padding: 0rem;
   }
+}
+
+.service-tags {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  gap: 6px;
+}
+.service-tags span {
+  background-color: #272a2e;
+  padding: 0.2rem 0.6rem;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  font-size: 0.9rem;
+  color: rgba(232, 232, 232, 0.6980392157);
+  white-space: nowrap;
 }
 
 #introduction-about {
@@ -2368,6 +2399,9 @@ header {
   padding: 3rem 0rem;
   position: relative;
 }
+#ending div.endnote a {
+  color: #c83c4e;
+}
 @media (min-width: 768px) {
   #ending {
     padding: 6rem 0rem;
@@ -2399,6 +2433,9 @@ header {
   #ending .endnote h3 {
     font-size: 3rem;
   }
+}
+#ending .endnote .signature {
+  font-size: 1rem;
 }
 
 .split-container {
@@ -3212,6 +3249,52 @@ header {
   }
 }
 
+.intro-hero-new {
+  position: fixed;
+  width: 100%;
+  z-index: -2000; /* Lower than the content section */
+  height: 80vh; /* Adjust based on your design */
+  top: 0;
+  left: 0;
+}
+
+.ne-video-container {
+  margin: 0 auto;
+  width: 90%;
+  height: 100%; /* Adjust based on the parent container or viewport */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%; /* This will cover the area of the .video-container */
+  -o-object-fit: cover;
+     object-fit: cover; /* This will ensure the video covers the area without losing its aspect ratio */
+}
+
+.fixed-container-new {
+  position: relative;
+  z-index: 2; /* Higher to scroll over the fixed section */
+  margin-top: 80vh; /* Same as the height of the first section */
+  background-color: white;
+}
+
 .form-popup-bg {
   position: fixed;
   inset: 0;
@@ -3227,9 +3310,11 @@ header {
      -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
      -moz-box-pack: center;
@@ -3237,11 +3322,11 @@ header {
           justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: rgba(43, 43, 43, 0.673);
-  -webkit-animation: fadeContactOverlay 0.4s;
-     -moz-animation: fadeContactOverlay 0.4s;
-       -o-animation: fadeContactOverlay 0.4s;
-          animation: fadeContactOverlay 0.4s;
+  background-color: rgba(43, 43, 43, 0.5);
+  -webkit-animation: fadeContactOverlay 0.5s;
+     -moz-animation: fadeContactOverlay 0.5s;
+       -o-animation: fadeContactOverlay 0.5s;
+          animation: fadeContactOverlay 0.5s;
   overflow-y: hidden;
   z-index: 10000;
 }
@@ -3282,7 +3367,7 @@ header {
   }
 }
 .form-container {
-  background-color: #ecebeb;
+  background-color: rgba(236, 235, 235, 0.8117647059);
   -webkit-border-radius: 10px;
      -moz-border-radius: 10px;
           border-radius: 10px;
@@ -3303,13 +3388,15 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   margin: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 40px;
+  right: -40px;
+  padding: 30px;
   color: black;
+  top: 49%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   -webkit-animation: slideUpContactForm 0.6s ease-out forwards;
      -moz-animation: slideUpContactForm 0.6s ease-out forwards;
        -o-animation: slideUpContactForm 0.6s ease-out forwards;
@@ -3317,46 +3404,103 @@ header {
 }
 @-webkit-keyframes slideUpContactForm {
   from {
-    -webkit-transform: translate(-50%, 100vh);
-            transform: translate(-50%, 100vh);
+    -webkit-transform: translate(-70px, 100vh);
+            transform: translate(-70px, 100vh);
   }
   to {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-70px, -50px);
+            transform: translate(-70px, -50px);
   }
 }
 @-moz-keyframes slideUpContactForm {
   from {
-    -moz-transform: translate(-50%, 100vh);
-         transform: translate(-50%, 100vh);
+    -moz-transform: translate(-70px, 100vh);
+         transform: translate(-70px, 100vh);
   }
   to {
-    -moz-transform: translate(-50%, -50%);
-         transform: translate(-50%, -50%);
+    -moz-transform: translate(-70px, -50px);
+         transform: translate(-70px, -50px);
   }
 }
 @-o-keyframes slideUpContactForm {
   from {
-    -o-transform: translate(-50%, 100vh);
-       transform: translate(-50%, 100vh);
+    -o-transform: translate(-70px, 100vh);
+       transform: translate(-70px, 100vh);
   }
   to {
-    -o-transform: translate(-50%, -50%);
-       transform: translate(-50%, -50%);
+    -o-transform: translate(-70px, -50px);
+       transform: translate(-70px, -50px);
   }
 }
 @keyframes slideUpContactForm {
   from {
-    -webkit-transform: translate(-50%, 100vh);
-       -moz-transform: translate(-50%, 100vh);
-         -o-transform: translate(-50%, 100vh);
-            transform: translate(-50%, 100vh);
+    -webkit-transform: translate(-70px, 100vh);
+       -moz-transform: translate(-70px, 100vh);
+         -o-transform: translate(-70px, 100vh);
+            transform: translate(-70px, 100vh);
   }
   to {
-    -webkit-transform: translate(-50%, -50%);
-       -moz-transform: translate(-50%, -50%);
-         -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-70px, -50px);
+       -moz-transform: translate(-70px, -50px);
+         -o-transform: translate(-70px, -50px);
+            transform: translate(-70px, -50px);
+  }
+}
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 600px;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    color: black;
+    -webkit-animation: slideUpContactForm 0.6s ease-out forwards;
+       -moz-animation: slideUpContactForm 0.6s ease-out forwards;
+         -o-animation: slideUpContactForm 0.6s ease-out forwards;
+            animation: slideUpContactForm 0.6s ease-out forwards;
+  }
+  @-webkit-keyframes slideUpContactForm {
+    from {
+      -webkit-transform: translate(-50%, 100vh);
+              transform: translate(-50%, 100vh);
+    }
+    to {
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
+  }
+  @-moz-keyframes slideUpContactForm {
+    from {
+      -moz-transform: translate(-50%, 100vh);
+           transform: translate(-50%, 100vh);
+    }
+    to {
+      -moz-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+    }
+  }
+  @-o-keyframes slideUpContactForm {
+    from {
+      -o-transform: translate(-50%, 100vh);
+         transform: translate(-50%, 100vh);
+    }
+    to {
+      -o-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+    }
+  }
+  @keyframes slideUpContactForm {
+    from {
+      -webkit-transform: translate(-50%, 100vh);
+         -moz-transform: translate(-50%, 100vh);
+           -o-transform: translate(-50%, 100vh);
+              transform: translate(-50%, 100vh);
+    }
+    to {
+      -webkit-transform: translate(-50%, -50%);
+         -moz-transform: translate(-50%, -50%);
+           -o-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
   }
 }
 
@@ -3502,6 +3646,68 @@ textarea {
      -moz-animation-delay: 1.7s;
        -o-animation-delay: 1.7s;
           animation-delay: 1.7s;
+}
+
+.stickyContactIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 5000;
+  display: inline-block;
+}
+
+.stickyContactIcon svg {
+  color: yellow; /* Updated the SVG color here */
+  -webkit-transform: scaleX(-1);
+     -moz-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+       -o-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.stickyContactIcon:hover {
+  -webkit-transform: scale(1.04);
+     -moz-transform: scale(1.04);
+      -ms-transform: scale(1.04);
+       -o-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+.chaticon-text {
+  position: absolute;
+  right: 70px; /* Start offscreen to the right */
+  bottom: 13px;
+  background-color: #2b2d30;
+  color: white;
+  font-weight: 600;
+  padding: 5px;
+  font-size: 0.7rem;
+  mix-blend-mode: exclusion;
+  white-space: nowrap;
+  z-index: -4999;
+  visibility: hidden;
+  -webkit-transform: translateX(100%);
+     -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+       -o-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 0.5s ease-in-out forwards;
+  -o-transition: all 0.5s ease-in-out forwards;
+  -moz-transition: all 0.5s ease-in-out forwards;
+  transition: all 0.5s ease-in-out forwards;
+}
+
+.stickyContactIcon:hover .chaticon-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+div.endnote a {
+  color: #c83c4e;
+}
+
+#thankYouMessage .contactForm {
+  bottom: 0;
 }
 
 .red-color {

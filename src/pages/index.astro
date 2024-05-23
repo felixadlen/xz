@@ -4,7 +4,7 @@ import MenuNav from "../components/MenuNav.astro";
 import Footer from "../components/Footer.astro";
 import RecentPost from '../components/RecentPost.astro';
 import ContactForm from "../components/ContactForm.astro";
-
+import ChatIcon from "../components/ChatIcon.astro";
 ---
 
 <!DOCTYPE html>
@@ -127,27 +127,51 @@ import ContactForm from "../components/ContactForm.astro";
         <div class="column-item top-column">
           <h3>Brand concepts</h3>
           <p>
-            Well-grounded strategies, stunning visuals, and strong storytelling are essential for strong brands. Together, we will ensure that your brand resonates with both you and the audience.        </div>
-        <div class="column-item top-column">
+            Well-grounded strategies, stunning visuals, and strong storytelling are essential for strong brands. Together, we will ensure that your brand resonates with both you and the audience.       
+          </p>  <div class="service-tags">
+            <span>Brand Identity</span>
+            <span>Storytelling</span>
+            <span>Strategy</span>
+           </div>    </div>
+       
+            <div class="column-item top-column">
           <h3>Ads & Campaigns</h3>
           <p>
             To get more out of advertising, your campaigns need to have a clear goal. Whether it's gaining brand awareness or more leads, we support you with ideas, knowledge, and production.
-
           </p>
+          <div class="service-tags">
+            <span>Google Ads</span>
+            <span>Meta</span>
+            <span>Campaign Strategy</span>
+            <span>Content</span>
+           </div>   
         </div>
         <div class="column-item">
           <h3>Strategic Marketing</h3>
           <p>
             What should you communicate, where, and how? By pinpointing beneficial actions we produce the right content and strategy for you – from social media, SEO, articles to custom websites.          </p>
-            
+            <div class="service-tags">
+              <span>Digital Marketing</span>
+              <span>Audience analysis</span>
+              <span>Copywriting</span>
+              <span>SEO</span>
+              <span>Websites</span>
+              <span>Social media</span>
+
+
+               </div>   
           </div>
         <div class="column-item">
           <h3>Graphic Design</h3>
           <p>
-            Design is more than just aesthetics – it's about communication. We care about things like pixels, fonts, and colors, designing everything from presentations and illustrations, to full websites.        
-  
-          
-          </p>        </div>
+            Design is more than just aesthetics – it's about communication. We care about things like pixels, fonts, and colors, designing everything from presentations and illustrations, to full websites.                 
+          </p>      <div class="service-tags">
+            <span>Visual Identity</span>
+            <span>UX/UI</span>
+            <span>Print</span>
+            <span>Ads</span>
+            <span>Illustrations</span>
+           </div>       </div>
       </div>
 
       <div class="button-center">
@@ -213,14 +237,10 @@ import ContactForm from "../components/ContactForm.astro";
   <section id="blog3-preview">
 
     <RecentPost />
-    <!-- <div class="blogcontainerThree">
-      <div class="text-container">
-        <h2 class="stories-special-header">experiences<br>creates stories</h2>
-        <p class="white-color">Here are our marketing insights and
-          random reflections you won't get anywhere else.
-        </p>
+    
 
- </div> -->
+
+
     </div> 
   </section>      
 
@@ -244,19 +264,9 @@ color: #e8e8e8;
      <a href="/stories">stories</a>.
         </p>
         <h3 class="signature">/xz studios</h2>
-
-    
       </div>
   </section>
 
-
-
-
-    <style>
-  
-div.endnote a {
-color: #c83c4e;}
-    </style>
 
     <script
       async
@@ -265,6 +275,7 @@ color: #c83c4e;}
     ></script>
 
 <Footer />
+<ChatIcon />
 <ContactForm />
 
     <script src="/script.js" is:inline></script>

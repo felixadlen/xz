@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import type { Props as BaseHeadProps } from '../components/BaseHead.astro';
 import CreateCopyCodeButtons from "../components/CodeButtons/CreateCopyCodeButtons.astro";
 import ContactForm from "../components/ContactForm.astro";
+import ChatIcon from "../components/ChatIcon.astro";
 import '../styles/astro-main.css';
 // import ContactForm from "../components/ContactForm.astro";
 export interface Props {
@@ -55,7 +56,8 @@ const { seo } = Astro.props;
   
     </main>
     <slot name="footer" />
-    <ContactForm />
+    <ChatIcon />
 
+    <ContactForm />
   </body>
 </html>
