@@ -3,6 +3,7 @@ import MenuNav from "../components/MenuNav.astro";
 import Footer from "../components/Footer.astro";
 import RecentPost from '../components/RecentPost.astro';
 import ContactForm from "../components/ContactForm.astro";
+import ChatIcon from "../components/ChatIcon.astro";
 
 ---
 
@@ -10,6 +11,8 @@ import ContactForm from "../components/ContactForm.astro";
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
+    <meta name="robots" content="noindex">
+    <!-- TA BORT ROBOTS-META taggen när sidan ska live -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>XZ STUDIOS</title>
     <meta name="title" content="XZ STUDIOS | Marknadsföring för små företag  />
@@ -55,144 +58,31 @@ import ContactForm from "../components/ContactForm.astro";
 <MenuNav />
 
 
-<section id="new-about">
-  <video id="introVideo" autoplay muted loop preload poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/oceanshot.jpg">
-    <source src="/video/zoom-reverse-bg.mp4" />
-  </video>
-  <h1 id="title">we are xz studios</h1>
-  <h3 id="title-subheader">experience based marketing in malmö</h3>
+<section class="intro-hero-new white-bg vh-80">
+  <div class="highlightTextContainer">
+      <svg viewBox="0 0 1350 600">
+        <text x="50%" y="80%" fill="transparent" text-anchor="middle">xz studios</text>
+      </svg>
+   
+    
+      <h2 class="intro-subheader desktop" style="margin-top: 0.1rem;">
+Litet företag kan bli stort. Om du vill alltså.  
+<p style="margin-top: 0.9rem;font-weight: 300;font-size: 1rem;">MARKNADSFÖRING & VARUMÄRKESBYGGANDE I MALMÖ</p>  
+<button class="btnOpenForm btn-outline-black" style="display: block;margin: 1.5rem auto;">Kontakta oss</button>
+          <!-- <p style="margin-top: 0.9rem;font-weight: 300;font-size: 1rem;">VI HJÄLPER SMÅFÖRETAGARE ATT BYGGA STARKA VARUMÄRKEN</p>        <button class="btnOpenForm btn-outline-black" style="margin-top: 1.5rem;">Kontakta oss</button> -->
+
+        </h2>
+  <h2 class="intro-subheader mobile">
+  </h2>
+</div>
 </section>
 
-  <style lang="scss">
-  #new-about {
-    position: relative;
-    background-color: #1c1e21;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow-x: hidden;
-  
-  
-  video, h1 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    overflow-x: hidden;
-  }
-  
-  video {
-    height: 100vh;
-    object-fit: cover;
-    z-index: 1;
-  }
-  
-  h1 {
-    font-size: 6rem;
-    font-weight: 700;
-    line-height: 100vh;
-    text-align: center;
-    background: white;
-    color: black;
-    mix-blend-mode: screen;
-    transition: opacity 1s ease, font-size 0.3s ease;
-    z-index: 10;
-  }
-
-  
-  #title-subheader {
-  position: fixed; /* Changed from absolute to fixed */
-  z-index: 10;
-  left: 50%;
-  top: 57%; /* Adjust this value to position it where you want it vertically */
-  transform: translate(-50%, -50%); /* This will center it at the specified top position */
-  color: #c83c4e;
-  font-size: 1.5rem; /* Static initial font size */
-  transition: opacity 0.4s ease, font-size 0.3s ease; /* Keeping only opacity transition */
-}
-
-
-#introVideo {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  // transform-origin: top center;
-  position: fixed;
-  overflow-y: hidden;
-  transition: transform 2s ease, opacity 0.3s ease;
-}
-
-#introVideo.video-absolute {
-  transform: translateY(-100%); 
-}
-}
-  </style>
-
-  <script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-  const title = document.getElementById("title");
-  const subheader = document.getElementById("title-subheader");
-  const video = document.getElementById('introVideo');
-  let initialScrollYWhenOpaque = null;
-
-  window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
+    <section id="introduction" class="fixed-container-new">
+      <!-- <video id="introVideo" autoplay loop muted playsinline style="width: 100vw; height: 100vh; z-index: 1;">
+        <source src="/video/zoom-reverse-bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video> -->
     
-    // Configurations for h1 and h3
-    const maxFontSizeTitle = 10; // Maximum font size for h1
-    const minFontSizeTitle = 6; // Starting font size for h1
-    const maxFontScrollTitle = 200; // Scroll length over which font size increases for h1
-
-    // Configurations for h3
-    const maxFontSizeSubheader = 2.5; // Maximum font size for h3
-    const minFontSizeSubheader = 1.5; // Starting font size for h3
-    const maxFontScrollSubheader = 100; // Scroll length over which font size increases for h3
-
-    // Font size adjustment for h1
-    let fontSizeTitle = minFontSizeTitle + (scrollY / maxFontScrollTitle) * (maxFontSizeTitle - minFontSizeTitle);
-    fontSizeTitle = Math.min(fontSizeTitle, maxFontSizeTitle);
-    title.style.fontSize = `${fontSizeTitle}rem`;
-
-    // Font size adjustment for h3
-    let fontSizeSubheader = minFontSizeSubheader + (scrollY / maxFontScrollSubheader) * (maxFontSizeSubheader - minFontSizeSubheader);
-    fontSizeSubheader = Math.min(fontSizeSubheader, maxFontSizeSubheader);
-    subheader.style.fontSize = `${fontSizeSubheader}rem`;
-
-    // Opacity logic for h1
-    let opacityTitle = 1;
-    if (fontSizeTitle > 7) {
-      opacityTitle = 1 - ((fontSizeTitle - 7) / (maxFontSizeTitle - 7));
-    }
-    title.style.opacity = Math.max(opacityTitle, 0).toFixed(2);
-
-    // Opacity logic for h3, mirroring h1
-    let opacitySubheader = 1;
-    if (fontSizeSubheader > 2) { // Adjusted to fit h3's scale
-      opacitySubheader = 1 - ((fontSizeSubheader - 1) / (maxFontSizeSubheader - 1));
-    }
-    subheader.style.opacity = Math.max(opacitySubheader, 0).toFixed(2);
-
-    // Video translation trigger
-    if (title.style.opacity === '0') {
-      if (initialScrollYWhenOpaque === null) {
-        initialScrollYWhenOpaque = scrollY;
-      }
-      if (scrollY - initialScrollYWhenOpaque >= 100) {
-        video.classList.add('video-absolute');
-      }
-    } else {
-      initialScrollYWhenOpaque = null;
-      video.classList.remove('video-absolute');
-    }
-
-    // Visibility adjustments
-    title.style.visibility = (fontSizeTitle >= maxFontSizeTitle) ? 'hidden' : 'visible';
-  });
-});
-
-  </script>
-  
-
-    <section id="introduction">
       <div class="intro-container">
         <h2 class="embraceText">hej förresten!</h2>
         <p class="embrace-answer hidden">
@@ -220,8 +110,6 @@ import ContactForm from "../components/ContactForm.astro";
         <button class="btn-outline-white" id="embraceButton">Try this</button>
       </div>
     </section>
-
-
 
 <section class="services-spec white-color" style="background-color: #1F2225;">
   <h2>tjänster</h2>
@@ -283,12 +171,6 @@ import ContactForm from "../components/ContactForm.astro";
  
        </div>     </div>
 
-      <!-- <div class="ne-video-container">
-        <video autoplay loop muted playsinline>
-            <source src="/video/ne-laptop.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div> -->
   </div>
 
   <div class="button-center">
@@ -299,20 +181,30 @@ import ContactForm from "../components/ContactForm.astro";
     
   </div>
 </section>
-<script>
-  window.addEventListener('scroll', function() {
-      const introHero = document.querySelector('.intro-hero-new');
-      if (window.pageYOffset > window.innerHeight * 0.8) { // Adjust based on your vh setting for the section
-          introHero.style.position = 'absolute';
-          introHero.style.top = window.innerHeight * 0.8 + 'px'; // Fix it at the height it would naturally be
-      } else {
-          introHero.style.position = 'fixed';
-          introHero.style.top = '0px';
+
+<!-- <script is:inline>
+window.addEventListener('scroll', function() {
+      let ticking = false;
+
+      if (!ticking) {
+          window.requestAnimationFrame(function() {
+              const introHero = document.querySelector('.intro-hero-new');
+              if (window.pageYOffset > window.innerHeight * 0.8) {
+                  introHero.style.position = 'absolute';
+                  introHero.style.top = window.innerHeight * 0.8 + 'px'; 
+              } else {
+                  introHero.style.position = 'fixed';
+                  introHero.style.top = '0px';
+              }
+              ticking = false;
+          });
+
+          ticking = true;
       }
   });
-  </script>
+  </script> -->
   
-    <section id="home-hero-two">
+    <section id="home-hero-two" class="white-bg">
       <div id="tilt-card">
         <img src="/img/red-smiley-happy.svg" class="smile" alt="red happy smiley">
       </div>
@@ -354,94 +246,31 @@ import ContactForm from "../components/ContactForm.astro";
 
   <style lang="scss">
 
-.service-tags {
-  margin-top: 1rem;
-display: flex; 
-flex-wrap: wrap;
-gap: 6px;
-span {
-  background-color: #272A2E;
-  padding: 0.2rem 0.6rem;
-  border-radius: 3px;
-  font-size: 0.9rem;
-  color: #E8E8E8B2;
-  white-space: nowrap;
-}
-}
-
-
     .stories-special-header {
 font-weight: 900;
 color: #e8e8e8;
     }
   </style>
-<!-- 
+
     <section id="ending">
       <div class="endnote">
         <h3>
-          If you've come all the way to the page bottom, we clearly have
-          something in common.
+Vi kanske kan hjälpa dig
         </h3>
         <p>
-          And that might be a good reason for us to get to know eachother.<br>
-          <a class="btnOpenForm">Say hi</a> or if you want to follow our journey - check out our
-     <a href="/stories">stories</a>.
+         Oavsett vad du behöver hjälp med, litet som stort, kanske vi kan hjälpa dig.
+         Vi har lång erfarenhet, vill alltid överleverera, och är faktiskt inte så pjåkiga. Dessutom är vi bara ett meddelande ifrån - <a class="btnOpenForm">säg hej!</a>
         </p>
         <h3 class="signature">/xz studios</h2>
 
     
       </div>
-  </section> -->
+  </section> 
 
 
-  <div class="stickyContactIcon"><button class="btnOpenForm"><svg fill="none" height="40" viewBox="0 0 24 24" width="40" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m22.75 12c0-5.93706-4.8129-10.75-10.75-10.75-5.93706 0-10.75 4.81294-10.75 10.75 0 1.7183.40371 3.3445 1.12213 4.7869.1072.2152.12995.435.08047.6199l-.5956 2.226c-.40773 1.5238.98637 2.9179 2.5102 2.5102l2.22604-.5956c.1849-.0495.40467-.0267.61991.0805 1.44238.7184 3.06855 1.1221 4.78685 1.1221 5.9371 0 10.75-4.8129 10.75-10.75zm-10.75-9.25c5.1086 0 9.25 4.14137 9.25 9.25 0 5.1086-4.1414 9.25-9.25 9.25-1.4811 0-2.87879-.3475-4.11809-.9648-.4974-.2477-1.09218-.3431-1.67638-.1868l-2.22604.5956c-.40883.1094-.78286-.2647-.67347-.6735l.59561-2.226c.15631-.5842.06091-1.179-.18683-1.6764-.61728-1.2393-.9648-2.637-.9648-4.1181 0-5.10863 4.14137-9.25 9.25-9.25z" fill="#c83c4e" fill-rule="evenodd"/></svg></button>
-    <span class="chaticon-text">YO</span>
-  </div>
+<ChatIcon />
 
 
-    <style lang="scss">
- .stickyContactIcon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 5000;
-    display: inline-block;
-}
-
-.stickyContactIcon svg {
-    color: yellow; /* Updated the SVG color here */
-    transform: scaleX(-1);
-}
-
-.stickyContactIcon:hover {
-    transform: scale(1.04);
-}
-
-.chaticon-text {
-    position: absolute;
-    right: 70px; /* Start offscreen to the right */
-bottom: 13px;
-    background-color: #2B2D30;
-    color: white;
-    font-weight: 600;
-    padding: 5px;
-    font-size: 0.7rem;
-    mix-blend-mode: exclusion;
-    white-space: nowrap;
-    z-index: -4999;
-    visibility: hidden;
-    transform: translateX(100%);
-    transition: all 0.5s ease-in-out;
-}
-
-.stickyContactIcon:hover .chaticon-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-div.endnote a {
-color: #c83c4e;}
-    </style>
 
     <script
       async
