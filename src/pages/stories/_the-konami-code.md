@@ -1,30 +1,33 @@
 ---
 layout: "../../layouts/Post.astro"
 title: The Konami Code
-subtitle: Love your Ex's - Exploring, Expectations and Experiments
+subtitle: Love your Ex's - Exploring, Experiments and Expectations
 # chapter: Story 2
 image: /images/IMG_4499.webp
-publishedAt: "2024-05-23"
+publishedAt: "2024-06-12"
 category: "stories"
-location: Tirana, Albania 🇦🇱
+location: Malmö, Sweden
 ---
 
-## Kazuhisa Hashimoto
+_Before we decipher the mysterious story title: We're back in Sweden after 9 months! Since the last update we've been to Spain, France and Albania. It's been a lot of fun work, and now it's time to step this up. But first, story time._
 
-Marketing, much like life, often presents us with a series of codes—some explicit, others hidden, all offering different outcomes. Just as Kazuhisa Hashimoto's Konami Code revolutionized gaming, challenging conventions and offering rewards, so too can we find inspiration in unconventional approaches in our marketing endeavors.
+<!-- ## Are you in love with your Ex's? -->
 
-<b> Today, we explore the parallels between the Konami Code and our marketing philosophy, and remind you why you should love your Ex's.</b>
+## Never stop loving your Ex's
+
+Marketing, much like life, often presents us with different paths to take — some explicit, others hidden. Whether you follow the usual path or explore a new one, the outcomes will be different. Just as Kazuhisa Hashimoto revolutionized gaming with the Konami Code, by challenging conventions and offering hidden rewards, we can find inspiration in those unconventional approaches.
+
+<b> Today, we explore the connection between the Konami Code and our own marketing philosophy, reminding you why we believe you should love your Ex’s – _Exploring_, _Experiments_, and _Expectations_.</b>
 
 <div id="konami-container">
 <img src="https://static.wikia.nocookie.net/contra/images/b/b0/Kazuhisa_Hashimoto_-_01.jpg" alt="gif of gradius gameplay on nintendo" width="300px" height="auto" />
 <img src="https://64.media.tumblr.com/cb229382810d61e0843e7a8b7bf67bee/tumblr_nu3zc6pQoF1qd4q8ao1_500.gif" alt="gif of gradius gameplay on nintendo" width="300px" height="auto" />
 </div>
 
-# 1. Exploring
+# 1. Exploring is not dangerous (sometimes)
 
-Just as gamers eagerly hunt for secret passages and hidden Easter eggs, marketers can learn from the immersive worlds of gaming. Gamification offers valuable insights into human behavior—how we seek rewards, retain attention, and respond to challenges. By delving into this realm, we discover new ways to engage our audience and differentiate ourselves from the competition.
-
-<b>So, what happens if you embrace the unknown?</b>
+Just like gamers love to explore secret passages and hidden Easter eggs, we can find hidden opportunities in our own projects. The exploration provides gamers with another level of experience, and similarly, we can discover new ways to engage our audience and differentiate ourselves.
+<br><br> <b>What happens when you embrace the unknown?</b>
 
 <div id="gameArea">
     <img src="https://cdn-icons-png.flaticon.com/512/7451/7451013.png" alt="game character" id="character">
@@ -45,33 +48,41 @@ Just as gamers eagerly hunt for secret passages and hidden Easter eggs, marketer
     <button id="btn-a" class="btn-key" data-key="65">A</button>
     <button id="btn-b" class="btn-key" data-key="66">B</button>
 </div>
-
 </div>
+
+<br>
+<i>Fun fact: in Albania we went off road to explore some stunning views and nature. No tourists. No people. The only company we had was a shepherd who wasn’t keen on us being there, along with his hungry dogs. </i>
 
 # 2. Experiments
 
 Innovation arises from experimentation and that is why we love to push boundaries and challenge conventions. By daring to be different, we uncover hidden potentials and forge new paths.
 
-  <div class="motherlode-input-container">
-        <input type="text" id="codeInput" placeholder="Enter code to get  50,000 simoleons">
-        <button onclick="confettiSuccess()" class="btn-red" style="background-color: #1c1e21;border-radius: 50px;">Submit</button>
-    </div>
+Tesla faced initial skepticism and challenges, but by relentlessly pushing the boundaries of technology and design, it transformed the automotive industry completely.
 
 # 3. Expectations
 
-Some may view the Konami Code as cheating, while others see it as a way reach the final and actual goal. Similarly, our preconceived notions of success and failure influence how we approach our strategies. By managing these expectations and embracing alternative viewpoints, we open ourselves up to new possibilities and redefine what it means to succeed. Expectations shape our experiences.
+While some may view the Konami Code as cheating, others see it as a tool to reach the actual goal. Similarly, our preconceived notions of success and failure will influence our strategies. By managing these expectations and embracing alternative viewpoints, we open ourselves to new possibilities to redefine success. Expectations shape our experiences.
+
+<b>If you have played The Sims, what would you expect?</b>
+
+<div class="motherlode-input-container">
+    <input type="text" id="codeInput" placeholder="Enter code to get  50,000 simoleons">
+    <button onclick="confettiSuccess()" class="btn-red" style="background-color: #1c1e21;border-radius: 50px;">Submit</button>
+</div>
 
 <h2 style="margin-top: 2rem;">Sum may say summary</h2>
 
-The Konami Code is more than just a series of button presses—it's a symbol of innovation, creativity, and the willingness to defy expectations. In embracing its spirit, we encourage you to approach marketing with a sense of curiosity and courage. Love your "ex's," explore uncharted territories, and experiment fearlessly. Remember, in a world filled with codes waiting to be cracked, the greatest rewards often come to those who dare to play by their own rules. So, stay curious and love your ex's.
-
-<br><a class="btnOpenForm">What do you think? We would love to hear your thoughts on this!</a>
+The Konami Code is more than just a series of button presses — it’s a symbol of innovation, creativity, and the willingness to defy expectations. By embracing its spirit, we believe in approaching the challenges with a sense of curiosity and courage. Love your “Ex’s,” explore uncharted territories, and experiment fearlessly. In a world filled with codes waiting to be cracked, the greatest rewards often come to those who dare to play by their own rules. So, stay curious and love your Ex’s.
+<br>
+<br>
+<a class="btnOpenForm">What do you think? We would love to hear your thoughts on this!</a>
 
 <div class="hrSpace">
 </div>
 <strong>Smile and be different.</strong>
 
-<h3 class="signature">/xz studios</h2>
+<h3 class="signature">/xz studios</h2> <div class="hrSpace">
+</div>
 
 <script src="/js/birdbox-game.js" is:inline></script>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0" is:inline></script>
