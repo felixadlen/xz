@@ -155,7 +155,7 @@ textarea {
   bottom: 20px;
   right: 20px;
   z-index: 5000;
-  display: none;
+  display: inline-block;
   @media (min-width: 768px) {
     display: inline-block;
   }
