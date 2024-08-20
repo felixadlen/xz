@@ -4,7 +4,7 @@ import Container from "./Container.astro";
 ---
 
 <link rel="stylesheet" href="/sass/components/footer.css">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css">
 
 <div id="footer-container">
 
@@ -31,16 +31,28 @@ import Container from "./Container.astro";
      </div>
   </div>
   
-  
+  <!-- <script type="module" src="/cookieconsent-config.js"></script> -->
+
   <div id="footer-strip">
   
     <div>
-      <a href="/integrity/">Cookies & integrity</a>
+      <button type="button" style="color: #A2A2A2;" data-cc="show-consentModal">Cookies</button>      & <a href="/integrity/">integrity</a>
     </div>
     
     <div><span>XZ STUDIOS AB &nbsp;© 2024&nbsp;|&nbsp; S:t Knuts Torg 6, 211 57 Malmö &nbsp;|&nbsp; Org.nr: 559445-1394</span></div>
   
   </div>
 
+  <style is:global> #cc-main {
 
+    --cc-btn-primary-bg: #000000;
+    --cc-btn-primary-border-color: #000000;
+    --cc-btn-primary-hover-bg: #444444;
+    --cc-btn-primary-hover-border-color: #444444;
 
+    /** Also make toggles the same color as the button **/
+    --cc-toggle-on-bg: var(--cc-btn-primary-bg);
+
+    /** Make the buttons a bit rounder **/
+    --cc-btn-border-radius: 10px;
+}</style>
